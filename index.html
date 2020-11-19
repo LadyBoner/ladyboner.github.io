@@ -17,31 +17,34 @@
 
   <h1>Calculator Challenge (abridged)</h1>
 
-
-<p>
-The goal is to have minimal and complete capabilities for the purpose of directly comparing other programming paradigms against the imperative/structural paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of your submission is also a direct reflection upon your chosen paradigm.
-</p>
-<p>
-Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following requirements:
-</p>
   <p>
-1.  Unbreakable self-contained executable for use within a terminal.  No installation of any kind required to run the program.  Standard library only!
+    The goal is to have minimal and complete capabilities for the purpose of directly contrasting programming paradigms against the imperative/structural paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of your submission is also a direct reflection upon your chosen paradigm.
   </p>
   <p>
-2.  Capabilities must include many uses (at least four) of each: nested parentheses, divisors ( "/" ), and additions ( "+" ).
-</p>
-  <p>
-3.  Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing ENTER.  Each key typed by the user is only accepted if it is contributing to a validly formed equation, resulting in computable inputs only.  Program will only ignore a pre-mature ENTER press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input ( "/" or "+" ).  Must always compute the correct mathematical answer[*] to the user's equation, or DNE (Does Not Exist) indicator for a 0-divisor incidence.  Not necessary to handle positive/negative notation from the user's inputs.  Handling of excess parentheses (excess opening or empty parentheses) from the user is your choice; not relevant.  Also not concerned about use of BACKSPACE from user.
+    Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following requirements:
   </p>
-  <p>
+  <ol>
+    <li>  Unbreakable, self-contained executable for use within a terminal.  No installation of any kind required to run your program.  Standard library only!
+    </li>
+    <li>  Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing ENTER.  Must always compute a numerical answer to the user's equation and be mathematical correct[*], or a DNE (Does Not Exist) indicator for a 0-divisor incidence.
+    
   [ *Not concerned about integer overflow and float round-offs.  Just do not break otherwise! ]
-  </p>
-  <p>
-4.  On a new line each, repeat accepting inputted equations from the user and calculating them upon the user pressing ENTER until the user hits ESC to terminate program.
-  </p>
-  <p>
-5.  (Skipped for expedition.)
-  </p>
-  
-  </body>
+    </li>
+
+		<li>  On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing ENTER until the user hits ESC --at any point-- to terminate program.
+		</li>
+
+		<li>  Capabilities must include many uses (at least four) of each: nested parentheses, divisors ( "/" ), additions ( "+" ), and decimal numbers.
+  - Not necessary to handle positive/negative notation from the user's inputs.
+		</li>
+<li>  Limit user's inputs to forming only equations the program is capable of calculating.
+  - Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.
+  - Also not concerned about use of BACKSPACE from the user.
+		</li>
+<li>  Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature ENTER press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input ( "/" or "+" ).
+		</li>
+<li>  (Skipped for expedition.)
+		</li>
+	</ol>
+		</body>
 </html>
