@@ -2,27 +2,27 @@
 <html lang="en-US">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport"     content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="default-style"  content="" />  
+  <meta charset="UTF-8" />
+  <meta name="viewport"     content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="default-style"  content="text/html; charset=UTF-8" />
 
-	<meta name="author"       content="Viola T.Whiting" />
-	<meta name="discription"  content="" />
-	<meta name="keyword"      content="" />
+  <meta name="author"       content="Viola T.Whiting" />
+  <meta name="discription"  content="Calculator programming challenge to disprove OOD and Functional paradigms." />
+  <meta name="keywords"     content="coding,comparison,prove,OOP,learning" />
 
-	<title>Calculator Challenge  (abridged)</title>
+  <title>Calculator Challenge  (abridged)</title>
 
 </head>
 <body  style="max-width:40em;">
 
   <h1>Calculator Challenge (abridged)</h1>
-	<h5>Programming Demonstration</h5>
+  <h2>Programming Demonstration</h2>
 	
   <p>
 The goal is to have minimal and complete capabilities for the purpose of directly contrasting programming paradigms against the classic intuitive structural/imperative paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of each submission will also be a direct reflection upon the chosen paradigm.
   </p>
 	
-	<h3>Requirements</h3>
+  <h3>Requirements</h3>
 	
   <p>
 Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following:
@@ -30,90 +30,88 @@ Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), wri
 	
   <ol>
     <li>
-Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!
+      Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!
     </li>
-		<br>
+    <br>
     <li>
-Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <code>ENTER</code>.  Must always compute a numerical answer to the user's equation and be mathematical correct<small><sup>&dagger;</sup></small>, or a DNE (Does Not Exist) indicator for a 0-divisor incidence.
-			<br>
-			<small>
-				<sup>&dagger;</sup>
-Not concerned about integer overflow and float round-offs.  Just do not break otherwise!
-			</small>
+      Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <code>ENTER</code>.  Must always compute a numerical answer to the user's equation and be mathematical correct<small><sup>&dagger;</sup></small>, or a DNE (Does Not Exist) indicator for a 0-divisor incidence.
+      <br>
+      <small><sup>&dagger;</sup>
+        Not concerned about integer overflow and float round-offs.  Just do not break otherwise!
+      </small>
     </li>
-		<br>
-		<li>  
-On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <code>ENTER</code> until the user hits <code>ESC</code> <em>at any point</em> to terminate program.
-		</li>
-		<br>
-		<li>  
-Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <code>/</code> )<wbr>, additions <wbr>( <code>+</code> )<wbr>, and decimal numbers.
-			<ul>
-				<li>
-					Not necessary to handle positive/negative notation from the user's inputs.
-				</li>
-			</ul>
-		</li>
-		<br>
-		<li>
+    <br>
+    <li>
+      On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <code>ENTER</code> until the user hits <code>ESC</code> <em>at any point</em> to terminate program.
+    </li>
+    <br>
+    <li>
+      Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <code>/</code> )<wbr>, additions <wbr>( <code>+</code> )<wbr>, and decimal numbers.
+      <ul>
+        <li>
+          Not necessary to handle positive/negative notation from the user's inputs.
+        </li>
+      </ul>
+    </li>
+    <br>
+    <li>
 Limit user's inputs to forming only equations the program is capable of calculating.
-			<ul>
-				<li>
-					Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.
-				</li>
-				<li>
-					Also not concerned about use of <code>BACKSPACE</code> from the user.
-				</li>
-			</ul>
-		</li>
-		<br>
-		<li>
-Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <code>ENTER</code> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <code>/</code> <wbr>or<wbr> <code>+</code> ).
-		</li>
-		<br>
-		<li>
-			<small>
-(Skipped for expedition.)
-			</small>
-		</li>
-	</ol>
+      <ul>
+        <li>
+          Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.
+        </li>
+        <li>
+          Also not concerned about use of <code>BACKSPACE</code> from the user.
+        </li>
+      </ul>
+    </li>
+    <br>
+    <li>
+      Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <code>ENTER</code> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <code>/</code> <wbr>or<wbr> <code>+</code> ).
+    </li>
+    <br>
+    <li>
+      <small>(Skipped for expedition.)
+      </small>
+    </li>
+  </ol>
 	
-	<h3>Rationale</h3>
+  <h3>Rationale</h3>
 
-	<p>
+  <p>
 Unlike nurses and engineers, programming is not part of a professional (regulatory) body.  As a consequence, much of what one encounters is ambiguity and zealousness contributing to lack of empiricism.  Even the amount of misnomers tossed around in the industry is shameful.  Take these related examples.  If one were to ask what "the cloud" is, the response will never identify it as a synonym for a server.  If one were to ask what "serverless" means, the response will never identify it as a synonym for a server.  Yet, for both scenarios the response will always be to just provide the definition of a server.  Many new ideas are often promoted as though they are the only solution in the sandbox; not building upon previous knowledge and experience by demonstrating the problem they are solving in contrast to the alternatives.  There is much conflicting information as a result of this field being an unprofessional one.  For an idea to be effectively communicated, one must define what it specifically <em>is</em>, and what it specifically <em>is not</em>.  This challenge is to directly confront the conflicting information of programming paradigms.
-	</p>
-	<p>
+  </p>
+  <p>
 Popular programming paradigms are among the essential oils and mysticism in the gullible industry.  Only after decades can apologists now be found for object-oriented design, and, at best, functional programmers admitting that discretion should be practiced when making the paradigm choice.  But never is it identified nor demonstrated when either paradigm is appropriate.  As advocates within the field describe, each of these paradigms are the de-facto solution over the other.  This challenge is introducing a new acronym: <mark>PYCWYFMI</mark>, <q>pick wiff me</q> <wbr>&mdash;<small><em>Put-<wbr>Your-<wbr>Code-<wbr>Where-<wbr>Your-<wbr>Fucking-<wbr>Mouth<wbr>-Is</em></small>.  It is imperative that submissions adhere to, and are criticized on, the definitions of their corresponding paradigms <strong><em>as they are purveyed</em></strong>.
-	</p>
+  </p>
 
-	<h6>Colloquial Definitions</h6>
+  <h4>Colloquial Definitions</h4>
 
-	<dl>
-		<dt><em>Object-Oriented Design</em></dt>
-		<dd>
-Everything is an object because mapping real-world objects is intuitive.  Many of the buzzwords swarming around OOD include: modularity, encapsulation, abstraction, inheritance, and polymorphism.  All for the purpose of achieving code re-usability.
-		</dd>
-		<br>
-		
-		<dt><em>Functional</em></dt>
-		<dd>
-All functions are pure!  There is no state.  The buzzword associated with this paradigm is "immutability".  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects.
-		</dd>
-	</dl>
+  <dl>
+    <dt><em>Object-Oriented Design</em></dt>
+    <dd>
+      Everything is an object because mapping real-world objects is intuitive.  Many of the buzzwords swarming around OOD include: modularity, encapsulation, abstraction, inheritance, and polymorphism.  All for the purpose of achieving code re-usability.
+    </dd>
+    <br>
 
-	<p>
+    <dt><em>Functional</em></dt>
+    <dd>
+      All functions are pure!  There is no state.  The buzzword associated with this paradigm is "immutability".  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects.
+    </dd>
+  </dl>
+
+  <p>
 Both definitions seem to taught a solution to a problem.  But when one tries to apply either of them to already familiar projects, they are obviously missing pieces and nobody wants to talk about the Emperor's clothes.  Demonstrations of each often contradict or evade the elephant in the room; neglect to answer the follow-up questions by presenting inadequate examples.  This challenge takes the simplest of possible programs and dares each paradigm to make themselves relevant.
-	</p>
-	<p>
+  </p>
+  <p>
 The OOD and functional submissions will be contrasted to a structural implementation of the challenge written in the C programming language, which is specifically <em>not</em> an object-oriented language, and <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its paradigm; <em>not be identical</em>.  For clarification, a language feature is not a paradigm.  For clarification, a technique or "pattern" is not a paradigm.  A lack of proof-of-concept (submission) for any paradigm, will assume it to be a FRAUD.
-	</p>
-	<p>
+  </p>
+  <p>
 An OOD submission will be judged on everything being an object, and no object can simply be the same logic as a procedure(s) and/or a function(s) wrapped in a class.  Because that would be a module.  OOD has to provide a solution to something.  Demonstrate it.
-	</p>
-	<p>
+  </p>
+  <p>
 A functional submission will be judged on its absence of state.  There will be no such thing as <q><em>that doesn't count</em></q>.  Please.  For the love of God.  <strong>Demonstrate this sorcery!</strong>
-	</p>	
+  </p>	
 	
 </body>
 </html>
