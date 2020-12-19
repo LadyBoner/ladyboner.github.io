@@ -1,0 +1,54 @@
+@media  only (prefers-color-scheme: dark)  {
+
+  main  {
+    background-color: #111 ;
+    color: #BBB ;
+  }
+}
+
+@media  only (prefers-color-scheme: light)  {
+
+  main  {
+    background-color: #white ;
+    color: #black ;
+  }
+}
+
+
+
+body  {
+  margin-top: 0px ;
+  margin-bottom: 0px ;
+  max-width: 40em ;
+  font-family: sans-serif ;
+  font-weight: lighter ;
+}
+
+h1  {
+  margin-top: 0px ;
+  padding: 1em ;
+  background-image: linear-gradient(to bottom right, #203 50%, #F0C) ;
+  color: #DDD ;
+  text-shadow: 0px 0px 0.3em black ;
+}
+
+p  {
+  line-height: 1.4 ;
+}
+
+dl  {
+  padding-left: 1em ;
+  padding-right: 1em ;
+}
+
+dd  {
+  padding-top: 0.3em ;
+}
+
+footer  {
+  margin-bottom: 0px ;
+  min-height: 2em ;
+  background-color: #203 ;
+  box-shadow: inset 0px -0.1em 0.1em 0em #808 ;
+  color: white ;
+}
