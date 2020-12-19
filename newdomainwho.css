@@ -45,6 +45,10 @@ dl  {
   padding-right: 1em ;
 }
 
+dfn  {
+  font-weight: normal ;
+}
+
 dd  {
   padding-top: 0.3em ;
 }
