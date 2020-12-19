@@ -1,6 +1,6 @@
 @media  only (prefers-color-scheme: dark)  {
 
-  main  {
+  body  {
     background-color: #111 ;
     color: #BBB ;
   }
@@ -8,7 +8,7 @@
 
 @media  only (prefers-color-scheme: light)  {
 
-  main  {
+  body  {
     background-color: #white ;
     color: #black ;
   }
@@ -30,6 +30,10 @@ h1  {
   background-image: linear-gradient(to bottom right, #203 50%, #F0C) ;
   color: #DDD ;
   text-shadow: 0px 0px 0.3em black ;
+}
+
+h4, h5, h6  {
+  color: #707 ;
 }
 
 p  {
