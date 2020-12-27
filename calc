@@ -1,0 +1,306 @@
+!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport"     content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="default-style"  content="text/html; charset=UTF-8" />
+
+  <meta name="author"       content="Viola T.Whiting" />
+  <meta name="discription"  content="Shitpost to call BS and disprove OOD and Functional." />
+  <meta name="keywords"     content="coding,comparison,experiment,prove,OOP,confusion,learning,perspective" />
+
+  <title>Calculator Challenge  (abridged)</title>
+
+  <link rel="stylesheet" href="newdomainwho.css" />
+
+
+</head>
+<body>
+
+
+<main>
+
+  <h1>Calculator Challenge (abridged)</h1>
+  <h2>Programming Demonstration</h2>
+  <mark><label  for "status">Status:</label></mark>
+  <meter  id="status" low="2" high="4" max="5" optimum="4" value="1"><small>[<i>drafting</i>]</small></meter>
+
+  <p>
+The goal is to have minimal and complete capabilities for the purpose of directly contrasting programming paradigms against the classic intuitive structural/imperative paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of each submission will also be a direct reflection upon the chosen paradigm.
+  </p>
+	
+  <br>
+	
+<section>
+	
+  <h3>Requirements</h3>
+	
+  <p>
+Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following:
+  </p>
+	
+  <ol>
+    <li>
+      Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interupts will be excused.)
+    </li>
+    <br>
+    <li>
+      Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematical correct<small><sup>&dagger;</sup></small>, or a DNE (Does Not Exist) indicator for a 0-divisor incidence.
+      <br>
+      <small><sup>&dagger;</sup>
+        Not concerned about integer overflow and float round-offs.  Just do not break otherwise!
+      </small>
+    </li>
+    <br>
+    <li>
+      On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.
+    </li>
+    <br>
+    <li>
+      Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.
+      <ul>
+        <li>
+          Not necessary to handle positive/negative notation from the user's inputs.
+        </li>
+      </ul>
+    </li>
+    <br>
+    <li>
+      Limit user's inputs to forming only equations the program is capable of calculating.
+      <ul>
+        <li>
+          Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.
+        </li>
+        <li>
+          Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.
+        </li>
+      </ul>
+    </li>
+    <br>
+    <li>
+      Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).
+    </li>
+    <br>
+    <li>
+      <small>(Skipped for expedition.)</small>
+      <br>
+      <s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or DNE answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.
+      </s>
+    </li>
+  </ol>
+
+
+</section>
+
+  <br>
+
+<section>
+	
+  <h3>Rationale</h3>
+
+  <p>
+Unlike nurses and engineers, programming is not part of a professional (regulatory) body.  As a consequence, much of what one encounters is ambiguity and zealousness contributing to lack of empiricism.  Even the amount of misnomers tossed around in the industry is shameful.  Take these related examples.  If one were to ask what "the cloud" is, the response will never identify it as a synonym for a server.  If one were to ask what "serverless" means, the response will never identify it as a synonym for a server.  Yet, for both scenarios the response will always be to just provide the definition of a server.  Many new ideas are often promoted as though they are the only solution in the sandbox; not building upon previous knowledge and experience by demonstrating the problem they are solving in contrast to the alternatives.  There is much conflicting information as a result of this field being an unprofessional one.  For an idea to be effectively communicated, one must define what it specifically <em>is</em>, and what it specifically <em>is not</em>.  This challenge is to directly confront the conflicting information of, and lack of juxtoposition between, programming paradigms.
+  </p>
+  <p>
+Popular programming paradigms are among the essential oils and mysticism in the gullible industry.  Only after decades can apologists now be found for object-oriented design, and, at best, functional programmers admitting that discretion should be practiced when making the paradigm choice.  But never is it identified nor demonstrated when either paradigm is appropriate.  As advocates within the field peddle, each of these paradigms are the de-facto solution over the other.  This challenge is introducing a new acronym: <small><dfn>PYCWYFMI</dfn></small>, <q>pick wiff me</q> <wbr>&mdash;<small><i>Put-<wbr>Your<wbr>-Code-Where-Your-Fucking<wbr>-<wbr>Mouth<wbr>-Is</i></small>.  It is imperative that submissions adhere to, and are criticized on, the definitions of their corresponding paradigms <strong><em>as they are purveyed.</em></strong>
+  </p>
+
+  <h4>Colloquial Definitions</h4>
+
+  <dl>
+    <dt><dfn>Object-Oriented Design</dfn></dt>
+    <dd>
+      Everything is an object because mapping real-world objects is intuitive.  Many of the buzzwords swarming around OOD include: modularity, encapsulation, abstraction, inheritance, polymorphism, and factories/managers.  All for the purpose of achieving code re-usability.
+    </dd>
+    <br>
+
+    <dt><dfn>Functional</dfn></dt>
+    <dd>
+      All functions are pure!  There is no state.  The buzzword associated with this paradigm is "immutability".  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have globals.
+    </dd>
+  </dl>
+
+  <p>
+Both definitions seem to tout a solution to a problem.  But when one tries to apply either of them to already familiar projects, there are obvious missing pieces and nobody wants to talk about the Emperor's clothes.  Demonstrations of each often contradict or evade the elephant in the room; neglect to answer the follow-up questions by presenting unconprehensive examples.  With all the red herrings, one could think the industry is riddled with imposters, not just the syndrome.  This challenge takes the simplest of possible programs and dares each paradigm to make themselves relevant.
+  </p>
+  <p>
+The OOD and functional submissions will be contrasted to a structural implementation of the challenge written in the C Programming Language, which is specifically <em>not</em> an object-oriented language, and specifically <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its paradigm; <em>not be identical</em>.  For clarification, a language feature is not a paradigm.  For clarification, a technique or "pattern" is not a paradigm.  A lack of proof-of-concept (submission) for any paradigm, will assume it to be a <em>fraud</em>.
+  </p>
+  <p>
+An OOD submission will be judged on everything being an object, and no object can simply be the same logic as structural procedures and/or a functions wrapped in a class.  Because that would be a module.  OOD is praised as "intuitive" and re-usable.  Demonstrate it.
+  </p>
+  <p>
+A functional submission will be judged on its absence of state.  There will be no such thing as <q><em>that doesn't count</em></q>.  Please.  For the love of God.  <strong>Demonstrate this sorcery!</strong>
+  </p>
+
+</section>
+
+  <br>
+
+<section>
+
+  <h4>To do</h4>
+
+  <ul>
+    <li>
+      Structural C benchmark link
+    </li>
+    <li>
+      Forum for comments link
+    </li>
+    <li>
+      Submissions link
+    </li>
+    <li>
+      Conclusions
+    </li>
+    <li>
+      Relevant links
+    </li>
+  <ul>
+
+</section>
+
+
+</main>
+
+
+<pre><code>
+/*  Base class  */
+    struct  Logger
+    {
+      virtual void  LogMessage(  char const*  message  )  = 0 ;
+      virtual  ~Logger()  = default ;
+    };
+
+
+
+struct  NVILogger
+  /*  Do this base.  Not the previous base (Logger).  */
+{
+  
+    void LogMessage(  char const*  message  )
+      {
+        /*  Do prep.  */
+        DoLogMessage(  message  ) ;
+        /*  Do finish.  */
+      }
+    virtual  ~Logger()  = default ;
+  
+  private:
+  
+    virtual void  DoLogMessage(  char const*  message  )  = 0 ;
+}
+
+
+
+/*  Implementations  */
+struct  ConsoleLogger  final :  Logger
+{
+  virtual void  LogMessage(  char const*  message  )  override
+  {
+    std::cout  <<  message  <<  '\n' ;
+  }
+};
+
+
+
+struct  FileLogger  final :  Logger
+{
+  FileLogger(  char const*  filename  ) :  output_{  filename  }  {}
+  
+  virtual void  LogMessage(  char const*  message  )  override
+  {
+    output_  <<  message  <<  '\n' ;
+  }
+  
+  private:
+    std::ofstream  output_ ;
+}
+
+
+
+struct  StatusDisplay final :  Logger
+{
+  virtual void  LogMessage(  char caonst*  message  )  override
+  {
+    /*  Show message as a current status on LCD  */ ;
+  }
+}
+
+
+
+struct  SurpriseLogger  final :  Logger
+{
+  virtual void  LogMessage(  char const*  message  )  override
+  {
+    std::exit(  EXIT_FAILURE  ) ;
+  }
+};
+
+
+
+
+/*  Client code  */
+
+int
+  main()
+{
+  
+  auto  logger{  std::make_unique<ConsoleLogger>()  } ;
+  
+  Logger*  logger_ptr{  logger.get()  } ;
+  
+  logger_ptr -> LogMessage(  "Hello, World!"  ) ;
+    /*  static(compile-time) type is Logger*  */
+    /*  dynamic(runtime) type is ConsoleLogger*  */
+}
+
+
+
+void
+  LogHelloWorld(  Logger&  logger  )
+{
+  
+  logger.LogMessage(  "Hello, World!"  ) ;
+}
+
+
+
+int
+  main()
+{
+  
+  auto  logger{  std::make_unique<ConsoleLogger>  } ;
+  
+  LogHelloWorld(  *logger  ) ;
+  LogHelloWorld(  *static_cast<Logger>(  logger.get()  )) ;
+  
+}
+
+
+
+int
+  main()
+{
+  
+  auto  cl{  ConsoleLogger{}  } ;
+  auto  fl{  FileLogger{  "logfile.txt"  }} ;
+  
+  LogHelloWorld(  cl  ) ;
+  LogHelloWorld(  fl  ) ;
+  
+  return  EXIT_SUCCESS ;
+}
+</code></pre>
+
+
+
+
+<footer>
+</footer>
+
+
+</body>
+</html>
