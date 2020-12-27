@@ -103,6 +103,7 @@ footer  {
 /*  left: 0 ;*/
 /*  width: 90% ;*/
   
+  margin-top: 2em ;
   margin-bottom: 0px ;
   min-height: 2em ;
   background-image: linear-gradient( 355deg, #505, #203 1.5em ) ;
