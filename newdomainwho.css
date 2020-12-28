@@ -91,6 +91,7 @@ pre  {
   background-color: #ACF ;
   color: black ;
   line-height: 1.6 ;
+  mix-blend-mode: luminosity ;
   overflow-x: auto ;
 }
 
