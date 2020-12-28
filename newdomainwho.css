@@ -91,6 +91,7 @@ pre  {
   background-color: rgba(192, 192, 255, 0.6) ;
   color: black ;
   line-height: 1.6 ;
+  font-size: smaller ;
   mix-blend-mode: luminosity ;
   overflow-x: auto ;
 }
