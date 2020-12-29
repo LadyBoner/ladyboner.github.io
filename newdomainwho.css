@@ -1,42 +1,56 @@
-@media  only (prefers-color-scheme: dark)  {
+@media  only (prefers-color-scheme: dark)
+{
 
-  body  {
+  body
+  {
     background-color: #111 ;
     color: #BBB ;
   }
 }
 
-@media  only (prefers-color-scheme: light)  {
 
-  body  {
+@media  only (prefers-color-scheme: light)
+{
+
+  body
+  {
     background-color: white ;
     color: black ;
   }
 }
 
 
-html  {
+
+
+html
+{
 /*  padding: 0px ;*/
 /*  margin: 0px ;*/
   min-height: 100% ;
-  overflow-x: hidden ;  /*  Scrollbar  */
+  overflow-x: hidden ;    /*  Scrollbar  */
 }
 
-body  {
+body
+{
   margin-top: 0px ;
   margin-bottom: 0px ;
   max-width: 40em ;
 /*  min-height: 100% ;*/
   font-family: sans-serif ;
   font-weight: lighter ;
+  background-color: #111 ;
+    color: #BBB ;
 }
 
 main  {
   min-height: 100% ;
 }
 
-h1  {
-  /*  Title  */
+
+
+
+h1    /*  Title  */
+{
   margin-top: 0px ;
   padding: 1em ;
   background-image: linear-gradient( to bottom right, #203 50%, #F0C ) ;
@@ -44,60 +58,83 @@ h1  {
   text-shadow: 0px 0px 0.3em black ;
 }
 
-h2  {
-  /*  Suppliment-Title  */
+h2    /*  Suppliment-Title  */
+{
+
 }
 
-h3  {
-  /*  Section Titles  */
+h3    /*  Section Titles  */
+{
   padding-left: 0.5em ;
 }
 
-h4, h5  {
-  /*  Sub-Headings  */
+h4, h5    /*  Sub-Headings  */
+{
   color: #707 ;
 }
 
-h6  {
-  /*  Footer Headings  */
+h6    /*  Footer Headings  */
+{
   color: white ;
 }
 
-strong  {
+
+
+
+strong
+{
   color: #888 ;
   font-weight: normal ;
 }
 
-p  {
+p
+{
   line-height: 1.4 ;
 }
 
-dl  {
+dl
+{
   padding-left: 1em ;
   padding-right: 1em ;
 }
 
-dfn  {
+dfn
+{
   font-weight: normal ;
+  font-size: smaller ;
+  
 }
 
-dd  {
+dd
+{
   padding-top: 0.3em ;
 }
 
-pre  {
-/*  outline: 1px solid black ;*/
+pre
+{
   padding: 1em ;
   background-color: rgba(192, 192, 255, 0.6) ;
-  color: black ;
-  line-height: 1.6 ;
   font-size: smaller ;
   mix-blend-mode: luminosity ;
   overflow-x: auto ;
 }
 
+code
+{
+  color: black ;
+  line-height: 1.6 ;
+}
 
-footer  {
+label, meter, sup
+{
+  font-size: smaller ;
+}
+
+
+
+
+footer
+{
 /*  position: -webkit-sticky ;*/
 /*  position: sticky ;*/
 /*  bottom: 0px ;*/
