@@ -38,6 +38,8 @@ body
 /*  min-height: 100% ;*/
   font-family: sans-serif ;
   font-weight: lighter ;
+/*  background-color: #111 ;*/
+/*    color: #BBB ;*/
 }
 
 main  {
@@ -88,6 +90,7 @@ strong
 p
 {
   line-height: 1.4 ;
+  white-space: pre-wrap ;
 }
 
 dl
@@ -106,26 +109,43 @@ dfn
 dd
 {
   padding-top: 0.3em ;
+  white-space: pre-wrap ;
+}
+
+li
+{
+  white-space: pre-wrap ;
 }
 
 pre
 {
   padding: 1em ;
   background-color: rgba(192, 192, 255, 0.6) ;
+  color: black ;
+  line-height: 1.4 ;
   font-size: smaller ;
   mix-blend-mode: luminosity ;
   overflow-x: auto ;
 }
 
-code
-{
-  color: black ;
-  line-height: 1.6 ;
-}
-
 label, meter, sup
 {
   font-size: smaller ;
+}
+
+
+
+
+.string
+{
+  color: #353 ;
+}
+
+.comment
+{
+  color: #533 ;
+  font-style: oblique ;
+  font-size: larger ;
 }
 
 
