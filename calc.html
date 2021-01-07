@@ -10,20 +10,20 @@
   <meta name="discription"  content="Shitpost to call BS and disprove OOD and Functional." />
   <meta name="keywords"     content="coding,comparison,experiment,prove,OOP,confusion,learning,perspective" />
 
-  <title>Calculator Challenge  (abridged)</title>
+  <title>{ }Demonstrate Your Programming Paradigm Is Even Real</title>
 
   <link rel="stylesheet" href="newdomainwho.css" />
 
 
 </head>
-<body  style="background-color:#111; color:#BBB;" >
+<body>
 
 
 <main>
 
-  <h1>Calculator Challenge (abridged)</h1>
-  <h2>Programming Demonstration</h2>
-  <mark><label  for "status">Status:</label></mark>
+  <h1>Demonstrate Your Programming Paradigm Is Even Real</h1>
+  <h2>Calculator Challenge</h2>
+  <mark><label  for="status">Status:</label></mark>
   <meter  id="status" low="2" high="4" max="5" optimum="4" value="1">[<i>drafting</i>]</meter>
 
   <p>The goal is to have minimal and complete capabilities for the purpose of directly contrasting programming paradigms against the classic intuitive structural/<wbr>imperative paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of each submission will also be a direct reflection upon the chosen paradigm.</p>
@@ -37,10 +37,10 @@
   <p>Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following:</p>
 	
   <ol>
-    <li>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interupts will be excused.)</li>
+    <li>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interrupts will be excused.)</li>
     <br>
-    <li>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematical correct<sup>*</sup>, or a DNE (Does Not Exist) indicator for a 0-divisor incidence.
-<br><sup>*</sup><small>Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></li>
+    <li>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup>*</sup></small>, or a <dfn>DNE</dfn> (Does Not Exist) indicator for a 0-divisor incidence.
+<br><small><sup>*</sup>Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></li>
     <br>
     <li>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</li>
     <br>
@@ -53,7 +53,7 @@
     <li>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).</li>
     <br>
     <li><small>(Skipped for expedition.)</small>
-<s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or DNE answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.</s></li>
+<s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.</s></li>
   </ol>
 
 
@@ -98,7 +98,7 @@
     <li>Submissions link</li>
     <li>Conclusions</li>
     <li>Relevant links</li>
-  <ul>
+  </ul>
 
 </section>
 
@@ -108,7 +108,7 @@
 
 <pre>
 <span  class="comment">/*  Base class  */</span>
-    struct  Logger
+    struct  <span  class="define">Logger</span>
     {
       virtual void  LogMessage(  char const*  message  )  = 0 ;
       virtual  ~Logger()  = default ;
@@ -116,7 +116,7 @@
 
 
 
-struct  NVILogger
+struct  <span  class="define">NVILogger</span>
     <span  class="comment">/*  Do this base.  */</span>
     <span  class="comment">/*  Not the previous base (Logger).  */</span>
 {
@@ -138,7 +138,7 @@ struct  NVILogger
 
 <span  class="comment">/*  Implementations  */</span>
 
-struct  ConsoleLogger  final :  Logger
+struct  <span  class="define">ConsoleLogger</span>  final :  Logger
 {
   virtual void  LogMessage(  char const*  message  )  override
   {
@@ -148,7 +148,7 @@ struct  ConsoleLogger  final :  Logger
 
 
 
-struct  FileLogger  final :  Logger
+struct  <span  class="define">FileLogger</span>  final :  Logger
 {
   FileLogger(  char const*  filename  ) :  output_{  filename  }  {}
   
@@ -163,9 +163,9 @@ struct  FileLogger  final :  Logger
 
 
 
-struct  StatusDisplay final :  Logger
+struct  <span  class="define">StatusDisplay</span>  final :  Logger
 {
-  virtual void  LogMessage(  char caonst*  message  )  override
+  virtual void  LogMessage(  char const*  message  )  override
   {
     <span  class="comment">/*  Show message as a current status on LCD  */</span>
   }
@@ -173,7 +173,7 @@ struct  StatusDisplay final :  Logger
 
 
 
-struct  SurpriseLogger  final :  Logger
+struct  <span  class="define">SurpriseLogger</span>  final :  Logger
 {
   virtual void  LogMessage(  char const*  message  )  override
   {
@@ -186,8 +186,7 @@ struct  SurpriseLogger  final :  Logger
 
 <span  class="comment">/*  Client code  */</span>
 
-int
-  main()
+int  <span  class="func">main</span>()
 {
   
   auto  logger{  std::make_unique<ConsoleLogger>()  } ;
@@ -201,8 +200,7 @@ int
 
 
 
-void
-  LogHelloWorld(  Logger&  logger  )
+void  <span  class="func">LogHelloWorld</span>(  Logger&  logger  )
 {
   
   logger.LogMessage(  "<span  class="string">Hello, World!</span>"  ) ;
@@ -210,8 +208,7 @@ void
 
 
 
-int
-  main()
+int  <span  class="func">main</span>()
 {
   
   auto  logger<span  class="brace1">{</span>  std::make_unique<ConsoleLogger>  <span  class="brace1">}</span> ;
@@ -222,8 +219,7 @@ int
 
 
 
-int
-  main()
+int  <span  class="func">main</span>()
 {
   
   auto  cl<span  class="brace1">{</span>  ConsoleLogger{}  <span  class="brace1">}</span> ;
