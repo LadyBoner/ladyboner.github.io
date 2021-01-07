@@ -60,12 +60,15 @@ h1    /*  Title  */
 
 h2    /*  Suppliment-Title  */
 {
-
+  text-shadow: 0.05em 0.05em 0.05em #80C ;
+/*  mix-blend-mode: color-dodge ;*/
 }
 
 h3    /*  Section Titles  */
 {
   padding-left: 0.5em ;
+  text-shadow: 0.05em 0.05em 0.05em #80C ;
+/*  mix-blend-mode: color-burn ;*/
 }
 
 h4, h5    /*  Sub-Headings  */
@@ -103,7 +106,6 @@ dfn
 {
   font-weight: normal ;
   font-size: smaller ;
-  
 }
 
 dd
@@ -124,17 +126,53 @@ pre
   color: black ;
   line-height: 1.4 ;
   font-size: smaller ;
+  font-weight: thin ;
   mix-blend-mode: luminosity ;
   overflow-x: auto ;
 }
 
-label, meter, sup
+q
+{
+  font-size: smaller ;
+  text-shadow: 0.05em 0.05em 0.3em #A0F ;
+}
+
+small
+{
+  font-size: small ;
+}
+
+sup
+{
+  font-size: small ;
+  text-shadow: 0.1em 0.1em 0.1em #808 ;
+}
+
+kbd
+{
+  font-size: smaller ;
+  text-shadow: 0.05em 0.05em 0.1em #808 ;
+}
+
+label, meter
 {
   font-size: smaller ;
 }
 
 
 
+
+.define
+{
+  color: #335 ;
+  font-weight: bold ;
+}
+
+.func
+{
+  font-size: larger ;
+  font-weight: bold ;
+}
 
 .string
 {
