@@ -37,23 +37,21 @@
   <p>Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following:</p>
 	
   <ol>
-    <li>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interrupts will be excused.)</li>
-    <br>
-    <li>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup>*</sup></small>, or a <dfn>DNE</dfn> (Does Not Exist) indicator for a 0-divisor incidence.
-<br><small><sup>*</sup>Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></li>
-    <br>
-    <li>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</li>
-    <br>
-    <li>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.
-<ul><li>Not necessary to handle positive/negative notation from the user's inputs.</li></ul></li>
-    <br>
-    <li>Limit user's inputs to forming only equations the program is capable of calculating.
-<ul><li>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</li><li>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</li></ul></li>
-    <br>
-    <li>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).</li>
-    <br>
-    <li><small>(Skipped for expedition.)</small>
-<s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.</s></li>
+    <li><p>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interrupts will be excused.)</p></li>
+    
+    <li><p>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup>*</sup></small>, or a <dfn>DNE</dfn> (Does Not Exist) indicator for a 0-divisor incidence.
+  <small><sup>*</sup>Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></p></li>
+    
+    <li><p>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</p></li>
+    
+    <li><p>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.</p><ul><li>Not necessary to handle positive/negative notation from the user's inputs.</li></ul></li>
+    
+    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p><ul><li>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</li><li>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</li></ul></li>
+    
+    <li><p>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).</p></li>
+    
+    <li><p><small>(Skipped for expedition.)</small>  &nbsp;&nbsp;
+<s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.</s></p></li>
   </ol>
 
 
@@ -73,8 +71,9 @@
   <dl>
     <dt><dfn>Object-Oriented Design</dfn></dt>
     <dd>Everything is an object because mapping real-world objects is intuitive.  Many of the buzzwords swarming around OOD include: modularity, encapsulation, abstraction, inheritance, polymorphism, and factories/managers.  All for the purpose of achieving code re-usability.</dd>
-    <br>
+  </dl>
 
+  <dl>
     <dt><dfn>Functional</dfn></dt>
     <dd>All functions are pure!  There is no state.  The buzzword associated with this paradigm is "immutability".  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have globals.</dd>
   </dl>
