@@ -1,7 +1,7 @@
 @media  only (prefers-color-scheme: dark)
 {
 
-  body
+  body, p
   {
     background-color: #111  !important ;
     color: #BBB  !important ;
@@ -9,30 +9,14 @@
 }
 
 
-body
+body, p
 {
   background-color: white ;
   color: black ;
 }
 
 
-/*@media  only (prefers-color-scheme: light)*/
-/*{*/
 
-/*  body, p*/
-/*  {*/
-/*    background-color: white ;*/
-/*    color: black ;*/
-/*  }*/
-/*}*/
-
-
-
-
-/**  {*/
-/*  font-size: inherit ;*/
-/*  font-weight: inherit ;*/
-/*}*/
 
 html
 {
@@ -102,7 +86,7 @@ strong
 
 p
 {
-  color: initial ;
+/*  color: initial ;*/
   line-height: 1.4 ;
   font-size: normal ;
   font-weight: lighter ;
@@ -118,18 +102,16 @@ ol
   font-weight: bold ;
 }
 
-ul
+ol>li>ul>li
 {
   margin-top: -1em ;
 /*  font-weight: lighter ;*/
-  color: initial ;
-  white-space: initial ;
 }
 
 li
 {
   font-weight: lighter ;
-  white-space: pre-wrap ;
+/*  white-space: pre-wrap ;*/
 }
 
 
@@ -218,6 +200,14 @@ label, meter
 .string
 {
   color: #353 ;
+}
+
+
+.comment_open,  .comment_close
+{
+  color: #533 ;
+  font-style: oblique ;
+  font-size: xx-small ;
 }
 
 .comment
