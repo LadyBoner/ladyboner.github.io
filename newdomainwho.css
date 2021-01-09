@@ -3,24 +3,36 @@
 
   body
   {
-    background-color: #111 ;
-    color: #BBB ;
+    background-color: #111  !important ;
+    color: #BBB  !important ;
   }
 }
 
 
-@media  only (prefers-color-scheme: light)
+body
 {
-
-  body
-  {
-    background-color: white ;
-    color: black ;
-  }
+  background-color: white ;
+  color: black ;
 }
 
 
+/*@media  only (prefers-color-scheme: light)*/
+/*{*/
 
+/*  body, p*/
+/*  {*/
+/*    background-color: white ;*/
+/*    color: black ;*/
+/*  }*/
+/*}*/
+
+
+
+
+/**  {*/
+/*  font-size: inherit ;*/
+/*  font-weight: inherit ;*/
+/*}*/
 
 html
 {
@@ -38,8 +50,6 @@ body
 /*  min-height: 100% ;*/
   font-family: sans-serif ;
   font-weight: lighter ;
-/*  background-color: #111 ;*/
-/*    color: #BBB ;*/
 }
 
 main  {
@@ -73,7 +83,7 @@ h3    /*  Section Titles  */
 
 h4, h5    /*  Sub-Headings  */
 {
-  color: #707 ;
+  color: #808 ;
 }
 
 h6    /*  Footer Headings  */
@@ -92,9 +102,36 @@ strong
 
 p
 {
+  color: initial ;
   line-height: 1.4 ;
+  font-size: normal ;
+  font-weight: lighter ;
+  text-shadow: none ;
   white-space: pre-wrap ;
 }
+
+
+ol
+{
+  color: #808 ;
+/*  font-size: smaller ;*/
+  font-weight: bold ;
+}
+
+ul
+{
+  margin-top: -1em ;
+/*  font-weight: lighter ;*/
+  color: initial ;
+  white-space: initial ;
+}
+
+li
+{
+  font-weight: lighter ;
+  white-space: pre-wrap ;
+}
+
 
 dl
 {
@@ -114,10 +151,6 @@ dd
   white-space: pre-wrap ;
 }
 
-li
-{
-  white-space: pre-wrap ;
-}
 
 pre
 {
@@ -127,9 +160,10 @@ pre
   line-height: 1.4 ;
   font-size: smaller ;
   font-weight: thin ;
-  mix-blend-mode: luminosity ;
+/*  mix-blend-mode: luminosity ;*/
   overflow-x: auto ;
 }
+
 
 q
 {
@@ -137,14 +171,21 @@ q
   text-shadow: 0.05em 0.05em 0.3em #A0F ;
 }
 
+s
+{
+  font-weight: lighter ;
+}
+
 small
 {
-  font-size: small ;
+/*  font-size: small ;*/
+  font-weight: lighter ;
 }
 
 sup
 {
   font-size: small ;
+  font-weight: lighter ;
   text-shadow: 0.1em 0.1em 0.1em #808 ;
 }
 
