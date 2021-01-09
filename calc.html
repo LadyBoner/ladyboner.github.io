@@ -44,9 +44,9 @@
     
     <li><p>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</p></li>
     
-    <li><p>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.</p><ul><li>Not necessary to handle positive/negative notation from the user's inputs.</li></ul></li>
+    <li><p>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.</p><ul><li><p>Not necessary to handle positive/negative notation from the user's inputs.</p></li></ul></li>
     
-    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p><ul><li>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</li><li>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</li></ul></li>
+    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p><ul><li><p>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</p></li><li><p>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</p></li></ul></li>
     
     <li><p>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).</p></li>
     
@@ -101,13 +101,11 @@
 
 </section>
 
-
-</main>
-
+<br>
 
 <pre>
-<span  class="comment">/*  Base class  */</span>
-    struct  <span  class="define">Logger</span>
+<span  class="comment_open">/*</span><span  class="comment">  Base class  </span><span  class="comment_close">*/</span>
+struct  <span  class="define">Logger</span>
     {
       virtual void  LogMessage(  char const*  message  )  = 0 ;
       virtual  ~Logger()  = default ;
@@ -116,15 +114,15 @@
 
 
 struct  <span  class="define">NVILogger</span>
-    <span  class="comment">/*  Do this base.  */</span>
-    <span  class="comment">/*  Not the previous base (Logger).  */</span>
+    <span  class="comment_open">/*</span><span  class="comment">  Do this base.  </span><span  class="comment_close">*/</span>
+    <span  class="comment_open">/*</span><span  class="comment">  Not the previous base (Logger).  </span><span  class="comment_close">*/</span>
 {
   
     void LogMessage(  char const*  message  )
       {
-          <span  class="comment">/*  Do prep.  */</span>
+          <span  class="comment_open">/*</span><span  class="comment">  Do prep.  </span><span  class="comment_close">*/</span>
         DoLogMessage(  message  ) ;
-          <span  class="comment">/*  Do finish.  */</span>
+          <span  class="comment_open">/*</span><span  class="comment">  Do finish.  </span><span  class="comment_close">*/</span>
       }
     virtual  ~Logger()  = default ;
   
@@ -135,7 +133,7 @@ struct  <span  class="define">NVILogger</span>
 
 
 
-<span  class="comment">/*  Implementations  */</span>
+<span  class="comment_open">/*</span><span  class="comment">  Implementations  </span><span  class="comment_close">*/</span>
 
 struct  <span  class="define">ConsoleLogger</span>  final :  Logger
 {
@@ -166,7 +164,7 @@ struct  <span  class="define">StatusDisplay</span>  final :  Logger
 {
   virtual void  LogMessage(  char const*  message  )  override
   {
-    <span  class="comment">/*  Show message as a current status on LCD  */</span>
+    <span  class="comment_open">/*</span><span  class="comment">  Show message as a current status on LCD  </span><span  class="comment_close">*/</span>
   }
 }
 
@@ -183,7 +181,7 @@ struct  <span  class="define">SurpriseLogger</span>  final :  Logger
 
 
 
-<span  class="comment">/*  Client code  */</span>
+<span  class="comment_open">/*</span><span  class="comment">  Client code  </span><span  class="comment_close">*/</span>
 
 int  <span  class="func">main</span>()
 {
@@ -193,8 +191,8 @@ int  <span  class="func">main</span>()
   Logger*  logger_ptr{  logger.get()  } ;
   
   logger_ptr -> LogMessage(  "<span  class="string">Hello, World!</span>"  ) ;
-    <span  class="comment">/*  static(compile-time) type is Logger*  */</span>
-    <span  class="comment">/*  dynamic(runtime) type is ConsoleLogger*  */</span>
+    <span  class="comment_open">/*</span><span  class="comment">  static(compile-time) type is Logger*  </span><span  class="comment_close">*/</span>
+    <span  class="comment_open">/*</span><span  class="comment">  dynamic(runtime) type is ConsoleLogger*  </span><span  class="comment_close">*/</span>
 }
 
 
@@ -232,6 +230,7 @@ int  <span  class="func">main</span>()
 </pre>
 
 
+</main>
 
 
 <footer>
