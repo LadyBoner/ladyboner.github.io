@@ -1,43 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
+
+
 @media  only (prefers-color-scheme: dark)
 {
 
   body, p
   {
     background-color: #111  !important ;
-    color: #BBB  !important ;
+    color: #CCC  !important ;
+    --dark_highlight: #C8C ;
   }
 }
 
 
 body, p
 {
-  background-color: white ;
-  color: black ;
+    background-color: white ;
+    color: black ;
 }
 
 
 
+:root
+{
+  --sans: 'Quicksand Light' ,  'Quicksand' ,  'Roboto' ,  sans-serif ;
+  --serif: 'Montaga' ,  var( --sans ) ;
+  --monospace: 'Nimbus Mono L' , 'FreeMono' , 'Source Code Pro' ,  monospace ;
+  --highlight: var( --dark_highlight ,  black ) ;
+
+}
+
+
+
+*
+{
+  outline: none ;
+}
 
 html
 {
-/*  padding: 0px ;*/
-/*  margin: 0px ;*/
-  min-height: 100% ;
+  padding: 0px ;
+  margin: 0px ;
+  min-height: 100vh ;
   overflow-x: hidden ;    /*  Scrollbar  */
 }
 
 body
 {
-  margin-top: 0px ;
-  margin-bottom: 0px ;
+  padding: 0px ;
+  margin: 0px ;
   max-width: 40em ;
-/*  min-height: 100% ;*/
-  font-family: sans-serif ;
-  font-weight: lighter ;
+  min-height: 100vh ;
+  font-family: var( --sans ) ;
+  font-weight: 300 ;
 }
 
 main  {
-  min-height: 100% ;
+  padding: 0px 0.4em ;
+  min-height: 80vh ;
 }
 
 
@@ -49,20 +73,31 @@ h1    /*  Title  */
   padding: 1em ;
   background-image: linear-gradient( to bottom right, #203 50%, #F0C ) ;
   color: #DDD ;
+  font-weight: 300 ;
   text-shadow: 0px 0px 0.3em black ;
 }
 
 h2    /*  Suppliment-Title  */
 {
+  padding-left: 2em ;
   text-shadow: 0.05em 0.05em 0.05em #80C ;
-/*  mix-blend-mode: color-dodge ;*/
 }
 
 h3    /*  Section Titles  */
 {
   padding-left: 0.5em ;
   text-shadow: 0.05em 0.05em 0.05em #80C ;
-/*  mix-blend-mode: color-burn ;*/
+}
+
+h2 ,  h3 ,  h4 ,  h5
+{
+  color: var( --highlight ) ;
+}
+
+h4 ,  h5 ,  h6
+{
+  font-family: var( --serif ) ;
+  font-weight: 300 ;
 }
 
 h4, h5    /*  Sub-Headings  */
@@ -78,41 +113,103 @@ h6    /*  Footer Headings  */
 
 
 
-strong
-{
-  color: #888 ;
-  font-weight: normal ;
-}
-
 p
 {
 /*  color: initial ;*/
   line-height: 1.4 ;
   font-size: normal ;
-  font-weight: lighter ;
+  font-weight: 300 ;
   text-shadow: none ;
   white-space: pre-wrap ;
 }
 
+aside
+{
+  padding-left: 6em ;
+  padding-right: 2em ;
+  text-align: right ;
+  font-size: smaller ;
+  font-style: oblique ;
+  white-space: pre-wrap ;
+}
 
-ol
+strong
+{
+  font-weight: 300 ;
+  text-shadow: 0.05em 0.05em 0.05em #A0F ;
+}
+
+q
 {
   color: #808 ;
 /*  font-size: smaller ;*/
+/*  text-shadow: 0.05em 0.05em 0.3em #A0F ;*/
+}
+
+s
+{
+  font-weight: lighter ;
+}
+
+small
+{
+  font-weight: lighter ;
+}
+
+sup
+{
+  font-size: small ;
+  font-weight: lighter ;
+}
+
+kbd
+{
+  color: var( --highlight ) ;
+  font-size: smaller ;
+  vertical-align: middle ;    /*  text-top  */
+  text-shadow: 0.05em 0.05em 0.1em #808 ;
+}
+
+
+
+
+ol>li::marker
+{
+  color: #808 ;
+  font-family: var( --serif ) ;
+  font-size: small ;
   font-weight: bold ;
 }
 
-ol>li>ul>li
+ol>li
 {
-  margin-top: -1em ;
-/*  font-weight: lighter ;*/
+  padding-left: 0.4em ;
 }
 
-li
+
+ul
 {
-  font-weight: lighter ;
-/*  white-space: pre-wrap ;*/
+  list-style-type: circle ;
 }
+
+ul>li::marker
+{
+  color: #A4A ;
+  font-size: smaller ;
+}
+
+ol li ul
+  /*  Calculator Challenge #requirements  */
+{
+  margin-top: -1em ;
+}
+
+li>p:nth-child(2)
+{
+  margin-top: -0.8em ;
+}
+
+
 
 
 dl
@@ -123,7 +220,7 @@ dl
 
 dfn
 {
-  font-weight: normal ;
+  font-weight: 300 ;
   font-size: smaller ;
 }
 
@@ -133,49 +230,35 @@ dd
   white-space: pre-wrap ;
 }
 
-
-pre
+summary
 {
-  padding: 1em ;
-  background-color: rgba(192, 192, 255, 0.6) ;
-  color: black ;
-  line-height: 1.4 ;
-  font-size: smaller ;
-  font-weight: thin ;
-/*  mix-blend-mode: luminosity ;*/
-  overflow-x: auto ;
+  font-family: var( --serif ) ;
+  font-size: larger ;
+  font-weight: normal ;
+  white-space: pre-wrap ;
+}
+
+details>summary
+{
+  padding-left: 0.6em ;
+}
+
+details
+{
+  margin-left: 0.3em ;
+  padding-left: 0.4em ;
+  padding-bottom: 0.4em ;
+  box-shadow: -0.2em 0.3em 0.3em rgba( 128 , 128 , 128 , 0.6 ) ;
+}
+
+details pre
+{
+  margin-left: -0.5em ;
 }
 
 
-q
-{
-  font-size: smaller ;
-  text-shadow: 0.05em 0.05em 0.3em #A0F ;
-}
 
-s
-{
-  font-weight: lighter ;
-}
 
-small
-{
-/*  font-size: small ;*/
-  font-weight: lighter ;
-}
-
-sup
-{
-  font-size: small ;
-  font-weight: lighter ;
-  text-shadow: 0.1em 0.1em 0.1em #808 ;
-}
-
-kbd
-{
-  font-size: smaller ;
-  text-shadow: 0.05em 0.05em 0.1em #808 ;
-}
 
 label, meter
 {
@@ -185,53 +268,180 @@ label, meter
 
 
 
-.define
+.disclaimer
 {
-  color: #335 ;
+  margin-left: 0px ;
+  margin-right: 0px ;
+  padding: 1em 2em ;
+  color: black  !important ;
+  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  rgba(255,255,128,0.85) 8%,  rgba(255,255,128,0.85) 92%,  rgba(0,0,0,0)) ;
+  text-size: smaller ;
+  text-align: center ;
+}
+
+
+
+pre
+{
+  padding: 0.6em ;
+/*  background-color: #DDF ;*/
+  background-color: rgba(215, 205, 255, 0.85) ;
+  color: black ;
+  line-height: 1.4 ;
+  font-family: var( --monospace ) ;
+  font-size: smaller ;
+  font-weight: thin ;
+/*  mix-blend-mode: luminosity ;*/
+  overflow-x: auto ;
+}
+
+pre>.code_line
+{
+  display: inline-block ;
+  width: 100% ;
+}
+
+pre>.code_line:hover ,
+pre>.code_line:active
+{
+  background-color: rgb(215, 205, 255) ;
+}
+
+
+pre>.code_line>.keyword
+{
+  color: #444 ;
+}
+
+pre>.code_line>.define
+{
+  color: #337 ;
+  font-size: larger ;
   font-weight: bold ;
 }
 
-.func
+pre>.code_line>.func
 {
   font-size: larger ;
   font-weight: bold ;
 }
 
-.string
+pre>.code_line>.typedef
 {
-  color: #353 ;
+  color: #606 ;
+}
+
+pre>.code_line>.string
+{
+  color: #880 ;
+}
+
+pre>.code_line>.semi-colon
+{
+/*  color: #3A3 ;*/
+  font-size: smaller ;
+  font-weight: bold ;
+/*  text-shadow: 0px 0px 0.1em #600 ;*/
 }
 
 
-.comment_open,  .comment_close
+pre>.code_line>.comment_open ,  pre>.code_line>.comment_close
 {
-  color: #533 ;
+  color: #666 ;
   font-style: oblique ;
+  font-size: xx-small ;
+  vertical-align: text-top ;    /*  super  */
+  text-shadow: 0px 0px 0.1em #0A0 ;
+}
+
+pre>.code_line>.comment
+{
+  color: #8AC ;
+  font-style: oblique ;
+/*  font-size: larger ;*/
+  text-shadow: 0px 0px 0.05em #0A0 ;
+}
+
+pre>.code_line>.block_brace
+{
+/*  color: #444 ;*/
+  font-size: xx-small ;
+/*  font-weight: bold ;*/
+/*  text-shadow: 0px 0px 0.1em black ;*/
+}
+
+pre>.code_line>.brace
+{
+  font-size: 1.4em ;
+}
+
+pre>.code_line>.cast
+{
+  font-size: smaller ;
+}
+
+
+
+.first_use:link ,
+.first_use:visited ,
+.first_use:hover ,
+.first_use:active
+{
+  visibility: visible ;
+  display: block ;
+  margin: 0px ;
+  padding: 0px;
+  max-width: 100vw ;
+  color: #808 ;
+  font-style: oblique ;
+  text-decoration: underline #000 dotted ;
+  text-align: right ;
   font-size: xx-small ;
 }
 
-.comment
+pre>a.go_to_define:link ,
+pre>a.go_to_define:visited ,
+pre>a.go_to_define:hover ,
+pre>a.go_to_define:active
 {
-  color: #533 ;
+  color: #808 ;
   font-style: oblique ;
-  font-size: larger ;
+  text-decoration: underline #000 dotted ;
 }
 
 
 
 
+
+
+
+.footer
+{
+  margin: 0px ;
+  padding: 0px ;
+/*  margin-top: 2em ;*/
+/*  margin-bottom: 0px ;*/
+  min-height: 2em ;
+  min-width: 100% ;
+  background-color: transparent ;
+  overflow-x: hidden ;    /*  Scrollbar  */
+  overflow-y: hidden ;    /*  Scrollbar  */
+/*  background-image: linear-gradient( 355deg, #505, #203 1.5em ) ;*/
+/*  box-shadow: inset 0px -0.1em 0.1em 0em #808 ;*/
+/*  color: #DDD ;*/
+/*  z-xindex: 100 ;*/
+}
+
 footer
 {
-/*  position: -webkit-sticky ;*/
-/*  position: sticky ;*/
+/*  position: fixed ;*/
 /*  bottom: 0px ;*/
-/*  left: 0 ;*/
-/*  width: 90% ;*/
-  
-  margin-top: 2em ;
-  margin-bottom: 0px ;
-  min-height: 2em ;
+  margin: 0px ;
+  padding: 0px ;
+/*  height: 100% ;*/
   background-image: linear-gradient( 355deg, #505, #203 1.5em ) ;
-  box-shadow: inset 0px -0.1em 0.1em 0em #808 ;
-  color: #DDD ;
+  border-bottom: 2px solid #808 ;
+  overflow-x: hidden ;    /*  Scrollbar  */
+  overflow-y: hidden ;    /*  Scrollbar  */
+/*  z-index: -1 ;*/
 }
