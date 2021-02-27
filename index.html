@@ -7,51 +7,113 @@
   <meta http-equiv="default-style"  content="text/html; charset=UTF-8" />
 
   <meta name="author"       content="Viola T.Whiting" />
-  <meta name="discription"  content="Shitpost to call BS and disprove OOD and Functional." />
+  <meta name="description"  content="Shitpost to call BS and disprove OOD and Functional." />
   <meta name="keywords"     content="coding,comparison,experiment,prove,OOP,confusion,learning,perspective" />
 
-  <title>{ }Demonstrate Your Programming Paradigm Is Even Real</title>
 
   <link rel="stylesheet" href="newdomainwho.css" />
+
+
+<!--  Quicksand  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&display=swap" rel="stylesheet">
+<!--  Montage  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montaga&display=swap" rel="stylesheet">
+<!--  Source Code Pro  -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap" rel="stylesheet">
+
+
+  <title>{ }Calculator Challenge: Demonstrate Your Programming Paradigm Is Even Real</title>
 
 
 </head>
 <body>
 
+  <h1>Demonstrate Your Programming Paradigm Is Even Real</h1>
 
 <main>
 
-  <h1>Demonstrate Your Programming Paradigm Is Even Real</h1>
   <h2>Calculator Challenge</h2>
-  <mark><label  for="status">Status:</label></mark>
-  <meter  id="status" low="2" high="4" max="5" optimum="4" value="1">[<i>drafting</i>]</meter>
 
-  <p>The goal is to have minimal and complete capabilities for the purpose of directly contrasting programming paradigms against the classic intuitive structural/<wbr>imperative paradigm.  Adherence to a paradigm will be highly criticized.  The readability and maintainability of each submission will also be a direct reflection upon the chosen paradigm.</p>
-	
   <br>
-	
-<section>
-	
-  <h3>Requirements</h3>
-	
-  <p>Using a sole paradigm of either true OOD (Java) or pure functions (Haskell), write a complete program (include source code) satisfying the following:</p>
-	
+
+<section  id="opening_narrative">
+
+  <p  class="disclaimer">The following is a dramatization of actual accounts.</p>
+
+  <br>
+
+  <p>The instructor, wearing a hoodie too young for that generation, attests to an intuitive programming paradigm using squares, circles and triangles.  A bias demonstration is given as proof. The mic is dropped, leaving questions on the floor.  The assignment is to write a basic text-based "conversational" server.  Do you know where to fit the squares, circles and triangles?</p>
+
+  <p>Never mind.</p>
+
+  <p>Years later these squares, circles and triangles have yet to be a nuisance.  It is all about best practices.  Clear, logical, categorized rationalizations.  Then, word on the street is that there is a new paradigm revolution on the rise.  In a mouse-infested lair under the city sidewalk, suitable for some teen-aged turtles, an obvious Mr. Robot imitator tells of purity using esoteric patterns.  Programs so pure there is no state!</p>
+
+  <p>Let's talk about the Emperor's clothes.  Convince and create practitioners of your paradigm.</p>
+
+</section>
+
+  <br>
+
+<section  id="requirements">
+
+  <h3>The Challenge</h3>
+
+  <aside><q>Put your code where your fucking mouth is.</q></aside>
+
+  <p>Using a sole paradigm of either true OOD <small>(Java)</small> or pure functions <small>(Haskell)</small>, write a complete program <small>(include source code)</small> satisfying the following:</p>
+
   <ol>
-    <li><p>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library only!  (Signal interrupts will be excused.)</p></li>
-    
-    <li><p>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup>*</sup></small>, or a <dfn>DNE</dfn> (Does Not Exist) indicator for a 0-divisor incidence.
-  <small><sup>*</sup>Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></p></li>
-    
+    <li><p>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library and system calls only!  <small>(Because those are the boundaries of a language's runtime.)</small></p>
+      <ul>
+        <li>
+          <small>Compile on at least Linux.</small>
+        </li>
+        <li>
+          <small>Signal interrupts will be excused.</small>
+        </li>
+        <li>
+          <small>Copyright infringement will be ignored.</small>
+        </li>
+      </ul>
+    </li>
+
+    <li><p>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup><strong>*</strong></sup></small>, or a <dfn>DNE</dfn> <small>(Does Not Exist)</small> or <dfn>NaN</dfn> <small>(Not a Number)</small> indicator for a 0-divisor incidence.</p>
+  <p>  <small><sup><strong>*</strong></sup> Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></p></li>
+
     <li><p>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</p></li>
-    
-    <li><p>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.</p><ul><li><p>Not necessary to handle positive/negative notation from the user's inputs.</p></li></ul></li>
-    
-    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p><ul><li><p>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</p></li><li><p>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</p></li></ul></li>
-    
+
+    <li><p>Capabilities must include many uses (at least four) of each: nested parentheses, divisors <wbr>( <kbd>/</kbd> )<wbr>, additions <wbr>( <kbd>+</kbd> )<wbr>, and decimal numbers.</p>
+      <ul>
+        <li>
+          <small>Not necessary to handle positive/negative notation from the user's inputs.</small>
+        </li>
+      </ul>
+    </li>
+
+    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p>
+      <ul>
+        <li>
+          <small>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</small>
+        </li>
+        <li>
+          <small>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</small>
+        </li>
+      </ul>
+    </li>
+
     <li><p>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press (equation calculation) if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> ).</p></li>
-    
+
     <li><p><small>(Skipped for expedition.)</small>  &nbsp;&nbsp;
-<s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup, then continuing on a new line for a new equation.  Just the same as done with an interactive user, as described above (code re-use).  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, aborted.  Ignore <kbd>spaces</kbd> from the command line/shell.</s></p></li>
+<small><s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup.  Then continue, just the same as done with an interactive user, as described above.  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, then continue.</s></small></p>
+      <ul>
+        <li>
+          <small><s>Ignore <kbd>spaces</kbd> from the command line/shell.</s></small>
+        </li>
+      </ul>
+    </li>
   </ol>
 
 
@@ -59,181 +121,102 @@
 
   <br>
 
-<section>
-	
-  <h3>Rationale</h3>
+<section  id="critique">
 
-  <p>Unlike nurses and engineers, programming is not part of a professional (regulatory) body.  As a consequence, much of what one encounters is ambiguity and zealousness contributing to lack of empiricism.  Even the amount of misnomers tossed around in the industry is shameful.  Take these related examples.  If one were to ask what "the cloud" is, the response will never identify it as a synonym for a server.  If one were to ask what "serverless" means, the response will never identify it as a synonym for a server.  Yet, for both scenarios the response will always be to just provide the definition of a server.  Many new ideas are often promoted as though they are the only solution in the sandbox; not building upon previous knowledge and experience by demonstrating the problem they are solving in contrast to the alternatives.  There is much conflicting information as a result of this field being an unprofessional one.  For an idea to be effectively communicated, one must define what it specifically <em>is</em>, and what it specifically <em>is not</em>.  This challenge is to directly confront the conflicting information of, and lack of juxtoposition between, programming paradigms.</p>
-  <p>Popular programming paradigms are among the essential oils and mysticism in the gullible industry.  Only after decades can apologists now be found for object-oriented design, and, at best, functional programmers admitting that discretion should be practiced when making the paradigm choice.  But never is it identified nor demonstrated when either paradigm is appropriate.  As advocates within the field peddle, each of these paradigms are the de-facto solution over the other.  This challenge is introducing a new acronym: <dfn>PYCWYFMI</dfn>, <q>pick wiff me</q> <wbr>&mdash;<small><i>Put-<wbr>Your<wbr>-Code-Where-Your-Fucking<wbr>-<wbr>Mouth<wbr>-Is</i></small>.  It is imperative that submissions adhere to, and are criticized on, the definitions of their corresponding paradigms <strong><em>as they are purveyed.</em></strong></p>
+  <h3>Observations</h3>
 
-  <h4>Colloquial Definitions</h4>
+  <p>The OOD and functional submissions will be contrasted to a structural benchmark of the challenge with best practices written in the C Programming Language, which is specifically <em>not</em> an object-oriented language, and specifically <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its paradigm; <em>not be identical logically</em>, despite language features</p>
 
-  <dl>
-    <dt><dfn>Object-Oriented Design</dfn></dt>
-    <dd>Everything is an object because mapping real-world objects is intuitive.  Many of the buzzwords swarming around OOD include: modularity, encapsulation, abstraction, inheritance, polymorphism, and factories/managers.  All for the purpose of achieving code re-usability.</dd>
-  </dl>
+  <br>
 
-  <dl>
-    <dt><dfn>Functional</dfn></dt>
-    <dd>All functions are pure!  There is no state.  The buzzword associated with this paradigm is "immutability".  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have globals.</dd>
-  </dl>
+  <h4>OOD vs Structured Best Practices</h4>
 
-  <p>Both definitions seem to tout a solution to a problem.  But when one tries to apply either of them to already familiar projects, there are obvious missing pieces and nobody wants to talk about the Emperor's clothes.  Demonstrations of each often contradict or evade the elephant in the room; neglect to answer the follow-up questions by presenting unconprehensive examples.  With all the red herrings, one could think the industry is riddled with imposters, not just the syndrome.  This challenge takes the simplest of possible programs and dares each paradigm to make themselves relevant.</p>
-  <p>The OOD and functional submissions will be contrasted to a structural implementation of the challenge written in the C Programming Language, which is specifically <em>not</em> an object-oriented language, and specifically <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its paradigm; <em>not be identical</em>.  For clarification, a language feature is not a paradigm.  For clarification, a technique or "pattern" is not a paradigm.  A lack of proof-of-concept (submission) for any paradigm, will assume it to be a <em>fraud</em>.</p>
-  <p>An OOD submission will be judged on everything being an object, and no object can simply be the same logic as structural procedures and/or a functions wrapped in a class.  Because that would be a module.  OOD is praised as "intuitive" and re-usable.  Demonstrate it.</p>
-  <p>A functional submission will be judged on its absence of state.  There will be no such thing as <q><em>that doesn't count</em></q>.  Please.  For the love of God.  <strong>Demonstrate this sorcery!</strong></p>
+  <ul>
+    <li>
+      <p><em>Is the same logic able to be implemented in C?  </em></p>
+    <p><small>  A language feature is not a paradigm.  A technique or "pattern" is not a paradigm.</small></p>
+    </li>
+
+    <li>
+      <p><em>Is everything oriented as an object?  </em></p>
+      <p><small>  If everything isn't an instantiated object and <em>relevantly so</em>, it would just be equivalent to refer to the structured benchmark as array-oriented or pointer-oriented.</small></p>
+    </li>
+
+    <li>
+      <p><em>Can everything be re-used?  </em></p>
+      <p><small>  If an object cannot be instantiated more than once within the same process (without being threaded), then what's the difference?</small></p>
+    </li>
+
+    <li>
+      <p><em>Is everything mapped to real-world objects?  </em></p>
+    <p><small>  Every procedure in programming is a verb.  How are nouns used instead?</small></p>
+    </li>
+
+    <li>
+      <p><em>Is anything wrapped in a class and instantiated that is just the same logic as a structured implementation?  </em></p>
+      <p><small>  That is just redundant.</small></p>
+    </li>
+
+    <li>
+      <p><em>Is it more intuitive to write than a structured implementation?</em></p>
+    </li>
+
+    <li>
+      <p><em>Is it more modular?  More encapsulated?  More abstracted?</em></p>
+    </li>
+
+    <li>
+      <p><em>Is there more inheritance?  More polymorphism?</em></p>
+    </li>
+
+    <li>
+      <p><em>Is it best to provide comments?</em></p>
+    </li>
+
+    <li>
+      <p><em>Is it faster to add new features?</em></p>
+    </li>
+  </ul>
+
+  <br>
+
+  <h4>Functional vs Structured Best Practices</h4>
+
+  <ul>
+    <li>
+      <p><em>Is the same logic able to be implemented in C?  </em></p>
+      <p><small>  A language feature is not a paradigm.  A technique or "pattern" is not a paradigm.</small></p>
+    </li>
+
+    <li>
+      <p><em>Is there any state at all?</em></p>
+      <p><small>  It is too easy just to write functions without side-effects.</small></p>
+    </li>
+
+    <li>
+      <p><em>Is there a re-assignment anywhere in the program?  </em></p>
+      <p><small>  That is mutable data.  (I only know about the term "immutable data" from functional programmers.)</small></p>
+    </li>
+
+    <li>
+      <p><em>Is it best to provide comments?</em></p>
+    </li>
+
+    <li>
+      <p><em>Bug found?  </em></p>
+      <p><small>  Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have state.</small></p></li>
+  </ul>
 
 </section>
 
   <br>
 
-<section>
-
-  <h4>To do</h4>
-
-  <ul>
-    <li>Structural C benchmark link</li>
-    <li>Forum for comments link</li>
-    <li>Submissions link</li>
-    <li>Conclusions</li>
-    <li>Relevant links</li>
-  </ul>
-
-</section>
-
-<br>
-
-<pre>
-<span  class="comment_open">/*</span><span  class="comment">  Base class  </span><span  class="comment_close">*/</span>
-struct  <span  class="define">Logger</span>
-    {
-      virtual void  LogMessage(  char const*  message  )  = 0 ;
-      virtual  ~Logger()  = default ;
-    };
-
-
-
-struct  <span  class="define">NVILogger</span>
-    <span  class="comment_open">/*</span><span  class="comment">  Do this base.  </span><span  class="comment_close">*/</span>
-    <span  class="comment_open">/*</span><span  class="comment">  Not the previous base (Logger).  </span><span  class="comment_close">*/</span>
-{
-  
-    void LogMessage(  char const*  message  )
-      {
-          <span  class="comment_open">/*</span><span  class="comment">  Do prep.  </span><span  class="comment_close">*/</span>
-        DoLogMessage(  message  ) ;
-          <span  class="comment_open">/*</span><span  class="comment">  Do finish.  </span><span  class="comment_close">*/</span>
-      }
-    virtual  ~Logger()  = default ;
-  
-  private:
-  
-    virtual void  DoLogMessage(  char const*  message  )  = 0 ;
-}
-
-
-
-<span  class="comment_open">/*</span><span  class="comment">  Implementations  </span><span  class="comment_close">*/</span>
-
-struct  <span  class="define">ConsoleLogger</span>  final :  Logger
-{
-  virtual void  LogMessage(  char const*  message  )  override
-  {
-    std::cout  <<  message  <<  '\n' ;
-  }
-};
-
-
-
-struct  <span  class="define">FileLogger</span>  final :  Logger
-{
-  FileLogger(  char const*  filename  ) :  output_{  filename  }  {}
-  
-  virtual void  LogMessage(  char const*  message  )  override
-  {
-    output_  <<  message  <<  '\n' ;
-  }
-  
-  private:
-    std::ofstream  output_ ;
-}
-
-
-
-struct  <span  class="define">StatusDisplay</span>  final :  Logger
-{
-  virtual void  LogMessage(  char const*  message  )  override
-  {
-    <span  class="comment_open">/*</span><span  class="comment">  Show message as a current status on LCD  </span><span  class="comment_close">*/</span>
-  }
-}
-
-
-
-struct  <span  class="define">SurpriseLogger</span>  final :  Logger
-{
-  virtual void  LogMessage(  char const*  message  )  override
-  {
-    std::exit(  EXIT_FAILURE  ) ;
-  }
-};
-
-
-
-
-<span  class="comment_open">/*</span><span  class="comment">  Client code  </span><span  class="comment_close">*/</span>
-
-int  <span  class="func">main</span>()
-{
-  
-  auto  logger{  std::make_unique<ConsoleLogger>()  } ;
-  
-  Logger*  logger_ptr{  logger.get()  } ;
-  
-  logger_ptr -> LogMessage(  "<span  class="string">Hello, World!</span>"  ) ;
-    <span  class="comment_open">/*</span><span  class="comment">  static(compile-time) type is Logger*  </span><span  class="comment_close">*/</span>
-    <span  class="comment_open">/*</span><span  class="comment">  dynamic(runtime) type is ConsoleLogger*  </span><span  class="comment_close">*/</span>
-}
-
-
-
-void  <span  class="func">LogHelloWorld</span>(  Logger&  logger  )
-{
-  
-  logger.LogMessage(  "<span  class="string">Hello, World!</span>"  ) ;
-}
-
-
-
-int  <span  class="func">main</span>()
-{
-  
-  auto  logger<span  class="brace1">{</span>  std::make_unique<ConsoleLogger>  <span  class="brace1">}</span> ;
-  
-  LogHelloWorld<span  class="paren1">(</span>  *logger  <span  class="paren1">)</span> ;
-  LogHelloWorld<span  class="paren1">(</span>  *static_cast<Logger><span  class="paren2">(</span>  logger.get()  <span  class="paren2">)</span><span  class="paren1">)</span> ;
-}
-
-
-
-int  <span  class="func">main</span>()
-{
-  
-  auto  cl<span  class="brace1">{</span>  ConsoleLogger{}  <span  class="brace1">}</span> ;
-  auto  fl<span  class="brace1">{</span>  FileLogger<span  class="brace2">{</span>  "<span  class="string">logfile.txt</span>"  <span  class="brace2">}</span><span  class="brace1">}</span> ;
-  
-  LogHelloWorld<span  class="paren1">(</span>  cl  <span  class="paren1">)</span> ;
-  LogHelloWorld<span  class="paren1">(</span>  fl  <span  class="paren1">)</span> ;
-  
-  return  EXIT_SUCCESS ;
-}
-</pre>
-
-
 </main>
 
+  <br>
 
 <footer>
+  <object  name="footer"  data="footer.html"  type="text/html"></object>
 </footer>
 
 
