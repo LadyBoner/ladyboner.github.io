@@ -176,8 +176,8 @@ kbd
 ol>li::marker
 {
   color: #808 ;
-  font-family: var( --serif ) ;
-  font-size: small ;
+/*  font-family: var( --serif ) ;*/
+/*  font-size: small ;*/
   font-weight: bold ;
 }
 
@@ -190,6 +190,7 @@ ol>li
 ul
 {
   list-style-type: circle ;
+  padding-left: 1.2em ;
 }
 
 ul>li::marker
@@ -204,9 +205,10 @@ ol li ul
   margin-top: -1em ;
 }
 
-li>p:nth-child(2)
+li>p:nth-child( 2 )
 {
-  margin-top: -0.8em ;
+  margin-top: -1em ;
+  padding-left: 0.6em ;
 }
 
 
@@ -222,6 +224,7 @@ dfn
 {
   font-weight: 300 ;
   font-size: smaller ;
+  vertical-align: text-top ;
 }
 
 dd
