@@ -11,6 +11,7 @@
   <meta  name="robots"    content="noarchive">
 
   <link  title="Viola_Style"  rel="stylesheet"  href="newdomainwho.css">
+<!--  <script  src="newdomainwho.js"  defer></script>-->
 
 
 <!--  Font:  Quicksand  -->
@@ -29,8 +30,8 @@
   <title>{ }Calculator Challenge: Demonstrate Your Programming Paradigm Is Even Real</title>
 
   <meta  name="author"       content="Viola T.Whiting" />
-  <meta  name="description"  content="Software development is an unprofessional, unregulated industry riddled with misnomers.  Prove OO design or functional in contrast to structured best practices.">
-  <meta  name="keywords"     content="practice,comparison,experiment,OOP,confusion,learning,perspective,imperative,procedural,industry,knowledge,solution,juxtaposition,apologists,critique,contradict,example,clarification,fraud,judged">
+  <meta  name="description"  content="Software development is an unprofessional, unregulated industry riddled with misnomers.  Oh well.  Here's a coding style you've never seen before!">  <!--  Prove OO design or functional in contrast to structured best practices.  -->
+  <meta  name="keywords"     content="practice, comparison, experiment, OOP, confusion, learning, perspective, imperative, procedural, industry, knowledge, solution, juxtaposition, apologists, critique, contradict, example, clarification, fraud, judge, coding, style, format, humor">
 
 
 </head>
@@ -39,6 +40,8 @@
   <h1>Demonstrate Your Programming Paradigm Is Even Real</h1>
 
 <main>
+
+  <aside  class="updated"><small>Updated <time  datetime="2021-03">2021-03</time></small></aside>
 
   <h2>Calculator Challenge</h2>
 
@@ -58,7 +61,9 @@
 
   <p>Years later these squares, circles and triangles have yet to be a nuisance.  It is all about best practices.  Clear, logical, categorized rationalizations.  Then, word on the street is that there is a new paradigm revolution on the rise.  In a mouse&ndash;infested lair under the city sidewalk, suitable for some teen-aged turtles, an obvious Mr. Robot imitator tells of purity using esoteric patterns.  Programs so pure there is no state!</p>
 
-  <p>Balderdash!</p>
+  <p><strong>Balderdash.</strong></p>
+
+<!--  <p>Software development is an unprofessional and unregulated industry.  This cannot be the same <dfn>STEM</dfn> field as the women who got the United States into space and beyond Earth.  This amount of smoke and mirrors is what one can expect from conservative news media and religious zealots.  In fact, one does not have to scroll too much deeper into the answers of Stack Overflow before it becomes obvious how an accidental pregnancy with one's own cousin is even a thing.</p>  -->
 
   <p>Let's talk about the Emperor's clothes.  Convince and create practitioners of your paradigm.  Demonstrate this sorcery!</p>
 
@@ -72,152 +77,183 @@
 
   <aside><q>Put your code where your fucking mouth is.</q></aside>
 
-  <p>Using a sole paradigm of either true OOD <small>(Java)</small> or pure functions <small>(Haskell)</small>, write a complete program <small>(include source code)</small> satisfying the following:</p>
+  <br>
 
-  <ol>
-    <li><p>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library and system calls only!  <small>(Because those are the boundaries of a language's runtime.)</small></p>
-      <ul>
-        <li>
-          <small>Compile on at least GNU/Linux.</small>
-        </li>
-        <li>
-          <small>Signal interrupts will be excused.</small>
-        </li>
-        <li>
-          <small>Copyright infringement will be ignored.</small>
-        </li>
-      </ul>
-    </li>
+  <details>
+    <summary>Requirements</summary>
 
-    <li><p>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup><strong>*</strong></sup></small>, or a <dfn>DNE</dfn> <small>(Does Not Exist)</small> or <dfn>NaN</dfn> <small>(Not a Number)</small> indicator for a 0-divisor incidence.</p>
-  <p>  <small><sup><strong>*</strong></sup> Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></p></li>
+    <p>Using a sole paradigm of either true OOD <small>(Java)</small> or pure functions <small>(Haskell)</small>, write a <em>complete</em> program <small>(include source code)</small> satisfying the following:</p>
 
-    <li><p>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</p></li>
+    <ol>
+      <li><p>Unbreakable, self-contained executable for use within a terminal.  No additional installation of any kind required to run your program.  Standard library and system calls only!  <small>(Because those are the boundaries of a language's runtime.)</small></p>
+        <ul>
+          <li>
+            <small>Compile on at least GNU/Linux.</small>
+          </li>
+          <li>
+            <small>Signal interrupts will be excused.</small>
+          </li>
+          <li>
+            <small>Copyright infringement will be ignored.</small>
+          </li>
+        </ul>
+      </li>
 
-    <li><p>Capabilities must include many uses <small>(at least four)</small> of each: nested parentheses, divisors <wbr><small>( <kbd>/</kbd> )</small><wbr>, additions <wbr><small>( <kbd>+</kbd> )</small><wbr>, and decimal numbers.</p>
-      <ul>
-        <li>
-          <small>Not necessary to handle positive/negative notation from the user's inputs.</small>
-        </li>
-      </ul>
-    </li>
+      <li><p>Accept typed input from the user to acquire a mathematical equation for the program to calculate upon the user pressing <kbd>ENTER</kbd>.  Must always compute a numerical answer to the user's equation and be mathematically correct<small><sup><strong>*</strong></sup></small>, or a <dfn>DNE</dfn> <small>(Does Not Exist)</small> or <dfn>NaN</dfn> <small>(Not a Number)</small> indicator for a 0-divisor incidence.</p>
+    <p>  <small><sup><strong>*</strong></sup> Not concerned about integer overflow and float round-offs.  Just do not break otherwise!</small></p></li>
 
-    <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p>
-      <ul>
-        <li>
-          <small>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</small>
-        </li>
-        <li>
-          <small>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</small>
-        </li>
-      </ul>
-    </li>
+      <li><p>On a new line each, repeat accepting inputted equations from the user and computing them upon the user pressing <kbd>ENTER</kbd> until the user hits <kbd>ESC</kbd> <em>at any point</em> to terminate program.</p></li>
 
-    <li><p>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press <small>(equation calculation)</small> if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr><small>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> )</small>.</p></li>
+      <li><p>Capabilities must include many uses <small>(at least four)</small> of each: nested parentheses, divisors <wbr><small>( <kbd>/</kbd> )</small><wbr>, additions <wbr><small>( <kbd>+</kbd> )</small><wbr>, and decimal numbers.</p>
+        <ul>
+          <li>
+            <small>Not necessary to handle positive/negative notation from the user's inputs.</small>
+          </li>
+        </ul>
+      </li>
 
-    <li><p><small>(Skipped for expedition.)</small>  &nbsp;&nbsp;
-<small><s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup.  Then continue, just the same as done with an interactive user, as described above.  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, then continue.</s></small></p>
-      <ul>
-        <li>
-          <small><s>Ignore <kbd>spaces</kbd> from the command line/shell.</s></small>
-        </li>
-      </ul>
-    </li>
-  </ol>
+      <li><p>Limit user's inputs to forming only equations the program is capable of calculating.</p>
+        <ul>
+          <li>
+            <small>Handling of excess opening/closing parentheses or empty parentheses from the user is your choice, not relevant.</small>
+          </li>
+          <li>
+            <small>Also not concerned about use of <kbd>BACKSPACE</kbd> from the user.</small>
+          </li>
+        </ul>
+      </li>
 
+      <li><p>Program will always be able to continue functioning, no dead-ends.  Only ignore a pre-mature <kbd>ENTER</kbd> press <small>(equation calculation)</small> if still requiring/waiting for the user's equation to be properly inputted.  For example: still needing a numerical input to follow an "operator" input <wbr><small>( <kbd>/</kbd> <wbr>or<wbr> <kbd>+</kbd> )</small>.</p></li>
 
-</section>
+      <li><p><small>(Skipped for expedition.)</small>  &nbsp;&nbsp;
+  <small><s>Parse from the command line/shell.  Validate the inputted equation and provide the correct mathematical answer at startup.  Then continue, just the same as done with an interactive user, as described above.  In addition to numerical or <dfn>DNE</dfn> answers, this step is allowed to indicate an invalid equation was provided, then continue.</s></small></p>
+        <ul>
+          <li>
+            <small><s>Ignore <kbd>spaces</kbd> from the command line/shell.</s></small>
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+    <br>
+    <div  hidden  class="close_details"></div>
+
+  </details>
 
   <br>
 
-<section  id="evaluation">
+  <details>
+    <summary>Evaluation</summary>
 
-  <h3>Evaluation</h3>
+    <p>The OOD and functional submissions will be contrasted to an imperative/structured benchmark of the challenge with best practices written in the C Programming Language, which is specifically <em>not</em> an object-oriented language, and specifically <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its <strong>paradigm</strong>; <em>not be identical logically</em>&mdash;despite language features!</p>
 
-  <p>The OOD and functional submissions will be contrasted to a structural benchmark of the challenge with best practices written in the C Programming Language, which is specifically <em>not</em> an object-oriented language, and specifically <em>not</em> a functional language.  It is reasonable to expect that the architectures of all the implementations will be contorted to that of its <strong>paradigm</strong>; <em>not be identical logically</em>&mdash;despite language features!</p>
+    <p>The submissions will be critiqued on their adherence to their paradigm <em><strong>as they are purveyed</strong></em>.  <small>(Never mind that <em>only now</em> can apologists be found back-tracking on notions.)</small></p>
 
-  <br>
+    <br>
 
-  <h4>OOD vs Structured Best Practices</h4>
+    <h4>OOD vs Structured Best Practices</h4>
 
-  <ul>
-    <li>
-      <p><em>Can the same logic be implemented in C?</em></p>
-    <p><small>A language feature is not a paradigm.  A technique or <em>pattern</em> is not a paradigm.</small></p>
-    </li>
-
-    <li>
-      <p><em>Is everything oriented as an object?</em></p>
-      <p><small>If everything isn't an instantiated object and <em>relevantly so</em>, it would just be equivalent to refer to the structured benchmark as array-oriented or pointer-oriented.  (Nobody says that.)</small></p>
-    </li>
-
-    <li>
-      <p><em>Can everything be re-used?</em></p>
-      <p><small>If an object cannot be instantiated more than once within the same process (without being threaded), then what's the difference?</small></p>
-    </li>
-
-    <li>
-      <p><em>Is everything mapped to real-world objects?</em></p>
-    <p><small>Every procedure in programming is a <em>verb</em>.  How are <em>nouns</em> leveraged instead?</small></p>
-    </li>
-
-    <li>
-      <p><em>Is anything wrapped in a class and instantiated that is just the same logic as a structured implementation?</em></p>
-      <p><small>That is just redundant.  If it's the whole file, this is just trying to be a module.</small></p>
-    </li>
-
-    <li>
-      <p><em>Is it more intuitive to write than a structured implementation?</em></p>
-    </li>
-
-    <li>
-      <p><em>Is it more modular?  More encapsulated?  More abstracted?</em></p>
-    </li>
-
-    <li>
-      <p><em>Is there more inheritance?  More polymorphism?</em></p>
-    </li>
-
-    <li>
-      <p><em>Is it best to provide comments?</em></p>
-    </li>
-
-    <li>
-      <p><em>Is it faster to add new features and scale?</em></p>
-    </li>
-  </ul>
-
-  <br>
-
-  <h4>Functional vs Structured Best Practices</h4>
-
-  <ul>
-    <li>
-      <p><em>Can the same logic be implemented in C?</em></p>
+    <ul>
+      <li>
+        <p><em>Can the same logic be implemented in C?</em></p>
       <p><small>A language feature is not a paradigm.  A technique or <em>pattern</em> is not a paradigm.</small></p>
-    </li>
+      </li>
 
-    <li>
-      <p><em>Is there any state at all?</em></p>
-      <p><small>It is too easy to just write functions without side-effects.</small></p>
-    </li>
+      <li>
+        <p><em>Is everything oriented as an object?</em></p>
+        <p><small>If everything isn't an instantiated object and <em>relevantly so</em>, it would just be equivalent to refer to the structured benchmark as array-oriented or pointer-oriented.  (Nobody says that!)</small></p>
+      </li>
 
-    <li>
-      <p><em>Is there a re-assignment anywhere in the program?</em></p>
-      <p><small>That is mutable data.  The <em>const</em> qualifier is already a thing.  (I only know about the term <em>immutable data</em> from functional programmers.)</small></p>
-    </li>
+      <li>
+        <p><em>Can everything be re-used?</em></p>
+        <p><small>If an object cannot be instantiated more than once within the same process (without being threaded), then what's the difference?</small></p>
+      </li>
 
-    <li>
-      <p><em>Is it best to provide comments?</em></p>
-    </li>
+      <li>
+        <p><em>Is everything mapped to real-world objects?</em></p>
+      <p><small>Every procedure in programming is a <em>verb</em>.  How are <em>nouns</em> leveraged instead?</small></p>
+      </li>
 
-    <li>
-      <p><em>Bug found?</em></p>
-      <p><small>Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have state.</small></p></li>
-  </ul>
+      <li>
+        <p><em>Is anything wrapped in a class and instantiated that is just the same logic as a structured implementation?</em></p>
+        <p><small>That is just redundant.  If it's the whole file, this is just trying to be a module.</small></p>
+      </li>
+
+      <li>
+        <p><em>Is it more intuitive to write than a structured implementation?</em></p>
+      </li>
+
+      <li>
+        <p><em>Is it more modular?  More encapsulated?  More abstracted?</em></p>
+      </li>
+
+      <li>
+        <p><em>Is there more inheritance?  More polymorphism?</em></p>
+      </li>
+
+      <li>
+        <p><em>Is it best to provide comments?</em></p>
+      </li>
+
+      <li>
+        <p><em>Is it faster to add new features and scale?</em></p>
+      </li>
+    </ul>
+
+    <br>
+
+    <h4>Functional vs Structured Best Practices</h4>
+
+    <ul>
+      <li>
+        <p><em>Can the same logic be implemented in C?</em></p>
+        <p><small>A language feature is not a paradigm.  A technique or <em>pattern</em> is not a paradigm.</small></p>
+      </li>
+
+      <li>
+        <p><em>Is there any state at all?</em></p>
+        <p><small>It is too easy to just write functions without side-effects.</small></p>
+      </li>
+
+      <li>
+        <p><em>Is there a re-assignment anywhere in the program?</em></p>
+        <p><small>That is mutable data.  The <em>const</em> qualifier is already a thing.  (I only know about the term <em>immutable data</em> from functional programmers.)</small></p>
+      </li>
+
+      <li>
+        <p><em>Is it best to provide comments?</em></p>
+      </li>
+
+      <li>
+        <p><em>Bug found?</em></p>
+        <p><small>Debugging is the most costly endeavor and it is far less likely to be necessary if functions cannot have side-effects, and programs do not have state.</small></p></li>
+    </ul>
+
+    <br>
+    <div  hidden  class="close_details"></div>
+
+  </details>
+
+  <br>
 
 </section>
 
+  <br>
+
+<section>
+
+  <h3>C Benchmark</h3>
+
+  <pre>
+
+  </pre>
+
+  <br>
+
+</section>
+
+  <br>
+  <hr>
   <br>
 
 <section>
