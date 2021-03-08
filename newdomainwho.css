@@ -5,33 +5,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;600&display=swap');
 
 
-@media  only (prefers-color-scheme: dark)
-{
 
-  body, p
+@media  only speech
+{
+  hr:efter
   {
-    background-color: #111  !important ;
-    color: #CCC  !important ;
-    --dark_highlight: #C8C ;
+    display: none ;
   }
 }
 
 
-body, p
+@media  only screen and ( min-width:40em )
 {
-    background-color: white ;
-    color: black ;
+
+  body
+  {
+    --margin-left: calc( 0.2 * ( 100vw - 40em )) ;
+  }
 }
+
+
+@media  only screen and (prefers-color-scheme: dark)
+{
+
+  body, p
+  {
+    --dark_background_color: #111 ;   /*  #111  */
+    --dark_text_color: #CCC ;         /*  #CCC  */
+    --dark_purple: #C8C ;
+  
+    --dark_background_rgb: 17, 17, 17 ;
+    --dark_text_rgb: 204, 204, 204 ;
+  }
+}
+
 
 
 
 :root
 {
+/*  --background_color: rgb(17, 17, 17) ;*/
+/*  --text_color: rgb(204, 204, 204) ;*/
+  --background_color: var( --dark_background_color, white ) ;
+  --text_color: var( --dark_text_color, black ) ;
+  --backgound_rgb: var( --dark_background_rgb, 255, 255, 255 ) ;
+  --text_rgb: var( --dark_text_rgb, 0, 0, 0 ) ;
+
   --sans: 'Quicksand Light' ,  'Quicksand' ,  'Roboto' ,  sans-serif ;
   --serif: 'Montaga' ,  var( --sans ) ;
   --monospace: 'Nimbus Mono L' , 'FreeMono' , 'Source Code Pro' ,  monospace ;
-  --highlight: var( --dark_highlight ,  black ) ;
+  --thick_text_color: var( --dark_purple ,  black ) ;
 
+  --details_rgb: 0, 136, 102 ;
 }
 
 
@@ -53,13 +78,17 @@ body
 {
   padding: 0px ;
   margin: 0px ;
+  margin-left: var( --margin-left , 0px ) ;
   max-width: 40em ;
   min-height: 100vh ;
+  background-color: var( --background_color )  !important ;
+  color: var( --text_color )  !important ;
   font-family: var( --sans ) ;
   font-weight: 300 ;
 }
 
-main  {
+main
+{
   padding: 0px 0.4em ;
   min-height: 80vh ;
 }
@@ -91,7 +120,7 @@ h3    /*  Section Titles  */
 
 h2 ,  h3 ,  h4 ,  h5
 {
-  color: var( --highlight ) ;
+  color: var( --thick_text_color ) ;
 }
 
 h4 ,  h5 ,  h6
@@ -108,6 +137,33 @@ h4, h5    /*  Sub-Headings  */
 h6    /*  Footer Headings  */
 {
   color: white ;
+}
+
+hr
+{
+  height: 2px ;
+  width: 100% ;
+  border: 0px ;
+  border-top: 1px solid ;
+  border-bottom: 1px solid ;
+  border-image: linear-gradient( to right, var( --background_color ), var( --text_color ), var( --text_color ), var( --background_color )) 1;
+  color: black ;
+  font-family: var( --serif ) ;
+  font-size: xx-small ;
+  font-weight: bold ;
+  text-align: center ;
+  text-shadow: 0.05em 0.05em 0.05em #A0F ;
+  overflow: visible ;
+}
+
+hr:after
+{
+  display: inline-block ;
+  position: relative ;
+  content: "V" ;
+  padding: 0.5em ;
+  top: -1em ;
+  background-image: radial-gradient( var( --background_color ), var( --background_color ), rgba(var( --backgound_rgb ),0.0)) ;
 }
 
 
@@ -133,8 +189,14 @@ aside
   white-space: pre-wrap ;
 }
 
+aside>strong
+{
+  color: black ;
+}
+
 strong
 {
+  color: #666 ;
   font-weight: 300 ;
   text-shadow: 0.05em 0.05em 0.05em #A0F ;
 }
@@ -164,7 +226,7 @@ sup
 
 kbd
 {
-  color: var( --highlight ) ;
+  color: var( --thick_text_color ) ;
   font-size: smaller ;
   vertical-align: middle ;    /*  text-top  */
   text-shadow: 0.05em 0.05em 0.1em #808 ;
@@ -241,22 +303,79 @@ summary
   white-space: pre-wrap ;
 }
 
+summary::marker
+{
+  color: rgb( var( --details_rgb ))  ;
+}
+
 details>summary
 {
-  padding-left: 0.6em ;
+  margin-left: -0.4em ;
+  padding-left: 1em ;
+  padding-bottom: 0.3em ;
+}
+
+details>summary:hover
+{
+  border-top-right-radius: 1em ;
+  background-image: linear-gradient( to bottom, rgba(var( --details_rgb ),0.2), var( --background_color ), var( --background_color )) ;
+  font-style: oblique ;
+}
+
+details>summary>strong
+{
+  text-shadow: 0.05em 0.05em 0.05em rgb( var( --details_rgb )) ;
 }
 
 details
 {
   margin-left: 0.3em ;
   padding-left: 0.4em ;
-  padding-bottom: 0.4em ;
+  border-top-right-radius: 1em ;
   box-shadow: -0.2em 0.3em 0.3em rgba( 128 , 128 , 128 , 0.6 ) ;
 }
 
-details pre
+details[open]
+{
+  border-bottom-right-radius: 1em 3em ;
+}
+
+details>div.close_details:last-child
+{
+  visibility: visible ;
+  display: block ;
+  margin-left: -0.4em ;
+  padding: 0.4em 0px ;
+  width: 100% ;
+  border: 0px ;
+  border-top: 1px solid ;
+  border-image: linear-gradient( to right, var( --background_color ), #888, var( --background_color )) 1;
+  font-family: var( --monospace ) ;
+  font-size: small ;
+  text-align: right ;
+  text-shadow: 0.05em 0.05em 0.1em rgb(var( --details_rgb )) ;
+}
+
+details>div.close_details:last-child:after
+{
+  content: "^close  " ;
+  white-space: pre-wrap ;
+}
+
+details>div.close_details:last-child:hover
+{
+  border-bottom-right-radius: 1em 3em ;
+  background-image: linear-gradient( to top, rgba(var( --details_rgb ),0.2), var( --background_color ), var( --background_color )) ;
+  font-style: oblique ;
+}
+
+details>pre:last-child
 {
   margin-left: -0.5em ;
+  margin-bottom: 0px ;
+  padding-bottom: 0px ;
+  border-bottom-right-radius: 0px ;
+  border-bottom-right-radius: 1em 3em ;
 }
 
 
@@ -271,30 +390,36 @@ label, meter
 
 
 
-.disclaimer
+p.disclaimer
 {
   margin-left: 0px ;
   margin-right: 0px ;
   padding: 1em 2em ;
   color: black  !important ;
-  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  rgba(255,255,128,0.85) 8%,  rgba(255,255,128,0.85) 92%,  rgba(0,0,0,0)) ;
+  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  rgba(255,245,128,0.85) 8%,  rgba(255,245,128,0.85) 92%,  rgba(0,0,0,0)) ;
   text-size: smaller ;
   text-align: center ;
+}
+
+p.disclaimer strong
+{
+  color: black ;
 }
 
 
 
 pre
 {
+  margin: 0.1em 0px ;
   padding: 0.6em ;
-/*  background-color: #DDF ;*/
   background-color: rgba(215, 205, 255, 0.85) ;
   color: black ;
+  border-radius: 0.5em 0.5em 0.5em 0px ;
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
   font-size: smaller ;
   font-weight: thin ;
-/*  mix-blend-mode: luminosity ;*/
+  box-shadow: inset -0.2em 0.3em 0.3em rgba( 128, 128, 128, 0.6 ) ;
   overflow-x: auto ;
 }
 
