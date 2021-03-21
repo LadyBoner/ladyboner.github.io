@@ -8,7 +8,7 @@
 
 @media  only speech
 {
-  hr:efter
+  hr:after
   {
     display: none ;
   }
@@ -32,8 +32,8 @@
   {
     --dark_background_color: #111 ;   /*  #111  */
     --dark_text_color: #CCC ;         /*  #CCC  */
-    --dark_purple: #C8C ;
-  
+    --dark_purple: #C9C ;
+
     --dark_background_rgb: 17, 17, 17 ;
     --dark_text_rgb: 204, 204, 204 ;
   }
@@ -44,8 +44,7 @@
 
 :root
 {
-/*  --background_color: rgb(17, 17, 17) ;*/
-/*  --text_color: rgb(204, 204, 204) ;*/
+/*  --background_color: #111 ;  --text_color: #CCC ;  --dark_purple: #C8C ;*/
   --background_color: var( --dark_background_color, white ) ;
   --text_color: var( --dark_text_color, black ) ;
   --backgound_rgb: var( --dark_background_rgb, 255, 255, 255 ) ;
@@ -64,6 +63,10 @@
 *
 {
   outline: none ;
+  font-smooth: none ;
+  -webkit-font-smoothing: none ;
+  -moz-osx-font-smoothing: grayscale ;
+  text-rendering: optimizeSpeed ;
 }
 
 html
@@ -76,9 +79,9 @@ html
 
 body
 {
-  padding: 0px ;
   margin: 0px ;
   margin-left: var( --margin-left , 0px ) ;
+  padding: 0px ;
   max-width: 40em ;
   min-height: 100vh ;
   background-color: var( --background_color )  !important ;
@@ -89,10 +92,18 @@ body
 
 main
 {
-  padding: 0px 0.4em ;
+  margin: 0px ;
+  padding: 0px ;
   min-height: 80vh ;
 }
 
+section
+{
+  padding-top: 0.6em ;
+  padding-bottom: 0.6em ;
+  margin-left: 0.4em ;
+  margin-right: 0.4em ;
+}
 
 
 
@@ -100,7 +111,7 @@ h1    /*  Title  */
 {
   margin-top: 0px ;
   padding: 1em ;
-  background-image: linear-gradient( to bottom right, #203 50%, #F0C ) ;
+  background-image: linear-gradient( to bottom right, #303 50%, #F0C ) ;
   color: #DDD ;
   font-weight: 300 ;
   text-shadow: 0px 0px 0.3em black ;
@@ -109,13 +120,13 @@ h1    /*  Title  */
 h2    /*  Suppliment-Title  */
 {
   padding-left: 2em ;
-  text-shadow: 0.05em 0.05em 0.05em #80C ;
+  text-shadow: 0.05em 0.05em 0.05em #96C ;
 }
 
 h3    /*  Section Titles  */
 {
   padding-left: 0.5em ;
-  text-shadow: 0.05em 0.05em 0.05em #80C ;
+  text-shadow: 0.05em 0.05em 0.05em #96C ;
 }
 
 h2 ,  h3 ,  h4 ,  h5
@@ -143,16 +154,14 @@ hr
 {
   height: 2px ;
   width: 100% ;
-  border: 0px ;
-  border-top: 1px solid ;
-  border-bottom: 1px solid ;
+  border: 1px 0px solid ;
   border-image: linear-gradient( to right, var( --background_color ), var( --text_color ), var( --text_color ), var( --background_color )) 1;
-  color: black ;
+  color: var( --text_color ) ;
   font-family: var( --serif ) ;
   font-size: xx-small ;
   font-weight: bold ;
   text-align: center ;
-  text-shadow: 0.05em 0.05em 0.05em #A0F ;
+  text-shadow: 0.05em 0.05em 0.05em #90F ;
   overflow: visible ;
 }
 
@@ -198,12 +207,12 @@ strong
 {
   color: #666 ;
   font-weight: 300 ;
-  text-shadow: 0.05em 0.05em 0.05em #A0F ;
+  text-shadow: 0.05em 0.05em 0.05em #90F ;
 }
 
 q
 {
-  color: #808 ;
+  color: #909 ;
 /*  font-size: smaller ;*/
 /*  text-shadow: 0.05em 0.05em 0.3em #A0F ;*/
 }
@@ -374,7 +383,6 @@ details>pre:last-child
   margin-left: -0.5em ;
   margin-bottom: 0px ;
   padding-bottom: 0px ;
-  border-bottom-right-radius: 0px ;
   border-bottom-right-radius: 1em 3em ;
 }
 
@@ -443,7 +451,7 @@ pre>.code_line>.keyword
 
 pre>.code_line>.define
 {
-  color: #337 ;
+  color: #336 ;
   font-size: larger ;
   font-weight: bold ;
 }
@@ -461,7 +469,7 @@ pre>.code_line>.typedef
 
 pre>.code_line>.string
 {
-  color: #880 ;
+  color: #990 ;
 }
 
 pre>.code_line>.semi-colon
@@ -479,15 +487,15 @@ pre>.code_line>.comment_open ,  pre>.code_line>.comment_close
   font-style: oblique ;
   font-size: xx-small ;
   vertical-align: text-top ;    /*  super  */
-  text-shadow: 0px 0px 0.1em #0A0 ;
+  text-shadow: 0px 0px 0.1em #090 ;
 }
 
 pre>.code_line>.comment
 {
-  color: #8AC ;
+  color: #69C ;
   font-style: oblique ;
 /*  font-size: larger ;*/
-  text-shadow: 0px 0px 0.05em #0A0 ;
+  text-shadow: 0px 0px 0.05em #090 ;
 }
 
 pre>.code_line>.block_brace
@@ -537,6 +545,14 @@ pre>a.go_to_define:active
   text-decoration: underline #000 dotted ;
 }
 
+
+
+section.throwaway
+{
+  padding-left: 0.4em ;
+  padding-right: 0.4em ;
+  background-image: linear-gradient( to right, rgba(0,128,0,0.1), white ) ;
+}
 
 
 
