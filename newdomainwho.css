@@ -15,12 +15,12 @@
 }
 
 
-@media  only screen and ( min-width:40em )
+@media  only screen and ( min-width:40rem )
 {
 
   body
   {
-    --margin-left: calc( 0.2 * ( 100vw - 40em )) ;
+    --margin-left: calc( 0.2 * ( 100vw - 40rem )) ;
   }
 }
 
@@ -32,7 +32,7 @@
   {
     --dark_background_color: #111 ;   /*  #111  */
     --dark_text_color: #CCC ;         /*  #CCC  */
-    --dark_purple: #C9C ;
+    --dark_purple: #C8C ;
 
     --dark_background_rgb: 17, 17, 17 ;
     --dark_text_rgb: 204, 204, 204 ;
@@ -82,12 +82,12 @@ body
   margin: 0px ;
   margin-left: var( --margin-left , 0px ) ;
   padding: 0px ;
-  max-width: 40em ;
+  max-width: 40rem ;
   min-height: 100vh ;
   background-color: var( --background_color )  !important ;
   color: var( --text_color )  !important ;
   font-family: var( --sans ) ;
-  font-weight: 300 ;
+  font-weight: 400 ;
 }
 
 main
@@ -99,10 +99,10 @@ main
 
 section
 {
-  padding-top: 0.6em ;
-  padding-bottom: 0.6em ;
-  margin-left: 0.4em ;
-  margin-right: 0.4em ;
+  padding-top: 0.6rem ;
+  padding-bottom: 0.6rem ;
+  margin-left: 0.4rem ;
+  margin-right: 0.4rem ;
 }
 
 
@@ -110,23 +110,25 @@ section
 h1    /*  Title  */
 {
   margin-top: 0px ;
-  padding: 1em ;
-  background-image: linear-gradient( to bottom right, #303 50%, #F0C ) ;
-  color: #DDD ;
-  font-weight: 300 ;
-  text-shadow: 0px 0px 0.3em black ;
+  padding: 2rem ;
+  background-image: linear-gradient( to bottom right, #003 10%, #222 50%, #C39 ) ;  /*  ( to bottom right, #203 50%, #F0C )  */
+  color: #DDB ;
+  font-weight: 400 ;
+  text-shadow: 0px 0px 0.3rem black ;
 }
 
 h2    /*  Suppliment-Title  */
 {
-  padding-left: 2em ;
-  text-shadow: 0.05em 0.05em 0.05em #96C ;
+  padding-left: 2rem ;
+  font-weight: 300 ;
+  text-shadow: 0.05rem 0.05rem 0.05rem #C3C ;
 }
 
 h3    /*  Section Titles  */
 {
-  padding-left: 0.5em ;
-  text-shadow: 0.05em 0.05em 0.05em #96C ;
+  padding-left: 0.5rem ;
+  font-weight: 300 ;
+  text-shadow: 0.05rem 0.05rem 0.05rem #C3C ;
 }
 
 h2 ,  h3 ,  h4 ,  h5
@@ -137,12 +139,12 @@ h2 ,  h3 ,  h4 ,  h5
 h4 ,  h5 ,  h6
 {
   font-family: var( --serif ) ;
-  font-weight: 300 ;
+  font-weight: 400 ;
 }
 
 h4, h5    /*  Sub-Headings  */
 {
-  color: #808 ;
+  color: #939 ;
 }
 
 h6    /*  Footer Headings  */
@@ -161,7 +163,7 @@ hr
   font-size: xx-small ;
   font-weight: bold ;
   text-align: center ;
-  text-shadow: 0.05em 0.05em 0.05em #90F ;
+  text-shadow: 0.05rem 0.05rem 0.05rem #A0F ;
   overflow: visible ;
 }
 
@@ -170,8 +172,8 @@ hr:after
   display: inline-block ;
   position: relative ;
   content: "V" ;
-  padding: 0.5em ;
-  top: -1em ;
+  padding: 0.5rem ;
+  top: -1rem ;
   background-image: radial-gradient( var( --background_color ), var( --background_color ), rgba(var( --backgound_rgb ),0.0)) ;
 }
 
@@ -183,15 +185,15 @@ p
 /*  color: initial ;*/
   line-height: 1.6 ;
   font-size: normal ;
-  font-weight: 300 ;
+  font-weight: 400 ;
   text-shadow: none ;
   white-space: pre-wrap ;
 }
 
 aside
 {
-  padding-left: 6em ;
-  padding-right: 2em ;
+  padding-left: 6rem ;
+  padding-right: 2rem ;
   text-align: right ;
   font-size: smaller ;
   font-style: oblique ;
@@ -205,16 +207,22 @@ aside>strong
 
 strong
 {
-  color: #666 ;
-  font-weight: 300 ;
-  text-shadow: 0.05em 0.05em 0.05em #90F ;
+  color: #333 ;
+/*  font-weight: 400 ;*/
+/*  text-shadow: 0.05rem 0.05rem 0.05rem #A0F ;*/
+}
+
+small>sup>strong
+{
+  font-weight: 400 ;
+  text-shadow: 0.05rem 0.05rem 0.05rem #A0F ;
 }
 
 q
 {
-  color: #909 ;
+  color: #936 ;
 /*  font-size: smaller ;*/
-/*  text-shadow: 0.05em 0.05em 0.3em #A0F ;*/
+/*  text-shadow: 0.05rem 0.05rem 0.3rem #A0F ;*/
 }
 
 s
@@ -237,8 +245,9 @@ kbd
 {
   color: var( --thick_text_color ) ;
   font-size: smaller ;
+  font-weight: 300 ;
   vertical-align: middle ;    /*  text-top  */
-  text-shadow: 0.05em 0.05em 0.1em #808 ;
+  text-shadow: 0.05rem 0.05rem 0.1rem #808 ;
 }
 
 
@@ -254,14 +263,14 @@ ol>li::marker
 
 ol>li
 {
-  padding-left: 0.4em ;
+  padding-left: 0.4rem ;
 }
 
 
 ul
 {
   list-style-type: circle ;
-  padding-left: 1.2em ;
+  padding-left: 1.2rem ;
 }
 
 ul>li::marker
@@ -273,13 +282,13 @@ ul>li::marker
 ol li ul
   /*  Calculator Challenge #requirements  */
 {
-  margin-top: -1em ;
+  margin-top: -1rem ;
 }
 
 li>p:nth-child( 2 )
 {
-  margin-top: -1em ;
-  padding-left: 0.6em ;
+  margin-top: -1rem ;
+  padding-left: 0.6rem ;
 }
 
 
@@ -287,74 +296,94 @@ li>p:nth-child( 2 )
 
 dl
 {
-  padding-left: 1em ;
-  padding-right: 1em ;
+  padding-left: 1rem ;
+  padding-right: 1rem ;
 }
 
 dfn
 {
-  font-weight: 300 ;
+  font-weight: 400 ;
   font-size: smaller ;
   vertical-align: text-top ;
 }
 
 dd
 {
-  padding-top: 0.3em ;
+  padding-top: 0.3rem ;
   white-space: pre-wrap ;
 }
 
 summary
 {
   font-family: var( --serif ) ;
-  font-size: larger ;
+/*  font-size: larger ;*/
   font-weight: normal ;
   white-space: pre-wrap ;
 }
 
 summary::marker
 {
-  color: rgb( var( --details_rgb ))  ;
+  color: rgb( var( --details_rgb ))  !important ;
 }
 
 details>summary
 {
-  margin-left: -0.4em ;
-  padding-left: 1em ;
-  padding-bottom: 0.3em ;
+  margin-left: -0.4rem ;
+  padding-left: 1rem ;
+  padding-bottom: 0.3rem ;
 }
 
 details>summary:hover
 {
-  border-top-right-radius: 1em ;
-  background-image: linear-gradient( to bottom, rgba(var( --details_rgb ),0.2), var( --background_color ), var( --background_color )) ;
+/*  border-top-right-radius: 1rem ;*/
+/*  background-image: linear-gradient( to bottom, rgba(var( --details_rgb ),0.2), var( --background_color ), var( --background_color )) ;*/
   font-style: oblique ;
 }
 
 details>summary>strong
 {
-  text-shadow: 0.05em 0.05em 0.05em rgb( var( --details_rgb )) ;
+  text-shadow: 0.05rem 0.05rem 0.05rem rgb( var( --details_rgb )) ;
 }
 
 details
 {
-  margin-left: 0.3em ;
-  padding-left: 0.4em ;
-  border-top-right-radius: 1em ;
-  box-shadow: -0.2em 0.3em 0.3em rgba( 128 , 128 , 128 , 0.6 ) ;
+  padding-top: 0.3rem ;
+  margin-left: 0.3rem ;
+  padding-left: 0.4rem ;
+  border-top-right-radius: 1rem ;
+  box-shadow: -0.2rem 0.3rem 0.3rem rgba( 128 , 128 , 128 , 0.6 ) ;
 }
 
 details[open]
 {
-  border-bottom-right-radius: 1em 3em ;
+  border-top: 1px solid #DDB ;
+/*  border-image: linear-gradient( to right, white, #FFC, #DDB ) 1 ;*/
+  border-bottom-right-radius: 1rem 3rem ;
+}
+
+details[open]>summary:first-child
+{
+  color: #363  ;
+  font-style: oblique ;
+}
+
+details[open]>summary:hover
+{
+  color: black  ;
+/*  font-style: normal ;*/
+}
+
+details[open]>summary:hover::marker
+{
+  color: black  !important ;
 }
 
 details>div.close_details:last-child
 {
   visibility: visible ;
   display: block ;
-  margin-left: -0.4em ;
-  padding: 0.4em 0px ;
+  margin-left: -0.4rem ;
+  padding: 0.4rem 0px ;
   width: 100% ;
   border: 0px ;
   border-top: 1px solid ;
@@ -362,7 +391,7 @@ details>div.close_details:last-child
   font-family: var( --monospace ) ;
   font-size: small ;
   text-align: right ;
-  text-shadow: 0.05em 0.05em 0.1em rgb(var( --details_rgb )) ;
+  text-shadow: 0.05rem 0.05rem 0.1rem rgb(var( --details_rgb )) ;
 }
 
 details>div.close_details:last-child:after
@@ -373,17 +402,17 @@ details>div.close_details:last-child:after
 
 details>div.close_details:last-child:hover
 {
-  border-bottom-right-radius: 1em 3em ;
+  border-bottom-right-radius: 1rem 3rem ;
   background-image: linear-gradient( to top, rgba(var( --details_rgb ),0.2), var( --background_color ), var( --background_color )) ;
   font-style: oblique ;
 }
 
 details>pre:last-child
 {
-  margin-left: -0.5em ;
+  margin-left: -0.5rem ;
   margin-bottom: 0px ;
   padding-bottom: 0px ;
-  border-bottom-right-radius: 1em 3em ;
+  border-bottom-right-radius: 1rem 3rem ;
 }
 
 
@@ -402,32 +431,33 @@ p.disclaimer
 {
   margin-left: 0px ;
   margin-right: 0px ;
-  padding: 1em 2em ;
-  color: black  !important ;
-  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  rgba(255,245,128,0.85) 8%,  rgba(255,245,128,0.85) 92%,  rgba(0,0,0,0)) ;
-  text-size: smaller ;
+  padding: 1rem 2rem ;
+  color: #666  !important ;
+  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  #FFC 8%,  #FFC 92%,  rgba(0,0,0,0)) ;
+  font-size: smaller ;
   text-align: center ;
 }
 
 p.disclaimer strong
 {
-  color: black ;
+  color: inherit ;
+  text-shadow: 0.05rem 0.05rem 0.05rem #93F ;
 }
 
 
 
 pre
 {
-  margin: 0.1em 0px ;
-  padding: 0.6em ;
-  background-color: rgba(215, 205, 255, 0.85) ;
+  margin: 0.1rem 0px ;
+  padding: 0.6rem ;
+  background-color: #DDF ;  /* rgba(215, 205, 255, 0.85)  */
   color: black ;
-  border-radius: 0.5em 0.5em 0.5em 0px ;
+  border-radius: 0.5rem 0.5rem 0.5rem 0px ;
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
   font-size: smaller ;
   font-weight: thin ;
-  box-shadow: inset -0.2em 0.3em 0.3em rgba( 128, 128, 128, 0.6 ) ;
+  box-shadow: inset -0.2rem 0.3rem 0.3rem rgba( 128, 128, 128, 0.6 ) ;
   overflow-x: auto ;
 }
 
@@ -451,7 +481,7 @@ pre>.code_line>.keyword
 
 pre>.code_line>.define
 {
-  color: #336 ;
+  color: #337 ;
   font-size: larger ;
   font-weight: bold ;
 }
@@ -469,7 +499,7 @@ pre>.code_line>.typedef
 
 pre>.code_line>.string
 {
-  color: #990 ;
+  color: #880 ;
 }
 
 pre>.code_line>.semi-colon
@@ -477,7 +507,7 @@ pre>.code_line>.semi-colon
 /*  color: #3A3 ;*/
   font-size: smaller ;
   font-weight: bold ;
-/*  text-shadow: 0px 0px 0.1em #600 ;*/
+/*  text-shadow: 0px 0px 0.1rem #600 ;*/
 }
 
 
@@ -487,15 +517,15 @@ pre>.code_line>.comment_open ,  pre>.code_line>.comment_close
   font-style: oblique ;
   font-size: xx-small ;
   vertical-align: text-top ;    /*  super  */
-  text-shadow: 0px 0px 0.1em #090 ;
+  text-shadow: 0px 0px 0.1rem #0A0 ;
 }
 
 pre>.code_line>.comment
 {
-  color: #69C ;
+  color: #8AC ;
   font-style: oblique ;
 /*  font-size: larger ;*/
-  text-shadow: 0px 0px 0.05em #090 ;
+  text-shadow: 0px 0px 0.05rem #0A0 ;
 }
 
 pre>.code_line>.block_brace
@@ -503,12 +533,12 @@ pre>.code_line>.block_brace
 /*  color: #444 ;*/
   font-size: xx-small ;
 /*  font-weight: bold ;*/
-/*  text-shadow: 0px 0px 0.1em black ;*/
+/*  text-shadow: 0px 0px 0.1rem black ;*/
 }
 
 pre>.code_line>.brace
 {
-  font-size: 1.4em ;
+  font-size: 1.4rem ;
 }
 
 pre>.code_line>.cast
@@ -547,11 +577,11 @@ pre>a.go_to_define:active
 
 
 
-section.throwaway
+section.throwaway   /*  kettlebells & eccential oils  */
 {
-  padding-left: 0.4em ;
-  padding-right: 0.4em ;
-  background-image: linear-gradient( to right, rgba(0,128,0,0.1), white ) ;
+  padding-left: 0.4rem ;
+  padding-right: 0.4rem ;
+  background-image: linear-gradient( to right, #FFD, white ) ;
 }
 
 
@@ -563,15 +593,15 @@ section.throwaway
 {
   margin: 0px ;
   padding: 0px ;
-/*  margin-top: 2em ;*/
+/*  margin-top: 2rem ;*/
 /*  margin-bottom: 0px ;*/
-  min-height: 2em ;
+  min-height: 2rem ;
   min-width: 100% ;
   background-color: transparent ;
   overflow-x: hidden ;    /*  Scrollbar  */
   overflow-y: hidden ;    /*  Scrollbar  */
-/*  background-image: linear-gradient( 355deg, #505, #203 1.5em ) ;*/
-/*  box-shadow: inset 0px -0.1em 0.1em 0em #808 ;*/
+/*  background-image: linear-gradient( 355deg, #505, #203 1.5rem ) ;*/
+/*  box-shadow: inset 0px -0.1rem 0.1rem 0rem #808 ;*/
 /*  color: #DDD ;*/
 /*  z-xindex: 100 ;*/
 }
@@ -583,7 +613,7 @@ footer
   margin: 0px ;
   padding: 0px ;
 /*  height: 100% ;*/
-  background-image: linear-gradient( 355deg, #505, #203 1.5em ) ;
+  background-image: linear-gradient( 355deg, #505, #203 1.5rem ) ;
   border-bottom: 2px solid #808 ;
   overflow-x: hidden ;    /*  Scrollbar  */
   overflow-y: hidden ;    /*  Scrollbar  */
