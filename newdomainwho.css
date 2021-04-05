@@ -87,7 +87,7 @@ body
   background-color: var( --background_color )  !important ;
   color: var( --text_color )  !important ;
   font-family: var( --sans ) ;
-  font-weight: 400 ;
+  font-weight: 300 ;
 }
 
 main
@@ -186,7 +186,7 @@ p
 /*  color: initial ;*/
   line-height: 1.6 ;
   font-size: normal ;
-  font-weight: 400 ;
+  font-weight: 300 ;
   text-shadow: none ;
   white-space: pre-wrap ;
 }
