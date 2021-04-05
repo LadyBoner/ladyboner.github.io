@@ -128,6 +128,7 @@ h2    /*  Suppliment-Title  */
 h3    /*  Section Titles  */
 {
   padding-left: 0.5rem ;
+  color: #306 ;
   font-weight: 300 ;
   text-shadow: 0.05rem 0.05rem 0.05rem #603 ;
 }
@@ -348,10 +349,20 @@ details>summary>strong
 
 details
 {
-  padding-top: 0.3rem ;
-  margin-left: 0.3rem ;
-  padding-left: 0.4rem ;
-  box-shadow: -0.1rem 0.2rem 0.2rem rgba( 128 , 128 , 128 , 0.6 ) ;
+  padding-top: 0.3rem;
+  margin-left: 0px ;
+  padding-left: 0px ;
+/*  background-image: linear-gradient( to right, #CFD, white, white, white ) ;*/
+/*  box-shadow: -0.1rem 0.2rem 0.2rem rgba( 128 , 128 , 128 , 0.6 ) ;*/
+/*  box-shadow: inset 0.1rem 0px 0.1rem black ;*/
+  border-left: 2px solid #666 ;
+}
+
+details[open]
+{
+  border-bottom-left-radius: 66% 1rem ;
+  border-bottom: 1px solid #999 ;
+/*  border-image: linear-gradient( to left, black, white, white ) 1 ;*/
 }
 
 
@@ -380,7 +391,7 @@ details>div.close_details:last-child
   border: 0px ;
 /*  border-top: 1px solid ;*/
 /*  border-image: linear-gradient( to right, var( --background_color ), #888, var( --background_color )) 1;*/
-  background-image: linear-gradient( to left, #FDF, var( --background_color ), var( --background_color )) ;
+/*  background-image: linear-gradient( to left, #FDF, var( --background_color ), var( --background_color )) ;*/
   font-family: var( --monospace ) ;
   font-size: small ;
   text-align: right ;
@@ -395,9 +406,9 @@ details>div.close_details:last-child:after
 
 details>div.close_details:last-child:hover
 {
-  border-top-right-radius: 1rem 3rem ;
-  border-bottom-right-radius: 1rem 3rem ;
-  background-image: linear-gradient( to left, #CFF, var( --background_color ), var( --background_color )) ;
+/*  border-top-right-radius: 1rem 3rem ;*/
+/*  border-bottom-right-radius: 1rem 3rem ;*/
+/*  background-image: linear-gradient( to left, #CFF, var( --background_color ), var( --background_color )) ;*/
   font-style: oblique ;
 }
 
@@ -434,16 +445,18 @@ p.disclaimer strong
 
 pre
 {
-  margin: 0.1rem 0px ;
+  margin: 0px ;
   padding: 0.6rem ;
-  background-color: #DDF ;  /* rgba(215, 205, 255, 0.85)  */
+/*  background-image: linear-gradient( to right, #DDF, white ) ;*/
   color: black ;
 /*  border-radius: 0.5rem 0.5rem 0.5rem 0px ;*/
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
   font-size: smaller ;
   font-weight: thin ;
-  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;
+/*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
+/*  border-left: 2px solid #99F ;*/
+  box-shadow: inset 0.1rem 0px 1rem #99F ;
   overflow-x: auto ;
 }
 
