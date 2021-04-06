@@ -22,6 +22,19 @@
   {
     --margin-left: calc( 0.2 * ( 100vw - 40rem )) ;
   }
+
+
+  details>summary
+  {
+    margin-left: 1rem ;
+  }
+
+  details
+  {
+    border-top-left-radius: 0.4rem 3rem ;
+    border-bottom-left-radius: 0.4rem 3rem ;
+  }
+
 }
 
 
@@ -66,7 +79,6 @@
   margin: 0px ;
   max-width: 40rem ;
   color: var( --text_color ) ;
-  font-family: var( --sans ) ;
   font-weight: 300 ;
   cursor: default ;
 
@@ -89,6 +101,7 @@ body
   padding: 0px ;
   min-height: 100vh ;
   background-color: var( --background_color ) ;
+  font-family: var( --sans ) ;
   overflow-x: hidden ;
 }
 
@@ -349,31 +362,29 @@ details>summary
   white-space: pre-wrap ;
 }
 
-details>summary:hover ,
-details>summary:active
+details>summary:hover /*details>summary:active*/
 {
   font-style: oblique ;
   text-shadow: 0px 0px 0.1rem #993 ;
 }
 
-details>summary:hover:before ,
-details>summary:active:before
+details>summary:hover:before /*details>summary:active:before*/
 {
   content: " "
 }
 
-details>summary:active
-{
-  margin-left: 0.5rem ;
-}
+/*details>summary:active*/
+/*{*/
+/*  margin-left: 0.5rem ;*/
+/*}*/
 
-details:active
-{
-  margin-left: 0.5rem ;
-  border-color: #CFF ;
-  background-image: linear-gradient( to right, #CFF, white ) ;
-  box-shadow: inset 0px -0.5rem 1rem white ;
-}
+/*details:active*/
+/*{*/
+/*  margin-left: 0.5rem ;*/
+/*  border-color: #CFF ;*/
+/*  background-image: linear-gradient( to right, #CFF, white ) ;*/
+/*  box-shadow: inset 0px -0.5rem 1rem white ;*/
+/*}*/
 
 
 details>summary>strong
@@ -403,11 +414,11 @@ details[open]
   width: 100% ;
 }
 
-details[open]:active
-{
-  border-color: #96C ;
-  background-image: none ;
-}
+/*details[open]:active*/
+/*{*/
+/*  border-color: #96C ;*/
+/*  background-image: none ;*/
+/*}*/
 
 
 details[open]>summary
@@ -435,6 +446,8 @@ details>div.close_details:last-child
   color: #666 ;
   font-family: var( --monospace ) ;
   font-size: x-small ;
+  text-decoration: underline ;
+  text-decoration-color: #666 ;
   text-align: right ;
 }
 
@@ -450,13 +463,13 @@ details>div.close_details:last-child:hover
   font-style: oblique ;
 }
 
-details>div.close_details:last-child:active
-{
-  border-bottom-left-radius: 1.4rem 3rem ;
-  border-bottom: 1px solid #DCF ;
-  background-image: linear-gradient( to right, #DCF, white ) ;
-  box-shadow: inset 0px 1rem 0.4rem white ;
-}
+/*details>div.close_details:last-child:active*/
+/*{*/
+/*  border-bottom-left-radius: 1.4rem 3rem ;*/
+/*  border-bottom: 1px solid #DCF ;*/
+/*  background-image: linear-gradient( to right, #DCF, white ) ;*/
+/*  box-shadow: inset 0px 1rem 0.4rem white ;*/
+/*}*/
 
 
 
