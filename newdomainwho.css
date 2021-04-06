@@ -63,6 +63,13 @@
 *
 {
   outline: none ;
+  margin: 0px ;
+  max-width: 40rem ;
+  color: var( --text_color ) ;
+  font-family: var( --sans ) ;
+  font-weight: 300 ;
+  cursor: default ;
+
   font-smooth: none ;
   -webkit-font-smoothing: none ;
   -moz-osx-font-smoothing: grayscale ;
@@ -72,29 +79,22 @@
 html
 {
   padding: 0px ;
-  margin: 0px ;
   min-height: 100vh ;
   overflow-x: hidden ;    /*  Scrollbar  */
 }
 
 body
 {
-  margin: 0px ;
   margin-left: var( --margin-left , 0px ) ;
   padding: 0px ;
-  max-width: 40rem ;
   min-height: 100vh ;
-  background-color: var( --background_color )  !important ;
-  color: var( --text_color )  !important ;
-  font-family: var( --sans ) ;
-  font-weight: 300 ;
+  background-color: var( --background_color ) ;
 }
 
 main
 {
   margin: 0px ;
-  padding: 0px 0.4rem ;
-  min-height: 80vh ;
+  min-height: 100vh ;
 }
 
 section
@@ -107,7 +107,6 @@ section
 
 h1    /*  Title  */
 {
-  margin: 0px ;
   padding: 2rem ;
   padding-bottom: 1rem ;
   color: #603 ;
@@ -118,8 +117,7 @@ h1    /*  Title  */
 
 h2    /*  Suppliment-Title  */
 {
-  margin: 0px ;
-  padding: 0px 2rem ;
+  padding: 0.6rem 2.5rem ;
   font-family: var( --san ) ;
   font-weight: 300 ;
   text-shadow: 0.05rem 0.05rem 0.1rem #603 ;
@@ -133,8 +131,9 @@ h3    /*  Section Titles  */
   text-shadow: 0.05rem 0.05rem 0.05rem #603 ;
 }
 
-h2 ,  h3 ,  h4 ,  h5
+h3 ,  h4 ,  h5
 {
+  padding: 1rem 1rem ;
 /*  color: var( --thick_text_color ) ;*/
 }
 
@@ -185,6 +184,7 @@ hr:after
 p
 {
 /*  color: initial ;*/
+  padding: 0.4rem 0.4rem ;
   line-height: 1.6 ;
   font-size: normal ;
   font-weight: 300 ;
@@ -248,14 +248,19 @@ sup
 kbd
 {
   color: #603  !important ;
-  font-size: smaller ;
-  font-weight: 300 ;
-  vertical-align: middle ;    /*  text-top  */
+  font-size: small ;
+  font-weight: 400 ;
+/*  vertical-align: middle ;      text-top  */
   text-shadow: 0.05rem 0.05rem 0.1rem #993 ;
 }
 
 
 
+
+li>p
+{
+  font-weight: 400 ;
+}
 
 ol>li::marker
 {
@@ -274,7 +279,7 @@ ol>li
 ul
 {
   list-style-type: circle ;
-  padding-left: 1.2rem ;
+  padding-left: 2rem ;
 }
 
 ul>li::marker
@@ -282,16 +287,20 @@ ul>li::marker
   color: #603  !important ;
 }
 
-ol li ul
-  /*  Calculator Challenge #requirements  */
+ol>li>ul
 {
-  margin-top: -1rem ;
+  padding-left: 2rem ;
 }
 
-li>p:nth-child( 2 )
+ol>li>ul>li:first-child
+{
+  margin-top: -0.2rem ;
+}
+
+li>p.asterisk
 {
   margin-top: -1rem ;
-  padding-left: 0.6rem ;
+  padding-left: 1rem ;
 }
 
 
@@ -307,7 +316,6 @@ dfn
 {
   font-weight: 400 ;
   font-size: smaller ;
-  vertical-align: text-top ;
 }
 
 dd
@@ -324,23 +332,48 @@ summary::marker
   color: #603  !important ;
 }
 
+details>summary:*
+{
+  cursor: pointer ;
+}
+
 details>summary
 {
-  margin-left: -0.4rem ;
-  padding-left: 1rem ;
-  padding-bottom: 0.3rem ;
+  padding-left: 2rem ;
+  padding-bottom: 0.6rem ;
+  cursor: pointer ;
   color: #603  !important ;
   font-family: var( --serif ) ;
   font-weight: normal ;
   white-space: pre-wrap ;
 }
 
-details>summary:hover
+details>summary:hover ,
+details>summary:active
 {
-  color: black  !important ;
   font-style: oblique ;
   text-shadow: 0px 0px 0.1rem #993 ;
 }
+
+details>summary:hover:before ,
+details>summary:active:before
+{
+  content: " "
+}
+
+details>summary:active
+{
+  margin-left: 0.5rem ;
+}
+
+details:active
+{
+  margin-left: 0.5rem ;
+  border-color: #CFF ;
+  background-image: linear-gradient( to right, #CFF, white ) ;
+  box-shadow: inset 0px -0.5rem 1rem white ;
+}
+
 
 details>summary>strong
 {
@@ -349,25 +382,36 @@ details>summary>strong
 
 details
 {
+  display: inline-block ;
+  margin-left: 1rem ;
+  margin-bottom: 1em ;
   padding-top: 0.3rem;
-  margin-left: 0px ;
   padding-left: 0px ;
-/*  background-image: linear-gradient( to right, #CFD, white, white, white ) ;*/
-/*  box-shadow: -0.1rem 0.2rem 0.2rem rgba( 128 , 128 , 128 , 0.6 ) ;*/
-/*  box-shadow: inset 0.1rem 0px 0.1rem black ;*/
-  border-left: 2px solid #666 ;
+  border-left: 3px solid #9CC ;
+  border-top-left-radius: 0.5rem 1rem ;
+  border-bottom-left-radius: 0.5rem 1rem ;
+  min-width: 66% ;
 }
 
 details[open]
 {
-  border-bottom-left-radius: 66% 1rem ;
-  border-bottom: 1px solid #999 ;
-/*  border-image: linear-gradient( to left, black, white, white ) 1 ;*/
+  margin-left: 0px ;
+  border-top-left-radius: 1rem 3rem ;
+  border-bottom-left-radius: 1rem 3rem ;
+  border-color: #96C ;
+  width: 100% ;
+}
+
+details[open]:active
+{
+  border-color: #96C ;
+  background-image: none ;
 }
 
 
-details[open]>summary:first-child
+details[open]>summary
 {
+  margin-left: 1rem ;
   color: #603  !important ;
   font-style: oblique ;
 }
@@ -377,25 +421,20 @@ details[open]>summary:hover
   color: #603  !important ;
 }
 
-/*details[open]>summary:hover::marker*/
-/*{*/
-/*  color: black  !important ;*/
-/*}*/
+
 
 details>div.close_details:last-child
 {
   visibility: visible ;
   display: block ;
+  margin-left: 3px ;
   padding: 0.4rem 0px ;
   width: 100% ;
   border: 0px ;
-/*  border-top: 1px solid ;*/
-/*  border-image: linear-gradient( to right, var( --background_color ), #888, var( --background_color )) 1;*/
-/*  background-image: linear-gradient( to left, #FDF, var( --background_color ), var( --background_color )) ;*/
+  color: #666 ;
   font-family: var( --monospace ) ;
-  font-size: small ;
+  font-size: x-small ;
   text-align: right ;
-  text-shadow: 0.05rem 0.05rem 0.1rem #993 ;
 }
 
 details>div.close_details:last-child:after
@@ -406,10 +445,16 @@ details>div.close_details:last-child:after
 
 details>div.close_details:last-child:hover
 {
-/*  border-top-right-radius: 1rem 3rem ;*/
-/*  border-bottom-right-radius: 1rem 3rem ;*/
-/*  background-image: linear-gradient( to left, #CFF, var( --background_color ), var( --background_color )) ;*/
+  cursor: pointer ;
   font-style: oblique ;
+}
+
+details>div.close_details:last-child:active
+{
+  border-bottom-left-radius: 1.4rem 3rem ;
+  border-bottom: 1px solid #DCF ;
+  background-image: linear-gradient( to right, #DCF, white ) ;
+  box-shadow: inset 0px 1rem 0.4rem white ;
 }
 
 
@@ -445,8 +490,10 @@ p.disclaimer strong
 
 pre
 {
-  margin: 0px ;
-  padding: 0.6rem ;
+  display: block ;
+  margin: 0.6rem 0px ;
+  padding: 1rem 0.6rem ;
+  width: calc( 100% - 2em ) ;
 /*  background-image: linear-gradient( to right, #DDF, white ) ;*/
   color: black ;
 /*  border-radius: 0.5rem 0.5rem 0.5rem 0px ;*/
@@ -455,9 +502,14 @@ pre
   font-size: smaller ;
   font-weight: thin ;
 /*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
-/*  border-left: 2px solid #99F ;*/
-  box-shadow: inset 0.1rem 0px 1rem #99F ;
+  border-left: 3px solid #99F ;
+  box-shadow: 0px 0px 1rem #999 ;
   overflow-x: auto ;
+}
+
+details>pre
+{
+  margin-left: -3px ;
 }
 
 pre>.code_line
@@ -586,6 +638,7 @@ section.throwaway   /*  kettlebells & eccential oils  */
 section.throwaway p
 {
   color: #333  !important ;
+  font-weight: 300 ;
 }
 
 
