@@ -497,14 +497,14 @@ pre
   width: calc( 100% - 2em ) ;
 /*  background-image: linear-gradient( to right, #DDF, white ) ;*/
   color: black ;
-/*  border-radius: 0.5rem 0.5rem 0.5rem 0px ;*/
+  border-radius: 0.4rem 0.4rem 0.4rem 0px ;
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
   font-size: smaller ;
   font-weight: thin ;
 /*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
   border-left: 2px solid #66F ;
-  box-shadow: 0px 0px 1rem #999 ;
+  box-shadow: 0px 0px 0.6rem #999 ;
   overflow-x: auto ;
 }
 
