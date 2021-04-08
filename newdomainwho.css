@@ -18,9 +18,25 @@
 @media  only screen and ( min-width:40rem )
 {
 
+  :root
+  {
+    --h1_gradient: white ;
+    --details_background: #F9F9F9, white, white ;
+    --details_border_left: none ;
+    --pre_margin_left: 0px ;
+  }
+
   body
   {
     --margin-left: calc( 0.2 * ( 100vw - 40rem )) ;
+  }
+
+  hr
+  {
+    margin: 2rem 3rem ;
+    width: 66% ;
+    border: none ;
+    border-top: 36pt dotted #F3F3FF ;
   }
 
 
@@ -32,12 +48,14 @@
   details
   {
     border-top-left-radius: 0.4rem 3rem ;
+    border-top-right-radius: 0.4rem 3rem ;
     border-bottom-left-radius: 0.4rem 3rem ;
+    border-bottom-right-radius: 0.4rem 3rem ;
   }
 
   pre
   {
-    border-radius: 0.4rem 0.4rem 0.4rem 0px ;
+    border-radius: 0px 0.4rem 0.4rem 0px ;
   }
 
 }
@@ -45,6 +63,18 @@
 
 @media  only screen and ( max-width:40rem )
 {
+
+  hr
+  {
+    margin: 2em -2rem ;
+    height: 4rem ;
+    width: 200% ;
+    border: 2px 0px ;
+/*    border-style: solid ;*/
+/*    border-color: #CCC ;*/
+    border-image: linear-gradient( to right, white, #999, #999, white ) 1 ;
+    box-shadow: inset 0px 1rem 1rem #DDD ;
+  }
 
   pre
   {
@@ -58,15 +88,10 @@
 @media  only screen and ( pointer )
 {
 
-  details>summary:hover /*details>summary:active*/
+  details:hover
   {
+    background-image: linear-gradient( to right, #FFF0FC, white, white ) ;
     font-style: oblique ;
-    text-shadow: 0px 0px 0.1rem #993 ;
-  }
-
-  details>summary:hover:before /*details>summary:active:before*/
-  {
-    content: " "
   }
 
 }
@@ -78,12 +103,6 @@
   details>summary:active
   {
     font-style: oblique ;
-    text-shadow: 0px 0px 0.1rem #993 ;
-  }
-
-  details>summary:active:before
-  {
-    content: " "
   }
 
 }
@@ -129,8 +148,8 @@
   margin: 0px ;
   max-width: 40rem ;
   color: var( --text_color ) ;
-  font-weight: 300 ;
   cursor: default ;
+  font-weight: 300 ;
 
   font-smooth: none ;
   -webkit-font-smoothing: none ;
@@ -178,6 +197,7 @@ h1    /*  Title  */
 {
   padding: 2rem ;
   padding-bottom: 1rem ;
+  background-image: linear-gradient( to bottom right, var( --h1_gradient, #DDF, white, white )) ;
   color: #603 ;
   font-family: var( --serif ) ;
   font-weight: 300 ;
@@ -188,16 +208,16 @@ h2    /*  Suppliment-Title  */
 {
   padding: 0.6rem 2.5rem ;
   font-family: var( --san ) ;
-  font-weight: 300 ;
-  text-shadow: 0.05rem 0.05rem 0.1rem #603 ;
+  font-weight: 400 ;
+  text-shadow: 0px 0px 0.1rem #F69 ;
 }
 
 h3    /*  Section Titles  */
 {
   padding-left: 0.5rem ;
-  color: #306 ;
+/*  color: #603 ;*/
   font-weight: 300 ;
-  text-shadow: 0.05rem 0.05rem 0.05rem #603 ;
+  text-shadow: 0px 0px 0.1rem #F6F ;
 }
 
 h3 ,  h4 ,  h5
@@ -214,7 +234,7 @@ h4 ,  h5 ,  h6
 
 h4, h5    /*  Sub-Headings  */
 {
-  color: #939 ;
+  color: #936 ;
 }
 
 h6    /*  Footer Headings  */
@@ -222,21 +242,8 @@ h6    /*  Footer Headings  */
   color: white ;
 }
 
-hr
-{
-  margin: 1rem 0px ;
-  height: 1px ;
-  width: 80% ;
-  border: 1px 0px solid ;
-  border-image: linear-gradient( to right, var( --background_color ), #DCF, var( --background_color )) 1;
-  color: var( --text_color ) ;
-  font-family: var( --serif ) ;
-  font-size: xx-small ;
-  font-weight: bold ;
-  text-align: center ;
-  text-shadow: 0.05rem 0.05rem 0.05rem #A0F ;
-  overflow: visible ;
-}
+
+
 
 /*hr:after*/
 /*{*/
@@ -445,10 +452,10 @@ details
   margin-bottom: 1em ;
   padding-top: 0.3rem;
   padding-left: 0px ;
-  border-left: 2px solid #603 ;
+  border-left: var( --details_border_left, 2px solid #603 ) ;
 /*  border-top-left-radius: 0.5rem 1rem ;*/
 /*  border-bottom-left-radius: 0.5rem 1rem ;*/
-  min-width: 66% ;
+  min-width: 85% ;
 }
 
 details[open]
@@ -459,13 +466,31 @@ details[open]
 /*  padding-bottom: 0px ;*/
   border-color: #D0A ;
   width: 100% ;
+  background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;
 }
 
-/*details[open]:active*/
-/*{*/
-/*  border-color: #96C ;*/
-/*  background-image: none ;*/
-/*}*/
+details[open]:hover ,
+details[open]:active
+{
+  font-style: normal ;
+/*  background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;*/
+}
+
+details[open]:after
+{
+  content: "- close -" ;
+  margin-left: 2px ;
+  padding-top: 0.6rem ;
+  float:left ;
+  width: 100% ;
+/*  border: none ;*/
+  color: #666 ;
+  cursor: pointer ;
+  font-family: var( --monospace ) ;
+  font-size: x-small ;
+  text-decoration-color: #666 ;
+  text-align: center ;
+}
 
 
 details[open]>summary
@@ -501,7 +526,7 @@ details>div.close_details:last-child
 
 details>div.close_details:last-child:after
 {
-  content: "^close" ;
+  content: "- close -" ;
   white-space: pre-wrap ;
 }
 
@@ -557,23 +582,25 @@ pre
 /*  margin-left: -2px ;*/
   padding: 1rem 0.6rem ;
 /*  width: calc( 100% - 2em ) ;*/
-/*  background-image: linear-gradient( to right, #DDF, white ) ;*/
-  background-color: #F0F0FF ;
+/*  background-color: #F0F0FF ;*/
+  background-image: linear-gradient( to right, #FAFAFF, #F6F6FF ) ;
   color: black ;
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
   font-size: x-small ;
   font-weight: thin ;
-  border-top-left-radius: 0.4rem ;
+/*  border-top-left-radius: 0.4rem ;*/
 /*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
-  border-left: 2px solid #00F ;
+  border-left: 2px solid #CCF ;
+  border-top: 2px solid white ;
+  border-bottom: 2px solid white ;
 /*  box-shadow: 0.1rem 0.1rem 0.1rem #999 ;*/
   overflow-x: auto ;
 }
 
 details>pre
 {
-  margin-left: -2px ;
+  margin-left: var( --pre_margin_left, -2px ) ;
 }
 
 pre>.code_line
@@ -696,7 +723,7 @@ section.throwaway   /*  kettlebells & eccential oils  */
 {
   padding-left: 0.4rem ;
   padding-right: 0.4rem ;
-  background-image: linear-gradient( to right, #DDD, white, white ) ;
+  background-image: linear-gradient( to right, #F0F0F0, #F9F9F9, #F9F9F9 ) ;
 }
 
 section.throwaway p
