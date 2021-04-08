@@ -31,13 +31,13 @@
     --margin-left: calc( 0.2 * ( 100vw - 40rem )) ;
   }
 
-  hr
-  {
-    margin: 2rem 3rem ;
-    width: 66% ;
-    border: none ;
-    border-top: 36pt dotted #F3F3FF ;
-  }
+/*  hr*/
+/*  {*/
+/*    margin: 2rem 3rem ;*/
+/*    width: 66% ;*/
+/*    border: none ;*/
+/*    border-top: 36pt dotted #F3F3FF ;*/
+/*  }*/
 
 
   details>summary
@@ -64,17 +64,15 @@
 @media  only screen and ( max-width:40rem )
 {
 
-  hr
-  {
-    margin: 2em -2rem ;
-    height: 4rem ;
-    width: 200% ;
-    border: 2px 0px ;
-/*    border-style: solid ;*/
-/*    border-color: #CCC ;*/
-    border-image: linear-gradient( to right, white, #999, #999, white ) 1 ;
-    box-shadow: inset 0px 1rem 1rem #DDD ;
-  }
+/*  hr*/
+/*  {*/
+/*    margin: 2em -2rem ;*/
+/*    height: 4rem ;*/
+/*    width: 200% ;*/
+/*    border: 2px 0px ;*/
+/*    border-image: linear-gradient( to right, white, #999, #999, white ) 1 ;*/
+/*    box-shadow: inset 0px 1rem 1rem #DDD ;*/
+/*  }*/
 
   pre
   {
@@ -243,7 +241,13 @@ h6    /*  Footer Headings  */
 }
 
 
-
+hr
+{
+  margin: 2rem 3rem ;
+  width: 66% ;
+  border: none ;
+  border-top: 36pt dotted #F3F3FF ;
+}
 
 /*hr:after*/
 /*{*/
