@@ -74,6 +74,12 @@
 /*    box-shadow: inset 0px 1rem 1rem #DDD ;*/
 /*  }*/
 
+  details[open]:after
+  {
+    border-bottom: 2px solid ;
+    border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;
+  }
+
   pre
   {
     border-right: 2px solid #00F ;
@@ -88,9 +94,14 @@
 
   details:hover
   {
-    background-image: linear-gradient( to right, #FFF0FC, white, white ) ;
-    font-style: oblique ;
+    background-image: linear-gradient( to right, #FFF9F9, white ) ;
+/*    font-style: oblique ;*/
   }
+
+/*  details[open]:hover*/
+/*  {*/
+/*    background-image: none ;*/
+/*  }*/
 
 }
 
@@ -100,7 +111,7 @@
 
   details>summary:active
   {
-    font-style: oblique ;
+/*    font-style: oblique ;*/
   }
 
 }
@@ -172,7 +183,9 @@ body
   margin-left: var( --margin-left , 0px ) ;
   padding: 0px ;
   min-height: 100vh ;
-  background-color: var( --background_color ) ;
+/*  background-color: var( --background_color ) ;*/
+  background-image: linear-gradient( to top, white calc( 100% - 6rem ), #DDF) ;
+  background-repeat: repeat ;
   font-family: var( --sans ) ;
   overflow-x: hidden ;
 }
@@ -207,7 +220,7 @@ h2    /*  Suppliment-Title  */
   padding: 0.6rem 2.5rem ;
   font-family: var( --san ) ;
   font-weight: 400 ;
-  text-shadow: 0px 0px 0.1rem #F69 ;
+  text-shadow: 0px 0px 0.1rem #F9C ;
 }
 
 h3    /*  Section Titles  */
@@ -215,7 +228,7 @@ h3    /*  Section Titles  */
   padding-left: 0.5rem ;
 /*  color: #603 ;*/
   font-weight: 300 ;
-  text-shadow: 0px 0px 0.1rem #F6F ;
+  text-shadow: 0px 0px 0.1rem #F9F ;
 }
 
 h3 ,  h4 ,  h5
@@ -426,6 +439,7 @@ details>summary
   color: #603  !important ;
   font-family: var( --serif ) ;
   font-weight: normal ;
+  text-shadow: 0px 0px 0.1em #DFF ;
   white-space: pre-wrap ;
 }
 
@@ -468,27 +482,31 @@ details[open]
 /*  border-top-left-radius: 1rem 3rem ;*/
 /*  border-bottom-left-radius: 1rem 3rem ;*/
 /*  padding-bottom: 0px ;*/
-  border-color: #D0A ;
+/*  border-color: #D0A ;*/
+  border-image: linear-gradient( to bottom, #D0A calc( 100% - 4em ), white ) 1 ;
   width: 100% ;
   background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;
+/*  mix-blend-mode: normal ;*/
 }
 
-details[open]:hover ,
-details[open]:active
-{
-  font-style: normal ;
-/*  background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;*/
-}
+/*details[open]:hover ,*/
+/*details[open]:active*/
+/*{*/
+/*  font-style: normal ;*/
+/*    background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;*/
+/*}*/
 
 details[open]:after
 {
   content: "- close -" ;
   margin-left: 2px ;
-  padding-top: 0.6rem ;
+  padding: 0.6rem 0px ;
   float:left ;
   width: 100% ;
 /*  border: none ;*/
-  color: #666 ;
+/*  border-bottom: 2px solid ;*/
+/*  border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;*/
+  color: #CCC ;
   cursor: pointer ;
   font-family: var( --monospace ) ;
   font-size: x-small ;
@@ -504,10 +522,10 @@ details[open]>summary
   font-style: oblique ;
 }
 
-details[open]>summary:hover
-{
-  color: #603  !important ;
-}
+/*details[open]>summary:hover*/
+/*{*/
+/*  color: #603  !important ;*/
+/*}*/
 
 
 
@@ -528,16 +546,16 @@ details>div.close_details:last-child
   text-align: center ;
 }
 
-details>div.close_details:last-child:after
-{
-  content: "- close -" ;
-  white-space: pre-wrap ;
-}
+/*details>div.close_details:last-child:after*/
+/*{*/
+/*  content: "- close -" ;*/
+/*  white-space: pre-wrap ;*/
+/*}*/
 
-details>div.close_details:last-child:hover
-{
-  cursor: pointer ;
-  font-style: oblique ;
+/*details>div.close_details:last-child:hover*/
+/*{*/
+/*  cursor: pointer ;*/
+/*  font-style: oblique ;*/
 }
 
 /*details>div.close_details:last-child:active*/
@@ -596,15 +614,19 @@ pre
 /*  border-top-left-radius: 0.4rem ;*/
 /*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
   border-left: 2px solid #CCF ;
-  border-top: 2px solid white ;
-  border-bottom: 2px solid white ;
+  border-top: 0.2rem solid white ;
+  border-bottom: 0.2rem solid white ;
 /*  box-shadow: 0.1rem 0.1rem 0.1rem #999 ;*/
+/*  box-shadow: 0px 0pc 0.6rem white ;*/
+/*  mix-blend-mode: normal ;*/
   overflow-x: auto ;
 }
 
-details>pre
+details[open]>pre
 {
   margin-left: var( --pre_margin_left, -2px ) ;
+/*  box-shadow: 0.1rem 0pc 0.1rem white ;*/
+/*  mix-blend-mode: normal ;*/
 }
 
 pre>.code_line
@@ -727,13 +749,24 @@ section.throwaway   /*  kettlebells & eccential oils  */
 {
   padding-left: 0.4rem ;
   padding-right: 0.4rem ;
-  background-image: linear-gradient( to right, #F0F0F0, #F9F9F9, #F9F9F9 ) ;
+  background-image: linear-gradient( to right, #F9F9F9, white, #F9F9F9 ) ;
 }
 
-section.throwaway p
+section.throwaway h3
 {
-  color: #333  !important ;
+  text-shadow: 0px 0px 0.1em #993 ;
+}
+
+section.throwaway *:not(h3)
+{
+  color: #666  !important ;
+  font-size: smaller ;
   font-weight: 300 ;
+}
+
+section.throwaway *::marker
+{
+  color: #993  !important ;
 }
 
 
