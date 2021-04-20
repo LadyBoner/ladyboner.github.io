@@ -155,15 +155,16 @@
 {
   outline: none ;
   margin: 0px ;
-  max-width: 40rem ;
   color: var( --text_color ) ;
   cursor: default ;
   font-weight: 300 ;
 
-  font-smooth: none ;
-  -webkit-font-smoothing: none ;
-  -moz-osx-font-smoothing: grayscale ;
-  text-rendering: optimizeSpeed ;
+/*  font-smooth: none ;*/
+  -webkit-font-smoothing: subpixel-antialiased ;
+  -moz-osx-font-smoothing: auto ;
+  text-rendering: optimizeLegibility ;
+
+  -webkit-tap-highlight-color: transparent;
 }
 
 *::selection
@@ -175,6 +176,7 @@ html
 {
   padding: 0px ;
   min-height: 100vh ;
+  border-bottom: 2px solid #C09 ;
   overflow-x: hidden ;    /*  Scrollbar  */
 }
 
@@ -183,8 +185,10 @@ body
   margin-left: var( --margin-left , 0px ) ;
   padding: 0px ;
   min-height: 100vh ;
+  max-width: 40rem ;
+
 /*  background-color: var( --background_color ) ;*/
-  background-image: linear-gradient( to top, white calc( 100% - 6rem ), #DDF) ;
+  background-image: linear-gradient( to bottom, #F0F0FF, white 3rem, white calc( 100% - 10rem ), #DCF ) ;
   background-repeat: repeat ;
   font-family: var( --sans ) ;
   overflow-x: hidden ;
@@ -208,7 +212,7 @@ h1    /*  Title  */
 {
   padding: 2rem ;
   padding-bottom: 1rem ;
-  background-image: linear-gradient( to bottom right, var( --h1_gradient, #DDF, white, white )) ;
+/*  background-image: linear-gradient( to bottom right, var( --h1_gradient, #DDF, white, white )) ;*/
   color: #603 ;
   font-family: var( --serif ) ;
   font-weight: 300 ;
@@ -220,7 +224,7 @@ h2    /*  Suppliment-Title  */
   padding: 0.6rem 2.5rem ;
   font-family: var( --san ) ;
   font-weight: 400 ;
-  text-shadow: 0px 0px 0.1rem #F9C ;
+  text-shadow: 0px 0px 0.1rem #F9F ;
 }
 
 h3    /*  Section Titles  */
@@ -228,7 +232,7 @@ h3    /*  Section Titles  */
   padding-left: 0.5rem ;
 /*  color: #603 ;*/
   font-weight: 300 ;
-  text-shadow: 0px 0px 0.1rem #F9F ;
+  text-shadow: 0px 0px 0.1rem #FCF ;
 }
 
 h3 ,  h4 ,  h5
@@ -351,10 +355,28 @@ kbd
 
 
 
-li>p
+li>p:first-child
 {
+  padding-bottom: 0.1rem ;
   font-weight: 400 ;
 }
+
+li>p:not(p:first-child)
+{
+  margin-top: -0.2em ;
+  margin-left: 0.2em ;
+  padding-top: 0.1rem ;
+  padding-bottom: 0.1em ;
+  line-height: 1.2em ;
+/*  border: 1px solid green ;*/
+}
+
+/*li small*/
+/*{*/
+/*  margin: 0px ;*/
+/*  line-height: 0.6em ;*/
+/*    border: 1px solid green ;*/
+/*}*/
 
 ol>li::marker
 {
@@ -483,7 +505,7 @@ details[open]
 /*  border-bottom-left-radius: 1rem 3rem ;*/
 /*  padding-bottom: 0px ;*/
 /*  border-color: #D0A ;*/
-  border-image: linear-gradient( to bottom, #D0A calc( 100% - 4em ), white ) 1 ;
+  border-image: linear-gradient( to bottom, #D0A calc( 100% - 24rem ), white ) 1 ;
   width: 100% ;
   background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;
 /*  mix-blend-mode: normal ;*/
@@ -605,7 +627,7 @@ pre
   padding: 1rem 0.6rem ;
 /*  width: calc( 100% - 2em ) ;*/
 /*  background-color: #F0F0FF ;*/
-  background-image: linear-gradient( to right, #FAFAFF, #F6F6FF ) ;
+  background-image: linear-gradient( to right, white, #FAFAFF ) ;
   color: black ;
   line-height: 1.4 ;
   font-family: var( --monospace ) ;
@@ -614,8 +636,8 @@ pre
 /*  border-top-left-radius: 0.4rem ;*/
 /*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
   border-left: 2px solid #CCF ;
-  border-top: 0.2rem solid white ;
-  border-bottom: 0.2rem solid white ;
+  border-top: 0.4rem solid white ;
+  border-bottom: 0.4rem solid white ;
 /*  box-shadow: 0.1rem 0.1rem 0.1rem #999 ;*/
 /*  box-shadow: 0px 0pc 0.6rem white ;*/
 /*  mix-blend-mode: normal ;*/
@@ -749,18 +771,17 @@ section.throwaway   /*  kettlebells & eccential oils  */
 {
   padding-left: 0.4rem ;
   padding-right: 0.4rem ;
-  background-image: linear-gradient( to right, #F9F9F9, white, #F9F9F9 ) ;
+  background-image: linear-gradient( to right, #F0F0F0, white, #F0F0F0 ) ;
 }
 
 section.throwaway h3
 {
-  text-shadow: 0px 0px 0.1em #993 ;
+  text-shadow: 0px 0px 0.1em #FD9 ;
 }
 
-section.throwaway *:not(h3)
+section.throwaway *
 {
   color: #666  !important ;
-  font-size: smaller ;
   font-weight: 300 ;
 }
 
@@ -794,12 +815,30 @@ footer
 {
 /*  position: fixed ;*/
 /*  bottom: 0px ;*/
-  margin: 0px ;
-  padding: 0px ;
+/*  margin: 0px ;*/
+/*  padding: 0px ;*/
 /*  height: 100% ;*/
-  background-image: linear-gradient( 355deg, #505, #203 1.5rem ) ;
-  border-bottom: 2px solid #808 ;
+
+/*  background-image: linear-gradient( 355deg, #FCD, rgba(0,0,0,0) 1.5rem ) ;*/
+/*  border-top: 3px double #C9F ;*/
+
   overflow-x: hidden ;    /*  Scrollbar  */
   overflow-y: hidden ;    /*  Scrollbar  */
 /*  z-index: -1 ;*/
+}
+
+/*footer:before*/
+/*{*/
+/*  margin: calc( 0 - (100% - 1rem) ) ;*/
+/*  display: inline-block ;*/
+/*  position: relative ;*/
+/*  content: "V" ;*/
+/*  padding: 0.5rem ;*/
+/*  top: -1rem ;*/
+/*  width: 100% ;*/
+
+/*  background-image: radial-gradient( var( --background_color ), var( --background_color ), rgba(var( --backgound_rgb ),0.0)) ;*/
+/*  font-family: var( --serif, serif ) ;*/
+/*  text-align: center ;*/
+/*  z-index: 100 ;*/
 }
