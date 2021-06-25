@@ -53,6 +53,11 @@
     border-bottom-right-radius: 0.4rem 3rem ;
   }
 
+  details[open]
+  {
+    box-shadow: 0.1rem 0.1rem 0.1rem #FAFAFA ;
+  }
+
   pre
   {
     border-radius: 0px 0.4rem 0.4rem 0px ;
@@ -76,14 +81,16 @@
 
   details[open]:after
   {
-    border-bottom: 2px solid ;
-    border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;
+    border-bottom: 2px solid #DDD;
+/*    border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;*/
+    border-bottom-left-radius: 50% 1rem ;
+    border-bottom-right-radius: 50% 1rem ;
   }
 
-  pre
-  {
-    border-right: 2px solid #00F ;
-  }
+/*  pre*/
+/*  {*/
+/*    border-right: 2px solid #00F ;*/
+/*  }*/
 
 }
 
@@ -346,10 +353,10 @@ sup
 kbd
 {
   color: #603  !important ;
-  font-size: small ;
+  font-size: smaller ;
   font-weight: 400 ;
 /*  vertical-align: middle ;      text-top  */
-  text-shadow: 0.05rem 0.05rem 0.1rem #993 ;
+  text-shadow: 0px 0px 0.1rem #993 ;
 }
 
 
@@ -489,6 +496,7 @@ details
 {
   display: inline-block ;
 /*  margin-left: 1rem ;*/
+  margin-right: 2px ;
   margin-bottom: 1em ;
   padding-top: 0.3rem;
   padding-left: 0px ;
@@ -505,8 +513,8 @@ details[open]
 /*  border-bottom-left-radius: 1rem 3rem ;*/
 /*  padding-bottom: 0px ;*/
 /*  border-color: #D0A ;*/
-  border-image: linear-gradient( to bottom, #D0A calc( 100% - 24rem ), white ) 1 ;
-  width: 100% ;
+  border-image: linear-gradient( to bottom, #C69 calc( 100% - 24rem ), white ) 1 ;
+  width: 100% ;   /*  Chrome needs this with <pre> child (smaller font); max-width: 40rem  */
   background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;
 /*  mix-blend-mode: normal ;*/
 }
@@ -769,9 +777,9 @@ pre>a.go_to_define:active
 
 section.throwaway   /*  kettlebells & eccential oils  */
 {
-  padding-left: 0.4rem ;
-  padding-right: 0.4rem ;
-  background-image: linear-gradient( to right, #F0F0F0, white, #F0F0F0 ) ;
+  padding-left: 2rem ;
+  padding-right: 2rem ;
+  background-image: radial-gradient( circle closest-side at 40% 50%, #F0F0F0 2rem, white ) ;
 }
 
 section.throwaway h3
