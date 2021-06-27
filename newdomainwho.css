@@ -467,6 +467,7 @@ details>summary
   cursor: pointer ;
   color: #603  !important ;
   font-family: var( --serif ) ;
+  font-size: 1rem ;
 /*  font-weight: normal ;*/
   text-shadow: 0px 0px 0.1em #DFF ;
   white-space: pre-wrap ;
@@ -775,7 +776,7 @@ pre>a.go_to_define:active
 
 
 
-section.throwaway   /*  kettlebells & eccential oils  */
+section.disposable   /*  kettlebells & eccential oils  */
 {
   padding-left: 2rem ;
   padding-right: 2rem ;
@@ -783,18 +784,18 @@ section.throwaway   /*  kettlebells & eccential oils  */
   background-image: radial-gradient( circle closest-side at 40% 50%, #F0F0F0 2rem, white ) ;
 }
 
-section.throwaway h3
+section.disposable h3
 {
   text-shadow: 0px 0px 0.1em #FD9 ;
 }
 
-section.throwaway *
+section.disposable *
 {
   color: #666  !important ;
   font-weight: 300 ;
 }
 
-section.throwaway *::marker
+section.disposable *::marker
 {
   color: #993  !important ;
 }
