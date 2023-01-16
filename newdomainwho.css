@@ -1,145 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400&display=swap');
+@charset  "UTF-8" ;
 
-@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montaga&family=Roboto+Slab:wght@500&display=swap');
+/*  Catamaran  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap' ) ;
+
+/*  Courier Prime  [italic limited]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Overpass+Mono:wght@300;400;500;600;700&display=swap' ) ;
+
+/*  Cutive Mono  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap' ) ;
+
+/*  Forum  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Forum&display=swap' ) ;
+
+/*  Josefin Sans  [italic 700]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' ) ;
+
+/*  Montaga  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Montaga&display=swap' ) ;
+
+/*  Montserrat  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' ) ;
+
+/*  Noto Sans  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' ) ;
+
+/*  Quicksand  [700]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap' ) ;
+
+/*  Roboto  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' ) ;
+
+/*  Roboto Slab  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap' ) ;
+
+/*  Overpass Mono  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap' ) ;
 
 
 
 
-@media  only speech
+  @media  only print
 {
-  hr:after
+  header , footer
   {
-    display: none ;
+    display:  none ;
   }
 }
-
-
-@media  only screen and ( min-width:40rem )
+  @media  only speech
 {
-
-  :root
+  *::after , *::before
   {
-    --h1_gradient: white ;
-    --details_background: #F9F9F9, white, white ;
-    --details_border_left: none ;
-    --pre_margin_left: 0px ;
-  }
-
-  body
-  {
-    --margin-left: calc( 0.2 * ( 100vw - 40rem )) ;
-  }
-
-/*  hr*/
-/*  {*/
-/*    margin: 2rem 3rem ;*/
-/*    width: 66% ;*/
-/*    border: none ;*/
-/*    border-top: 36pt dotted #F3F3FF ;*/
-/*  }*/
-
-
-  details>summary
-  {
-    margin-left: 1rem ;
-  }
-
-  details
-  {
-    border-top-left-radius: 0.4rem 3rem ;
-/*    border-top-right-radius: 0.4rem 3rem ;*/
-    border-bottom-left-radius: 0.4rem 3rem ;
-    border-bottom-right-radius: 0.4rem 3rem ;
-  }
-
-  details[open]
-  {
-    box-shadow: 0.1rem 0.1rem 0.1rem #F9F9F9 ;
-  }
-
-  pre
-  {
-    border-radius: 0px 0.4rem 0.4rem 0px ;
-  }
-
-}
-
-
-@media  only screen and ( max-width:40rem )
-{
-
-/*  hr*/
-/*  {*/
-/*    margin: 2em -2rem ;*/
-/*    height: 4rem ;*/
-/*    width: 200% ;*/
-/*    border: 2px 0px ;*/
-/*    border-image: linear-gradient( to right, white, #999, #999, white ) 1 ;*/
-/*    box-shadow: inset 0px 1rem 1rem #DDD ;*/
-/*  }*/
-
-  details[open]:after
-  {
-/*    border-bottom: 2px solid #F0F0F0 ;*/
-/*    border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;*/
-    border-bottom-left-radius: 50% 1rem ;
-    border-bottom-right-radius: 50% 1rem ;
-    height: 3rem ;
-    background-image: linear-gradient( to top, #F9F9F9, white ) ;
-  }
-
-/*  pre*/
-/*  {*/
-/*    border-right: 2px solid #00F ;*/
-/*  }*/
-
-}
-
-
-
-@media  only screen and ( pointer )
-{
-
-  details:hover
-  {
-    background-image: linear-gradient( to right, #FFF9F9, white ) ;
-/*    font-style: oblique ;*/
-  }
-
-/*  details[open]:hover*/
-/*  {*/
-/*    background-image: none ;*/
-/*  }*/
-
-}
-
-
-@media  only screen and ( not pointer )
-{
-
-  details>summary:active
-  {
-/*    font-style: oblique ;*/
-  }
-
-}
-
-
-@media  only screen and (prefers-color-scheme: dark)
-{
-
-  body, p
-  {
-    --dark_background_color: #111 ;   /*  #111  */
-    --dark_text_color: #CCC ;         /*  #CCC  */
-    --dark_purple: #C8C ;
-
-    --dark_background_rgb: 17, 17, 17 ;
-    --dark_text_rgb: 204, 204, 204 ;
+    display:  none ;
   }
 }
 
@@ -148,754 +60,378 @@
 
 :root
 {
-/*  --background_color: #111 ;  --text_color: #CCC ;  --dark_purple: #C8C ;*/
-  --background_color: var( --dark_background_color, white ) ;
-  --text_color: var( --dark_text_color, black ) ;
-  --backgound_rgb: var( --dark_background_rgb, 255, 255, 255 ) ;
-  --text_rgb: var( --dark_text_rgb, 0, 0, 0 ) ;
-
-  --sans: 'Quicksand Light' ,  'Quicksand' ,  'Roboto' ,  sans-serif ;
-  --serif: 'Roboto Slab' ,  var( --sans ) ;
-  --monospace: 'Overpass Mono' ,  'Nimbus Mono L' ,  'FreeMono' ,  monospace ;
-  --thick_text_color: var( --dark_purple ,  black ) ;
-
-  --details_rgb: 0, 136, 102 ;
+  --alpha:  rgba( 0, 0, 0, 0 ) ;
+  --background_color:  white ;
+  --body_padding:  1rem ;
+  --blue_header:  navy ;
+  --color:  black ;   /*  linen  */
+  --reading_width:  36rem ;
 }
 
 
 *
 {
-  outline: none ;
-  margin: 0px ;
-  color: var( --text_color ) ;
-  cursor: default ;
-  font-weight: 300 ;
 
-/*  font-smooth: none ;*/
-  -webkit-font-smoothing: subpixel-antialiased ;
-  -moz-osx-font-smoothing: auto ;
-  text-rendering: optimizeLegibility ;
+  outline-color:  blue ;
+  margin:  0px ;
+  cursor:  default ;
+  hyphen:  auto ;
+  word-break:  break-word ;
 
-  -webkit-tap-highlight-color: transparent ;
+  -webkit-tap-highlight-color:  transparent ;
 }
+
 
 *::selection
 {
-  background-color: #F0F0FF ;
-/*  mix-blend-mode: darken ;*/
+  background-color:  lightskyblue ;
+  text-shadow:  0px 0px 1em white ;
 }
+
 
 html
 {
   padding: 0px ;
-  min-height: 100vh ;
-/*  border-bottom: 2px solid #C09 ;*/
-  overflow-x: hidden ;    /*  Scrollbar  */
+  background-color:  var( --background_color ) ;
 }
 
+
+  @media  only screen
+    and ( min-width: 40rem )
+{
+  html
+  {
+    background-color:  white ;
+    background-image:  url("./paper-background.jpg") ;
+    background-repeat:  repeat ;
+  }
+  body
+  {
+    --margin_left:  calc( 0.2 * var( --excess_margins )) ;
+    --body_padding:  2rem ;
+
+    background-image:  linear-gradient( to right, white 80%, rgba(255,255,255,0.5)) ;
+    border-top:  1px solid white ;
+  }
+}
 body
 {
-  margin-left: var( --margin-left , 0px ) ;
-  padding: 0px ;
-  min-height: 100vh ;
-  max-width: 40rem ;
+  --body_max:  40rem ;
+  --excess_margins:  calc( 100vw - var( --body_max )) ;
 
-/*  background-color: var( --background_color ) ;*/
-  background-image: linear-gradient( to bottom, #F0F0FF, white 3rem, white calc( 100% - 10rem ), #333 calc( 100% - 9rem ), #001 calc( 100% - 1rem ) ) ;
-/*  background-repeat: repeat ;*/
-  font-family: var( --sans ) ;
-  overflow-x: hidden ;
+
+  margin-left:  var( --margin_left , 0px ) ;
+  padding:  0px var( --body_padding ) ;
+  max-width:  var( --body_max ) ;
+  color:  var( --color ) ;
 }
 
+
+  @media  only print
+{
+  main::after
+  {
+    content:  "\2014\2003 END\2003\2014" ;
+    display:  block ;
+    color:  lightgray ;
+    text-align:  center ;
+    font-family:  var( --monospace ) ;
+    font-weight:  bold ;
+  }
+}
 main
 {
-  margin: 0px ;
-  min-height: 100vh ;
+  margin:  0.4rem calc( 0px - var( --body_padding )) ;
+  padding:  0px var( --body_padding ) ;
+  border-top:  3px solid ;
+  border-image:  linear-gradient( to right, var( --alpha ) 12%, navy 12%, cyan )  1 ;
 }
 
-section
+
+section#title  p.tldr
 {
-  padding-top: 0.6rem ;
-  padding-bottom: 0.6rem ;
+  margin-top:  1rem ;
+  padding:  0px 4% ;
 }
 
 
-
-h1    /*  Title  */
+section#title  p
 {
-  padding: 2rem ;
-  padding-bottom: 1rem ;
-/*  background-image: linear-gradient( to bottom right, var( --h1_gradient, #DDF, white, white )) ;*/
-  color: #330 ;
-  font-family: 'Montaga' ;
-  font-weight: 400 ;
-/*  text-shadow: 0px 0px 0.1rem #993 ;*/
+  padding: 0px ;
 }
 
-h2    /*  Suppliment-Title  */
+
+section#title
 {
-  padding: 0.6rem 2.5rem ;
-  padding-bottom: 3rem ;
-  color: #024 ;
-  font-family: var( --sans ) ;
-  font-weight: 100 ;
-  font-style: oblique ;
-/*  text-shadow: 0px 0px 0.1rem #FFC ;*/
+  margin-bottom:  1.8rem ;
+  padding-bottom:  1rem ;
+  border-bottom:  1px solid ;
+  border-image:  linear-gradient( to right, var( --alpha )  2rem, var( --color )  calc( 2rem), calc( 100% - 2rem ), var( --alpha )  calc( 100% - 2rem )) 1 ;
 }
 
-h3    /*  Section Titles  */
+
+h1 , h2 , h3
 {
-  padding-left: 0.5rem ;
-  color: #402 ;
-  font-weight: 600 ;
-/*  text-shadow: 0px 0px 0.1rem #FCF ;*/
+  padding:  1rem 0px ;
 }
 
-h3 ,  h4 ,  h5
+
+p ,
+ol ,
+ul
 {
-  padding: 1rem 1rem ;
-/*  color: var( --thick_text_color ) ;*/
+  margin:  0px  auto ;
+  max-width:  var( --reading_width ) ;
+/*  background-image:  linear-gradient( to right, white 80%, var( --alpha )) ;*/
 }
-
-h4 ,  h5 ,  h6
-{
-  font-family: var( --serif ) ;
-/*  font-weight: 400 ;*/
-}
-
-h4, h5    /*  Sub-Headings  */
-{
-  color: #603 ;
-  font-size: larger ;
-}
-
-h6    /*  Footer Headings  */
-{
-  color: white ;
-}
-
-
-hr
-{
-  margin: 2rem 3rem ;
-  width: 66% ;
-  border: none ;
-  border-top: 36pt dotted #FAFAFF ;
-}
-
-/*hr:after*/
-/*{*/
-/*  display: inline-block ;*/
-/*  position: relative ;*/
-/*  content: "V" ;*/
-/*  padding: 0.5rem ;*/
-/*  top: -1rem ;*/
-/*  background-image: radial-gradient( var( --background_color ), var( --background_color ), rgba(var( --backgound_rgb ),0.0)) ;*/
-/*}*/
-
-
 
 
 p
 {
-/*  color: initial ;*/
-  padding: 0.4rem 0.4rem ;
-  line-height: 1.6 ;
-  font-size: normal ;
-  font-weight: 300 ;
-  text-shadow: none ;
-  white-space: pre-wrap ;
+  padding:  0.4rem  0px ;
+  white-space:  pre-wrap ;
 }
 
-aside
+
+iframe
 {
-  padding-left: 6rem ;
-  padding-right: 2rem ;
-  text-align: right ;
-  font-size: smaller ;
-  font-style: oblique ;
-  white-space: pre-wrap ;
+  display:  block ;
+  margin: 1rem auto  ;
 }
 
-aside>strong
+
+
+
+:root
 {
-  color: black ;
+  --monospace: 'Cutive Mono' ;
 }
 
-strong
+
+*
 {
-  color: #333  !important ;
-  font-weight: 400 ;
+/*  font-smooth:  none ;*/
+  -webkit-font-smoothing:  subpixel-antialiased ;
+  -moz-osx-font-smoothing:  auto ;
+  text-rendering:  optimizeLegibility ;
 }
 
-small>sup>strong
+
+h1
 {
-  color: #603  !important ;
-  font-weight: 400 ;
-  text-shadow: 0.05rem 0.05rem 0.05rem #993  !important ;
+  color:  var( --color ) ;
+  font-family:  'Noto Sans' ;
+  font-weight:  600 ;
+  font-size:  2rem ;
+  letter-spacing:  0.05em ;
 }
 
-q
+
+h2
 {
-  color: #603 ;
-/*  font-size: smaller ;*/
-/*  text-shadow: 0.05rem 0.05rem 0.3rem #A0F ;*/
+  color:  var( --blue_header ) ;
+  font-family:  'Montserrat' ;
+  font-weight:  400 ;
+  font-style:  oblique ;
+  letter-spacing:  0.05em ;
 }
 
-s
+
+h3
 {
-  color: #333  !important ;
-  text-decoration-color: #808  !important ;
-  font-weight: lighter ;
+  color:  var( --blue_header ) ;
+  font-family:  'Montserrat' ;
+  font-style:  oblique ;
+  font-size:  1.8rem ;
+  text-align:  right ;
 }
 
-small
+
+p
 {
-  font-weight: lighter ;
+  font-family:  'Quicksand' ;
+  font-weight:  400 ;
+  line-height:  1.6rem ;
+  letter-spacing:  0.1em ;
 }
 
-sup
+
+p.author
 {
-  font-size: small ;
-  font-weight: lighter ;
+  max-width:  100% ;
+  text-align:  right ;
+  font-family:  'Catamaran' ;
+  font-weight:  normal ;
+  letter-spacing:  0.1em ;
+  white-space:  pre-wrap ;
 }
 
-kbd
+
+p.updated
 {
-  color: #603  !important ;
-  font-size: smaller ;
-  font-weight: 400 ;
-/*  vertical-align: middle ;      text-top  */
-  text-shadow: 0px 0px 0.1rem #993 ;
+  max-width:  100% ;
+  font-family:  var( --monospace ) ;
+  font-weight:  normal ;
+  text-align:  right ;
+  letter-spacing:  0rem ;
 }
 
 
-
-
-li>p:first-child
+p.tldr
 {
-  padding-bottom: 0.1rem ;
-  font-weight: 400 ;
-}
-
-li>p:not(p:first-child)
-{
-  margin-top: -0.2em ;
-  margin-left: 0.2em ;
-  padding-top: 0.1rem ;
-  padding-bottom: 0.1em ;
-  line-height: 1.2em ;
-/*  border: 1px solid green ;*/
-}
-
-/*li small*/
-/*{*/
-/*  margin: 0px ;*/
-/*  line-height: 0.6em ;*/
-/*    border: 1px solid green ;*/
-/*}*/
-
-ol>li::marker
-{
-  color: #603  !important ;
-  font-family: var( --serif ) ;
-  font-size: smaller ;
-  text-shadow: 0px 0px 0.1rem #993  !important ;
-}
-
-ol>li
-{
-  padding-left: 0.4rem ;
-}
-
-
-ul
-{
-  list-style-type: circle ;
-  padding-left: 2rem ;
-}
-
-ul>li::marker
-{
-  color: #603  !important ;
-}
-
-ol>li>ul
-{
-  padding-left: 2rem ;
-}
-
-ol>li>ul>li:first-child
-{
-  margin-top: -0.2rem ;
-}
-
-li>p.asterisk
-{
-  margin-top: -1rem ;
-  padding-left: 1rem ;
-}
-
-
-
-
-dl
-{
-  padding-left: 1rem ;
-  padding-right: 1rem ;
-}
-
-dfn
-{
-  font-weight: 400 ;
-  font-size: smaller ;
-}
-
-dd
-{
-  padding-top: 0.3rem ;
-  white-space: pre-wrap ;
-}
-
-
-
-
-summary::marker
-{
-  color: #603  !important ;
-}
-
-details>summary:*
-{
-  cursor: pointer ;
-}
-
-details>summary
-{
-  padding-left: 1rem ;
-  padding-bottom: 0.6rem ;
-  cursor: pointer ;
-  color: #023  !important ;
-  font-family: var( --serif ) ;
-  font-size: 1rem ;
-  font-weight: normal ;
-  text-shadow: 0px 0px 0.1em #DFF ;
-  white-space: pre-wrap ;
-}
-
-details>summary:hover
-{
-  color: black  !important ;
-  font-weight: normal ;
-}
-
-/*details>summary:active*/
-/*{*/
-/*  margin-left: 0.5rem ;*/
-/*}*/
-
-/*details:active*/
-/*{*/
-/*  margin-left: 0.5rem ;*/
-/*  border-color: #CFF ;*/
-/*  background-image: linear-gradient( to right, #CFF, white ) ;*/
-/*  box-shadow: inset 0px -0.5rem 1rem white ;*/
-/*}*/
-
-
-details>summary>strong
-{
-  text-shadow: 0.05rem 0.05rem 0.05rem rgb( var( --details_rgb )) ;
-}
-
-details
-{
-  display: inline-block ;
-/*  margin-left: 1rem ;*/
-/*  margin-right: 2px ;*/
-  margin-bottom: 1rem ;
-  padding-top: 0.3rem;
-  padding-left: 0px ;
-  border-left: var( --details_border_left, 2px solid #603 ) ;
-/*  border-top-left-radius: 0.5rem 1rem ;*/
-/*  border-bottom-left-radius: 0.5rem 1rem ;*/
-  min-width: 85% ;
-}
-
-details>details
-{
-  margin: 1rem 2em ;
-}
-
-details[open]
-{
-/*  margin-left: 0px ;*/
-/*  border-top-left-radius: 1rem 3rem ;*/
-/*  border-bottom-left-radius: 1rem 3rem ;*/
-  padding-bottom: 2rem ;
-/*  border-color: #D0A ;*/
-  border-image: linear-gradient( to bottom, #C69 calc( 100% - 24rem ), white ) 1 ;
-  width: 100% ;   /*  Chrome needs this with <pre> child (smaller font); max-width: 40rem  */
-  background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;
-/*  mix-blend-mode: normal ;*/
-}
-
-/*details[open]:hover ,*/
-/*details[open]:active*/
-/*{*/
-/*  font-style: normal ;*/
-/*    background-image: linear-gradient( to right, var( --details_background, white, white, white )) ;*/
-/*}*/
-
-details[open]:after
-{
-  content: "- close -" ;
-  margin-left: 2px ;
-  padding: 0.6rem 0px ;
-  float:left ;
-  width: 100% ;
-/*  border: none ;*/
-/*  border-bottom: 2px solid ;*/
-/*  border-image: linear-gradient( to right, white, white, #DDD, white, white ) 1 ;*/
-  color: #CCC ;
-  cursor: pointer ;
-  font-family: var( --monospace ) ;
-  font-size: x-small ;
-  text-decoration-color: #666 ;
-  text-align: center ;
-}
-
-
-details[open]>summary
-{
-/*  margin-left: 1rem ;*/
-  color: black  !important ;
-  font-style: oblique ;
-  font-weight: normal ;
-}
-
-details[open]>summary:hover
-{
-  color: #023  !important ;
-}
-
-
-
-details>div.close_details:last-child
-{
-  visibility: visible ;
-  display: block ;
-  margin-left: 2px ;
-/*  padding: 0.4rem 0px ;*/
-  padding-top: 0.6rem ;
-  width: 100% ;
-  border: 0px ;
-  color: #666 ;
-  font-family: var( --monospace ) ;
-  font-size: x-small ;
-/*  text-decoration: underline ;*/
-  text-decoration-color: #666 ;
-  text-align: center ;
-}
-
-/*details>div.close_details:last-child:after*/
-/*{*/
-/*  content: "- close -" ;*/
+  max-width:  100% ;
+  text-align:  center ;
+  font-family:  'Catamaran' ;
+  font-weight:  normal ;
+  letter-spacing:  0.1em ;
 /*  white-space: pre-wrap ;*/
-/*}*/
-
-/*details>div.close_details:last-child:hover*/
-/*{*/
-/*  cursor: pointer ;*/
-/*  font-style: oblique ;*/
-}
-
-/*details>div.close_details:last-child:active*/
-/*{*/
-/*  border-bottom-left-radius: 1.4rem 3rem ;*/
-/*  border-bottom: 1px solid #DCF ;*/
-/*  background-image: linear-gradient( to right, #DCF, white ) ;*/
-/*  box-shadow: inset 0px 1rem 0.4rem white ;*/
-/*}*/
-
-
-
-
-
-label, meter
-{
-  font-size: smaller ;
 }
 
 
-
-
-p.disclaimer
+p.tldr>strong
 {
-  margin-left: 0px ;
-  margin-right: 0px ;
-  padding: 1rem 2rem ;
-  color: #555  !important ;
-  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  #FFFFF0 8%,  #FFFFF0 92%,  rgba(0,0,0,0)) ;
-  font-size: smaller ;
-  text-align: center ;
-}
-
-p.disclaimer strong
-{
-  color: inherit ;
-  text-shadow: 0.05rem 0.05rem 0.05rem #EAF ;
-}
-
-
-p.warning
-{
-  margin-left: 0px ;
-  margin-right: 0px ;
-  padding: 1rem 2rem ;
-  color: black  !important ;
-  background-image: linear-gradient( to right ,  rgba(0,0,0,0) ,  #FFF6F0 8%,  #FFF6F0 92%,  rgba(0,0,0,0)) ;
-  font-size: smaller ;
-  text-align: center ;
-}
-
-p.warning em
-{
-  font-weight: bolder ;
-}
-
-p.warning strong
-{
-  color: inherit ;
-  text-shadow: 0.05rem 0.05rem 0.05rem #93F ;
+  color:  dimgray ;
+  font-family:  'Montaga' ;
+  font-weight:  bold ;
+  font-style:  oblique ;
+  font-size:  1.5em ;
 }
 
 
 pre
 {
-  display: block ;
-/*  margin: 0.6rem 0px ;*/
-/*  margin-left: -2px ;*/
-  padding: 1rem 0.6rem ;
-/*  width: calc( 100% - 2em ) ;*/
-/*  background-color: #F0F0FF ;*/
-  background-image: linear-gradient( to right, white, #FAFAFF ) ;
-  color: black ;
-  line-height: 1.8 ;
-  font-family: var( --monospace ) ;
-  font-size: small ;
-  font-weight: thin ;
-/*  border-top-left-radius: 0.4rem ;*/
-/*  box-shadow: inset -0.1rem 0.2rem 0.2rem rgba( 128, 128, 128, 0.6 ) ;*/
-  border-left: 2px ridge #BBF ;
-  border-top: 0.4rem solid white ;
-  border-bottom: 0.4rem solid white ;
-/*  box-shadow: 0.1rem 0.1rem 0.1rem #999 ;*/
-/*  box-shadow: 0px 0pc 0.6rem white ;*/
-/*  mix-blend-mode: normal ;*/
+  line-height:  1.6em ;
+  font-family:  var( --monospace ) ;
+}
+
+
+details>summary
+{
+  font-family:  'Forum' ;
+  font-size:  larger ;
+  font-weight:  bolder ;
+  letter-spacing:  0.1em ;
+}
+
+
+details[open]>summary
+{
+  font-style:  oblique ;
+}
+
+
+
+
+:root
+{
+  --details_line:  2px ;
+  --details_left_position:  calc( 0px - var( --body_padding )) ;
+  --details_offset:  calc( 0px - var( --details_left_position ) - var( --details_line )) ;
+}
+
+
+summary::marker
+{
+  color:  DarkCyan ;
+}
+
+details
+{
+  padding-left:  var( --details_offset ) ;
+  width:  100% ;
+}
+
+
+details ,
+details>summary
+{
+  position:  relative ;
+  left:  var( --details_left_position ) ;
+}
+
+
+details>summary
+{
+  padding:  0.4em  0px ;
+  padding-left:  2rem ;
+  cursor:  pointer ;
+  max-width:  var(  --reading_width ) ;
+}
+
+
+details[open]>summary
+{
+  margin-bottom:  1rem ;
+}
+
+
+  @media  only print
+{
+  details[open]
+  {
+    --details_line_color:  LightBlue ;
+  }
+}
+  @media  only screen  and ( min-width: 40rem )
+{
+  details[open]
+  {
+    --details_line_color:  darkcyan ;
+  }
+}
+details[open]
+{
+  background-image:  linear-gradient( to right, ghostwhite, var( --alpha ) var( --body_padding )) ;
+  border-left:  var( --details_line )  solid ;
+  border-image:  linear-gradient( to bottom, var( --details_line_color, blue ) calc( 100% - 1rem), var( --alpha)) 1 ;
+}
+
+
+  @media  only screen and (any-pointer)
+{
+  details[open]::after
+  {
+    content:  "\2014\2003 close\2003\2014" ;
+    cursor:  pointer ;
+    display:  block ;
+    margin-top:  1rem ;
+      /*  Margin prevents content after from bouncing around upon activation.  */
+    margin-bottom:  var( --details_line ) ;
+    padding:  6mm  0px;
+    color:  navy ;
+    text-align:  center ;
+    font-family:  var( --monospace ) ;
+    font-size:  larger ;
+  }
+
+
+    /*  Cannot have pseudo-element before pseudo-class.  */
+  details[open]:hover::after
+  {
+      /*  This is removing previous margin buffer.  */
+    margin-bottom:  0px ;
+    color:  blue ;
+    background-image:  radial-gradient( farthest-side at 50% 100%, ghostwhite, var( --alpha )) ;
+    font-style:  bold ;
+    border-bottom:  var( --details_line )  solid ;
+    border-image:  linear-gradient( to right, var( --alpha ) 25%, lightgray, var( --alpha ) 75% )  1 ;
+  }
+}
+
+
+
+
+pre
+{
+  padding:  0.6em ;
+  padding-top:  1em ;
+  background-image: linear-gradient( to right, white, #F9FCFF ) ;
+
+  border:  none ;
+  border-top:   1px solid ;
+  border-left:  1px solid ;
+  border-image:  linear-gradient( to right,  var( --blue_header ), var( --alpha ))  1 ;
+
+  width:  calc( 100% - 4px ) ;    /*  Horizontal scroll bar is added for some reason otherwise.  */
   overflow-x: auto ;
-}
-
-details[open]>pre
-{
-  margin-left: var( --pre_margin_left, -2px ) ;
-/*  box-shadow: 0.1rem 0pc 0.1rem white ;*/
-/*  mix-blend-mode: normal ;*/
-}
-
-pre>.code_line
-{
-  display: inline-block ;
-  width: 100% ;
-}
-
-pre>.code_line:hover ,
-pre>.code_line:active
-{
-  background-color: rgb(215, 205, 255) ;
-}
-
-
-pre>.code_line>.keyword
-{
-  color: #444 ;
-}
-
-pre>.code_line>.define
-{
-  color: #337 ;
-  font-size: larger ;
-  font-weight: bold ;
-}
-
-pre>.code_line>.func
-{
-  font-size: larger ;
-  font-weight: bold ;
-}
-
-pre>.code_line>.typedef
-{
-  color: #606 ;
-}
-
-pre>.code_line>.string
-{
-  color: #880 ;
-}
-
-pre>.code_line>.semi-colon
-{
-/*  color: #3A3 ;*/
-  font-size: smaller ;
-  font-weight: bold ;
-/*  text-shadow: 0px 0px 0.1rem #600 ;*/
-}
-
-
-pre>.code_line>.comment_open ,  pre>.code_line>.comment_close
-{
-  color: #666 ;
-  font-style: oblique ;
-  font-size: xx-small ;
-  vertical-align: text-top ;    /*  super  */
-  text-shadow: 0px 0px 0.1rem #0A0 ;
-}
-
-pre>.code_line>.comment
-{
-  color: #8AC ;
-  font-style: oblique ;
-/*  font-size: larger ;*/
-  text-shadow: 0px 0px 0.05rem #0A0 ;
-}
-
-pre>.code_line>.block_brace
-{
-/*  color: #444 ;*/
-  font-size: xx-small ;
-/*  font-weight: bold ;*/
-/*  text-shadow: 0px 0px 0.1rem black ;*/
-}
-
-pre>.code_line>.brace
-{
-  font-size: 1.4rem ;
-}
-
-pre>.code_line>.cast
-{
-  font-size: smaller ;
-}
-
-
-
-.first_use:link ,
-.first_use:visited ,
-.first_use:hover ,
-.first_use:active
-{
-  visibility: visible ;
-  display: block ;
-  margin: 0px ;
-  padding: 0px;
-  max-width: 100vw ;
-  color: #808 ;
-  font-style: oblique ;
-  text-decoration: underline #000 dotted ;
-  text-align: right ;
-  font-size: xx-small ;
-}
-
-pre>a.go_to_define:link ,
-pre>a.go_to_define:visited ,
-pre>a.go_to_define:hover ,
-pre>a.go_to_define:active
-{
-  color: #808 ;
-  font-style: oblique ;
-  text-decoration: underline #000 dotted ;
-}
-
-
-
-section.disposable   /*  kettlebells & eccential oils  */
-{
-  padding-left: 2rem ;
-  padding-right: 2rem ;
-  border-top-left-radius: 0.4rem 3rem ;
-  border-top-right-radius: 0.4rem 3rem ;
-  border-bottom-left-radius: 0.4rem 3rem ;
-  border-bottom-right-radius: 0.4rem 3rem ;
-/*  max-width: 24rem ;*/
-  background-image: radial-gradient( circle farthest-side at 40% 50%, white, #FAFAFA ) ;
-}
-
-section.disposable h3
-{
-  text-shadow: 0px 0px 0.1em #FD9 ;
-}
-
-section.disposable *
-{
-  color: #666  !important ;
-  font-weight: 300 ;
-}
-
-section.disposable *::marker
-{
-  color: #993  !important ;
-}
-
-
-
-
-
-.footer
-{
-  margin: 0px ;
-  padding: 0px ;
-/*  margin-top: 2rem ;*/
-/*  margin-bottom: 0px ;*/
-  min-height: 2rem ;
-  min-width: 100% ;
-  background-color: transparent ;
-  overflow-x: hidden ;    /*  Scrollbar  */
-  overflow-y: hidden ;    /*  Scrollbar  */
-/*  background-image: linear-gradient( 355deg, #505, #203 1.5rem ) ;*/
-/*  box-shadow: inset 0px -0.1rem 0.1rem 0rem #808 ;*/
-/*  color: #DDD ;*/
-/*  z-xindex: 100 ;*/
-}
-
-footer
-{
-/*  position: fixed ;*/
-/*  bottom: 0px ;*/
-  margin-top: 3rem ;
-/*  padding: 0px ;*/
-/*  height: 100% ;*/
-
-/*  background-image: linear-gradient( 355deg, #FCD, rgba(0,0,0,0) 1.5rem ) ;*/
-/*  border-top: 3px double #C9F ;*/
-
-  overflow-x: hidden ;    /*  Scrollbar  */
-  overflow-y: hidden ;    /*  Scrollbar  */
-/*  z-index: -1 ;*/
-}
-
-/*footer:before*/
-/*{*/
-/*  margin: calc( 0 - (100% - 1rem) ) ;*/
-/*  display: inline-block ;*/
-/*  position: relative ;*/
-/*  content: "V" ;*/
-/*  padding: 0.5rem ;*/
-/*  top: -1rem ;*/
-/*  width: 100% ;*/
-
-/*  background-image: radial-gradient( var( --background_color ), var( --background_color ), rgba(var( --backgound_rgb ),0.0)) ;*/
-/*  font-family: var( --serif, serif ) ;*/
-/*  text-align: center ;*/
-/*  z-index: 100 ;*/
 }
