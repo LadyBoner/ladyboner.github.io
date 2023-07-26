@@ -2,6 +2,12 @@
 @charset  "UTF-8" ;
 
 
+/*  Gratuitous traffic  */
+@import  url( "file:///mnt/data/projects/newdomainwho/css/sunshine-text.css" ) ;
+@import  url( "file:///mnt/data/projects/newdomainwho/css/sunshine-pre.css" ) ;
+@import  url( "file:///mnt/data/projects/newdomainwho/css/sunshine-details.css" ) ;
+
+
 
 
   @media  only speech
@@ -280,6 +286,12 @@ ul
   list-style-type:  square ;
 }
 
+li::marker
+{
+  color:  darkblue ;
+  font-weight:  600 ;
+}
+
 
 p
 {
@@ -426,13 +438,25 @@ h3
   break-inside:  avoid-page ;
 }
 
-
+  @media  ( min-width: 44rem )
+  {
+    h4
+    {
+      font-weight:  normal ;
+    }
+  }
 h4
 {
-  padding-bottom:  1rem ;
-  color:  mediumvioletred ;
-  font-family:  'Catamaran' ;
+  margin-left:  -2rem ;
+  margin-bottom:  1rem ;
+  padding-left:  2rem ;
+  padding-bottom:  0.4rem ;
+  margin-bottom:  1rem ;
+  font-family:  'Montaga' ;
   font-size:  1.2rem ;
+  letter-spacing:  0.1em ;
+  border-bottom:  1px solid ;
+  border-image:  linear-gradient( to right, gray, var( --alpha ) 50% ) 1 ;
 }
 
 section#title > p
@@ -562,7 +586,7 @@ strong
 }
 sup > small > strong
 {
-  color:  mediumvioletred ;
+  color:  mediumblue ;
   font-weight:  700 ;
   vertical-align:  sub ;
 }
@@ -610,12 +634,6 @@ strong > a
 }
 
 
-li::marker
-{
-  color:  mediumvioletred ;
-  font-weight:  600 ;
-}
-
 
 ol > li > ul > li
 {
@@ -629,10 +647,13 @@ section#title > details > *
   font-family:  'Josefin Sans' ;
   font-weight:  300 ;
 }
-section:not([id="title"]) > br + details > summary
-{
-  font-weight:  bolder ;
-}
+  @media  ( min-width: 44rem )
+  {
+    section:not([id="title"]) > br + details > summary
+    {
+      font-weight:  bolder ;
+    }
+  }
 details>summary
 {
   font-family:  'Forum' ;
@@ -649,7 +670,6 @@ details[open]>summary>em
 {
   font-style:  normal ;
 }
-
 
 
 
@@ -735,8 +755,12 @@ details[open]>summary
     {
       --details_line_color:  LightBlue ;
 
-      border-left:  none  !important ;
-      border-right:  var( --details_line )  solid  !important ;
+        /*  Provides clarification when <details> follows an underlined heading.  */
+      border-bottom:  none  !important ;
+/*      border-left:  none  !important ;*/
+/*      border-top:  1px solid  !important ;*/
+/*      border-image:  linear-gradient( to left, var( --details_line_color ), white 4rem ) 1  !important ;*/
+      border-right:  2px solid  lightblue  !important ;
     }
   }
 details[open]
@@ -744,8 +768,9 @@ details[open]
   margin-bottom:  1rem ;
 /*  background-color:  ghostwhite ;*/
   background-image:  linear-gradient( to right, ghostwhite, rgb( 252, 252, 255 ) ) ;
-  border-left:  var( --details_line )  solid ;
-  border-image:  linear-gradient( to bottom, var( --details_line_color, blue ) calc( 100% - 1rem), var( --alpha)) 1 ;
+/*  border-left:  var( --details_line )  solid ;*/
+/*  border-image:  linear-gradient( to bottom, var( --details_line_color, blue ) calc( 100% - 1rem), var( --alpha)) 1 ;*/
+  border-bottom:  1px dashed dimgray ;
 }
 
 
@@ -788,6 +813,7 @@ details[open]
 
 
 
+
 details>pre
 {
   margin-left:  var( --mobile_pre_margin_left ) ;
@@ -819,6 +845,8 @@ pre:not([class="meta"])
 /*  width:  calc( 100% + var( --body_padding ) + 1rem - 6px ) ;    /*  Horizontal scroll bar is added for some reason otherwise.  */
   overflow-x:  auto ;
 }
+
+
 
 
 
