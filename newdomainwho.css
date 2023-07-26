@@ -1,6 +1,334 @@
 
 @charset  "UTF-8" ;
 
+
+
+
+  @media  only speech
+  {
+    *::after ,  *::before
+    {
+      display:  none ;
+    }
+  }
+
+  @media  only print
+  {
+    body::after
+    {
+      content:  "\2014\2003 END\2003\2014" ;
+      break-before:  avoid-page ;
+      break-after:   avoid-page ;
+      break-inside:  avoid-page ;
+      display:  block ;
+      margin-top:  -5rem ;
+      color:  lightgray ;
+      text-align:  center ;
+      font-family:  var( --monospace ) ;
+      font-weight:  bold ;
+    }
+    header ,  footer
+    {
+      display:  none ;
+    }
+    hr
+    {
+      margin-top:  3rem ;
+      margin-bottom:  1rem ;
+      margin-left:  24%  !important ;
+      margin-right:  40%  !important ;
+      border:  none ;
+      border-bottom:  4vw dotted lightsteelblue  !important ;
+    }
+  }
+  @media  only screen  and  ( min-width: 44rem )
+  {
+    hr
+    {
+      padding:  2rem  0px ;
+      border:  none ;
+      border-top:  1px solid ;
+      border-image:  linear-gradient( to left,  gainsboro, white 66% ) 1 ;
+    }
+    hr ~ section
+    {
+      border:  none ;
+      border-top:  1px solid ;
+      border-image:  linear-gradient( to right,  gainsboro, white 66% ) 1 ;
+    }
+    br + hr
+    {
+      margin-top:  -1.6rem ;
+      padding-top:  3rem ;
+    }
+  }
+
+  @media  only screen  and  ( max-width: 44rem )
+  {
+    hr
+    {
+      margin-top:  3rem ;
+      margin-bottom:  1rem ;
+      margin-left:  20%  !important ;
+      margin-right:  20%  !important ;
+      height:  2px ;
+      border:  none ;
+      border-top:  2px solid lightsteelblue  !important ;
+      border-bottom:  2px dashed darkgray  !important ;
+/*      border-top:  4vw dotted lightsteelblue ;*/
+    }
+  }
+  @media  ( max-width: 44rem )
+  {
+    :root
+    {
+      --body_padding:  1rem ;
+        /*  Multiply & divisor must have a number without units. */
+      --mobile_margin_left_offset:  calc( 4vw - var( --body_padding ) );
+      --mobile_pre_margin_left:  calc( 0px - var( --body_padding ) + 2vw ) ;
+    }
+    li
+    {
+      margin-left:  -1rem ;
+    }
+  }
+
+  @media  ( min-width: 44rem )
+  {
+    :root
+    {
+      --details_line_color:  lightgray ;
+      --body_padding:  2rem ;
+      --pre-right-margin:  calc( ) ;
+    }
+    html
+    {
+/*      background-image:  url("./images/paper-background.jpg") ;*/
+      background-repeat:  repeat ;
+    }
+    body
+    {
+      --margin_left:  calc( 0.2 * var( --excess_margins )) ;
+    }
+    section
+    {
+      background-image:  linear-gradient( to right, white 80%, rgba(255,255,255,0.5)) ;
+    }
+  }
+
+:root
+{
+  --alpha:  rgba( 0, 0, 0, 0 ) ;
+  --background_color:  aliceblue ;
+  --body_max:  44rem ;
+  --blue_header:  darkslateblue ;   /*  navy, midnightblue (darkest)  */
+  --color:  black ;   /*  linen  */
+  --reading_width:  36rem ;
+  --horizontal_line:  linear-gradient( to right,  var( --alpha )  8%, var( --color )  8%, 80%, var( --alpha )  88%) 1 ;
+}
+
+
+*
+{
+  outline-color:  blue ;
+  margin:  0px ;
+  cursor:  default ;
+  hyphen:  auto ;
+  word-break:  break-word ;
+
+  -webkit-tap-highlight-color:  transparent ;
+}
+
+
+*::selection
+{
+  background-color:  lightskyblue ;
+  text-shadow:  0px 0px 1em white ;
+}
+
+
+html
+{
+  padding:  0px ;
+/*  background-color:  var( --background_color ) ;*/
+}
+
+
+body
+{
+  --excess_margins:  calc( 100vw - var( --body_max )) ;
+
+
+  margin-left:  var( --margin_left , 0px ) ;
+  padding:  0px ;
+  max-width:  var( --body_max ) ;
+  color:  var( --color ) ;
+}
+
+
+main
+{
+/*  margin:  0.4rem calc( 0px - var( --body_padding )) ;*/
+  padding:  0px ;
+}
+
+
+section
+{
+  padding:  2rem var( --body_padding ) ;
+  padding-bottom:  4rem ;
+}
+
+
+section ~ section
+{
+/*  margin-top:  -2rem ;*/
+  padding-top:  0px ;
+}
+
+section#title
+{
+  padding-bottom:  8rem ;
+  border-bottom:  1px solid ;
+  border-image:  linear-gradient( to right, var( --alpha ) 4%, black 4%, black 96%, var( --alpha ) 96% )1 ;
+}
+
+section#title > br + p
+/*   Make <br> hidden when CSS is successful.  */
+{
+  margin-top:  -2rem ;
+}
+
+section#title:first-child > h1:first-child
+{
+  margin-top:  -1.6rem ;
+  margin-right:  calc( 0px - var( --body_padding )) ;
+  padding-right:  calc( 2* var( --body_padding )) ;
+/*  border-top:  3px solid ;*/
+/*  border-image:  linear-gradient( to right, var( --alpha ) 18%, navy 18%, cyan )  1 ;*/
+  /*  <hr> (branding) instead?  */
+}
+
+
+/*section#title > :last-child:not(h1):not(h2)*/
+/*{*/
+/*  padding-bottom:  1rem ;*/
+/*  border-bottom:  1px solid ;*/
+/*  border-image:  var(  --horizontal_line ) ;*/
+/*}*/
+
+section#title  p.tldr
+{
+  margin-top:  1rem ;
+  padding-left:  8% ;
+  padding-right:  8% ;
+}
+
+section#title ~ section
+{
+  padding-top:  4rem ;
+}
+
+
+.hidden
+{
+  display:  none ;
+}
+
+
+h1 , h2
+{
+  padding:  1rem 0px ;
+}
+
+
+h2
+{
+  padding-left:  0.6rem ;
+}
+
+
+h3
+{
+  margin:  0px ;
+  padding-top:  0px ;
+  padding-bottom:  1rem ;
+}
+
+h3 + p
+{
+  padding-top:  2rem ;
+}
+
+
+p ,
+ol ,
+ul ,
+li
+{
+  margin:  0px  auto ;
+  max-width:  var( --reading_width ) ;
+}
+
+
+ul>li::marker
+{
+  font-size:  0.6em ;
+}
+ul
+{
+  list-style-type:  square ;
+}
+
+
+p
+{
+  padding:  0.4rem  0px ;
+  white-space:  pre-wrap ;
+}
+
+
+  @media  only print
+  {
+    mark
+    {
+      background-color:  white ;
+      border:  2px solid  mediumturquoise ;
+    }
+  }
+  @media  only screen
+  {
+    mark
+    {
+      background-color:  paleturquoise ;    /*  lavender  lightblue  */
+      mix-blend-mode:  multiply ;
+    }
+  }
+mark
+    /*  Dynamic/interactive relevence or relevance within [pre-formated] sources (quotes).  */
+{
+  font-size:  1.1em ;
+  border-top-left-radius:  0.4em ;
+  border-bottom-right-radius:  0.4em ;
+}
+
+details > hr:last-child
+{
+  display:  none ;
+}
+
+iframe
+{
+  display:  block ;
+  margin: 1rem auto  ;
+}
+
+
+
+
+
+
+
 /*  Catamaran  */
   @import  url( 'https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap' ) ;
 
@@ -40,168 +368,6 @@
 
 
 
-  @media  only print
-{
-  header , footer
-  {
-    display:  none ;
-  }
-}
-  @media  only speech
-{
-  *::after , *::before
-  {
-    display:  none ;
-  }
-}
-
-
-
-
-:root
-{
-  --alpha:  rgba( 0, 0, 0, 0 ) ;
-  --background_color:  white ;
-  --body_padding:  1rem ;
-  --blue_header:  navy ;
-  --color:  black ;   /*  linen  */
-  --reading_width:  36rem ;
-}
-
-
-*
-{
-
-  outline-color:  blue ;
-  margin:  0px ;
-  cursor:  default ;
-  hyphen:  auto ;
-  word-break:  break-word ;
-
-  -webkit-tap-highlight-color:  transparent ;
-}
-
-
-*::selection
-{
-  background-color:  lightskyblue ;
-  text-shadow:  0px 0px 1em white ;
-}
-
-
-html
-{
-  padding: 0px ;
-  background-color:  var( --background_color ) ;
-}
-
-
-  @media  only screen
-    and ( min-width: 40rem )
-{
-  html
-  {
-    background-color:  white ;
-    background-image:  url("./paper-background.jpg") ;
-    background-repeat:  repeat ;
-  }
-  body
-  {
-    --margin_left:  calc( 0.2 * var( --excess_margins )) ;
-    --body_padding:  2rem ;
-
-    background-image:  linear-gradient( to right, white 80%, rgba(255,255,255,0.5)) ;
-    border-top:  1px solid white ;
-  }
-}
-body
-{
-  --body_max:  40rem ;
-  --excess_margins:  calc( 100vw - var( --body_max )) ;
-
-
-  margin-left:  var( --margin_left , 0px ) ;
-  padding:  0px var( --body_padding ) ;
-  max-width:  var( --body_max ) ;
-  color:  var( --color ) ;
-}
-
-
-  @media  only print
-{
-  main::after
-  {
-    content:  "\2014\2003 END\2003\2014" ;
-    display:  block ;
-    color:  lightgray ;
-    text-align:  center ;
-    font-family:  var( --monospace ) ;
-    font-weight:  bold ;
-  }
-}
-main
-{
-  margin:  0.4rem calc( 0px - var( --body_padding )) ;
-  padding:  0px var( --body_padding ) ;
-  border-top:  3px solid ;
-  border-image:  linear-gradient( to right, var( --alpha ) 12%, navy 12%, cyan )  1 ;
-}
-
-
-section#title  p.tldr
-{
-  margin-top:  1rem ;
-  padding:  0px 4% ;
-}
-
-
-section#title  p
-{
-  padding: 0px ;
-}
-
-
-section#title
-{
-  margin-bottom:  1.8rem ;
-  padding-bottom:  1rem ;
-  border-bottom:  1px solid ;
-  border-image:  linear-gradient( to right, var( --alpha )  2rem, var( --color )  calc( 2rem), calc( 100% - 2rem ), var( --alpha )  calc( 100% - 2rem )) 1 ;
-}
-
-
-h1 , h2 , h3
-{
-  padding:  1rem 0px ;
-}
-
-
-p ,
-ol ,
-ul
-{
-  margin:  0px  auto ;
-  max-width:  var( --reading_width ) ;
-/*  background-image:  linear-gradient( to right, white 80%, var( --alpha )) ;*/
-}
-
-
-p
-{
-  padding:  0.4rem  0px ;
-  white-space:  pre-wrap ;
-}
-
-
-iframe
-{
-  display:  block ;
-  margin: 1rem auto  ;
-}
-
-
-
-
 :root
 {
   --monospace: 'Cutive Mono' ;
@@ -210,6 +376,8 @@ iframe
 
 *
 {
+  line-height:  1.6em ;
+  letter-spacing:  0.1em ;
 /*  font-smooth:  none ;*/
   -webkit-font-smoothing:  subpixel-antialiased ;
   -moz-osx-font-smoothing:  auto ;
@@ -220,20 +388,29 @@ iframe
 h1
 {
   color:  var( --color ) ;
-  font-family:  'Noto Sans' ;
+  font-family:  'Montserrat' ;    /*  Noto Sans  */
+  font-style:  oblique ;
   font-weight:  600 ;
   font-size:  2rem ;
-  letter-spacing:  0.05em ;
+  line-height:  1.4em ;
+/*  letter-spacing:  0.05em ;*/
+  letter-spacing:  0px ;
 }
 
 
 h2
 {
-  color:  var( --blue_header ) ;
-  font-family:  'Montserrat' ;
-  font-weight:  400 ;
-  font-style:  oblique ;
+  color:  darkslategray ;  /* var( --blue_header ) ; */
+  font-family:  'Josefin Sans' ;    /*  Montserrat  */
+  font-weight:  300 ;
+/*  font-style:  oblique ;*/
   letter-spacing:  0.05em ;
+}
+
+h1 + h2
+{
+  margin-top:  -1rem ;
+  margin-bottom:  1rem ;
 }
 
 
@@ -244,6 +421,25 @@ h3
   font-style:  oblique ;
   font-size:  1.8rem ;
   text-align:  right ;
+  letter-spacing:  0px ;
+  break-after:   avoid-page ;
+  break-inside:  avoid-page ;
+}
+
+
+h4
+{
+  padding-bottom:  1rem ;
+  color:  mediumvioletred ;
+  font-family:  'Catamaran' ;
+  font-size:  1.2rem ;
+}
+
+section#title > p
+{
+  margin-left:  0px ;
+  font-family:  'Josefin Sans' ;
+  font-weight:  300 ;
 }
 
 
@@ -251,40 +447,46 @@ p
 {
   font-family:  'Quicksand' ;
   font-weight:  400 ;
-  line-height:  1.6rem ;
-  letter-spacing:  0.1em ;
+/*  line-height:  1.6rem ;*/
 }
 
 
-p.author
+p.author    /*  Let the name be stylized, not just meta data.  */
 {
-  max-width:  100% ;
+/*  max-width:  100% ;*/
   text-align:  right ;
   font-family:  'Catamaran' ;
   font-weight:  normal ;
-  letter-spacing:  0.1em ;
-  white-space:  pre-wrap ;
 }
 
 
-p.updated
+pre.meta
 {
-  max-width:  100% ;
+  margin-left:  auto ;
+  margin-right:  0px ;
+  max-width:  32rem ;
   font-family:  var( --monospace ) ;
   font-weight:  normal ;
   text-align:  right ;
-  letter-spacing:  0rem ;
+  white-space:  pre-wrap ;
+}
+/*h3 ~ pre.meta*/
+/*{*/
+/*  margin-top:  -1rem ;*/
+/*}*/
+details > pre.meta
+{
+  margin-top:  -2rem ;
+  padding-bottom:  2rem ;
 }
 
 
 p.tldr
 {
-  max-width:  100% ;
-  text-align:  center ;
+/*  max-width:  100% ;*/
+/*  text-align:  center ;*/
   font-family:  'Catamaran' ;
   font-weight:  normal ;
-  letter-spacing:  0.1em ;
-/*  white-space: pre-wrap ;*/
 }
 
 
@@ -297,91 +499,251 @@ p.tldr>strong
   font-size:  1.5em ;
 }
 
-
-pre
+p.formal ,
+details p ,
+details ol ,
+details ul
 {
-  line-height:  1.6em ;
-  font-family:  var( --monospace ) ;
+  font-family:  "Catamaran" ;
+  font-weight:  300 ;
+}
+
+p.asterisk
+{
+  line-height:  0 ;
 }
 
 
+em
+    /*  Stress operative words; change meaning of sentence--sarcastic word only.  */
+{
+  color:  midnightblue ;
+  font-family:  'Catamaran' ;
+/*  font-weight: 400 ;*/
+/*  font-size:  1.1em ;*/
+/*  vertical-align:  baseline ;*/
+}
+
+
+i
+    /*  Technical terms, idiomatic text, thoughts, distinct subjects, alternative voice,..  */
+{
+  font-style:  italic ;
+}
+
+
+em > i ,
+i > em
+{
+  font-style:  normal ;
+}
+
+small > em
+{
+  font-size:  initial ;
+}
+
+
+b   /*  Stylize for easy skimming.  */
+{
+  font-weight:  500 ;
+}
+
+
+strong
+    /*  Thesis or also stress importance to thesis (phrase, not hints)/content; warning!  Do not interfer with <em>.  */
+{
+/*  background-color:  aliceblue ;*/
+  font-family:  'Catamaran' ;
+  font-weight:  700  !important ;
+/*  border:  1px solid pink ;*/
+  border-top-left-radius:  0.4em ;
+  border-bottom-right-radius:  0.4em ;
+}
+sup > small > strong
+{
+  color:  mediumvioletred ;
+  font-weight:  700 ;
+  vertical-align:  sub ;
+}
+
+
+u
+    /*  No known use cases.  Yelling instead.  */
+{
+/*  color:  midnightblue ;*/
+  font-style:  oblique ;
+  font-size:  0.8em ;
+  text-transform:  uppercase ;
+  text-decoration:  none ;
+  vertical-align:  0.1em ;
+/*  text-decoration:  0.05em underline ;*/
+/*  text-decoration-color:  black ;   /*  skyblue  */*/
+/*  text-underline-offset:  0.2em ;*/
+}
+
+
+dfn ,   /*  Term being defined within a sentence.  */
+abbr ,    /*    */
+cite    /*  Titles, sources,..  */
+{}
+
+
+a
+{
+  cursor:  pointer ;
+  color:  mediumblue ;
+  font-family:  'Catamaran' ;
+/*  font-weight:  400 ;*/
+/*  font-style:  oblique ;*/
+  text-decoration:  1px solid underline cornflowerblue ;    /*  darkcyan  mediumturquoise  [light]seagreen  teal  */
+  text-underline-offset:  0.2em ;
+  letter-spacing: 0.15rem ;
+}
+a > *
+{
+  cursor:  pointer ;
+}
+strong > a
+{
+  color:  navy ;
+}
+
+
+li::marker
+{
+  color:  mediumvioletred ;
+  font-weight:  600 ;
+}
+
+
+ol > li > ul > li
+{
+  padding-bottom:  0.5em ;
+  line-height:  0 ;
+}
+
+
+section#title > details > *
+{
+  font-family:  'Josefin Sans' ;
+  font-weight:  300 ;
+}
+section:not([id="title"]) > br + details > summary
+{
+  font-weight:  bolder ;
+}
 details>summary
 {
   font-family:  'Forum' ;
   font-size:  larger ;
-  font-weight:  bolder ;
-  letter-spacing:  0.1em ;
+  font-style:  normal ;
 }
 
 
 details[open]>summary
 {
-  font-style:  oblique ;
+  font-style:  italic ;
+}
+details[open]>summary>em
+{
+  font-style:  normal ;
 }
 
 
 
 
+
+/*details{ border:  1px solid blue ; }*/
+
+  /*  Cursors:  default copy help not-allowed pointer progress text wait zoom-in zoom-out  */
+
+
+
+/*  <p> cannot auto margin inside details.  */
+
+
 :root
 {
-  --details_line:  2px ;
+  --details_line:  0px ;
   --details_left_position:  calc( 0px - var( --body_padding )) ;
-  --details_offset:  calc( 0px - var( --details_left_position ) - var( --details_line )) ;
+  --details_offset:  calc( var( --body_padding ) - var( --details_line )) ;
+  --summary_padding:  var( --mobile_padding_left_offset, 1rem ) ;
 }
 
 
 summary::marker
 {
-  color:  DarkCyan ;
+  color:  slategray ;
 }
 
 details
 {
+  margin-left:  1px ;
+  margin-right:  -1rem ;
+  padding-right:  1rem ;
+/*  width:  calc( 100% - 1px - var( --body_padding )) ;*/
+}
+
+section:not([id="title"]) > br+details
+{
+  margin-top:  -1rem ;
+  margin-left:  var( --details_left_position ) ;
   padding-left:  var( --details_offset ) ;
-  width:  100% ;
 }
 
 
-details ,
-details>summary
+br+details+*:not(details)
 {
-  position:  relative ;
-  left:  var( --details_left_position ) ;
+  margin-top:  1rem ;
+}
+
+
+section#title > details
+{
+  margin-left:  auto ;
+  margin-right:  auto ;
+  max-width:  32rem ;
+  background-image:  none ;
+  border:  none ;
+}
+section#title > details::after
+{
+  display:  none ;
 }
 
 
 details>summary
 {
   padding:  0.4em  0px ;
-  padding-left:  2rem ;
+  padding-left:  1rem ;
   cursor:  pointer ;
-  max-width:  var(  --reading_width ) ;
+/*  max-width:  var( --reading_width ) ;*/
 }
 
 
 details[open]>summary
 {
   margin-bottom:  1rem ;
+  margin-left:  calc(  0px - var( --details_line )) ;    /*  --details_line  */
 }
 
 
   @media  only print
-{
-  details[open]
   {
-    --details_line_color:  LightBlue ;
+    details[open]
+    {
+      --details_line_color:  LightBlue ;
+
+      border-left:  none  !important ;
+      border-right:  var( --details_line )  solid  !important ;
+    }
   }
-}
-  @media  only screen  and ( min-width: 40rem )
-{
-  details[open]
-  {
-    --details_line_color:  darkcyan ;
-  }
-}
 details[open]
 {
-  background-image:  linear-gradient( to right, ghostwhite, var( --alpha ) var( --body_padding )) ;
+  margin-bottom:  1rem ;
+/*  background-color:  ghostwhite ;*/
+  background-image:  linear-gradient( to right, ghostwhite, rgb( 252, 252, 255 ) ) ;
   border-left:  var( --details_line )  solid ;
   border-image:  linear-gradient( to bottom, var( --details_line_color, blue ) calc( 100% - 1rem), var( --alpha)) 1 ;
 }
@@ -391,7 +753,7 @@ details[open]
 {
   details[open]::after
   {
-    content:  "\2014\2003 close\2003\2014" ;
+    content:  "\0000B7close\0000B7" ;    /*  \2014 is em-dash, because HTML characters do not work.  */
     cursor:  pointer ;
     display:  block ;
     margin-top:  1rem ;
@@ -409,10 +771,14 @@ details[open]
   details[open]:hover::after
   {
       /*  This is removing previous margin buffer.  */
-    margin-bottom:  0px ;
-    color:  blue ;
+/*    content:  "\0000B7close\0000B7" ;*/
+    margin-bottom:  -1px ;
+    color:  navy ;
     background-image:  radial-gradient( farthest-side at 50% 100%, ghostwhite, var( --alpha )) ;
     font-style:  bold ;
+    text-decoration:  underline ;
+    text-decoration-color:  cornflowerblue ;
+    text-underline-offset:  20% ;
     border-bottom:  var( --details_line )  solid ;
     border-image:  linear-gradient( to right, var( --alpha ) 25%, lightgray, var( --alpha ) 75% )  1 ;
   }
@@ -421,17 +787,41 @@ details[open]
 
 
 
-pre
+
+details>pre
 {
+  margin-left:  var( --mobile_pre_margin_left ) ;
+}
+
+
+  @media  only print
+  {
+    pre
+    {
+      margin-right:  0px  !important ;
+    }
+  }
+pre:not([class="meta"])
+{
+  margin-right:  -1rem ;
   padding:  0.6em ;
   padding-top:  1em ;
-  background-image: linear-gradient( to right, white, #F9FCFF ) ;
+  background-color:  white ;
+/*  background-image:  linear-gradient( to right,  white 50%, AliceBlue ) ;*/
 
-  border:  none ;
-  border-top:   1px solid ;
-  border-left:  1px solid ;
-  border-image:  linear-gradient( to right,  var( --blue_header ), var( --alpha ))  1 ;
+  border:  1px solid ;
+  border-right:  none ;
+/*  border-top:   1px solid ;*/
+/*  border-left:  1px solid ;*/
+  border-image:  linear-gradient( to right,  lightblue, lightsteelblue, var( --alpha ))  1 ;
 
-  width:  calc( 100% - 4px ) ;    /*  Horizontal scroll bar is added for some reason otherwise.  */
-  overflow-x: auto ;
+  font-family:  var( --monospace ) ;
+/*  width:  calc( 100% + var( --body_padding ) + 1rem - 6px ) ;    /*  Horizontal scroll bar is added for some reason otherwise.  */
+  overflow-x:  auto ;
 }
+
+
+
+
+
+
