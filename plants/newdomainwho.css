@@ -1,0 +1,137 @@
+
+@charset  "UTF-8" ;
+
+/*  Catamaran  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Catamaran:wght@100;200;300;400;500;600;700;800;900&display=swap' ) ;
+
+/*  Courier Prime  [italic limited]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=Overpass+Mono:wght@300;400;500;600;700&display=swap' ) ;
+
+/*  Cutive Mono  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap' ) ;
+
+/*  Forum  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Forum&display=swap' ) ;
+
+/*  Josefin Sans  [italic 700]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap' ) ;
+
+/*  Montaga  [static]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Montaga&display=swap' ) ;
+
+/*  Montserrat  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' ) ;
+
+/*  Noto Sans  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap' ) ;
+
+/*  Quicksand  [700]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap' ) ;
+
+/*  Roboto  [italic]  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' ) ;
+
+/*  Roboto Slab  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap' ) ;
+
+/*  Overpass Mono  */
+  @import  url( 'https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@300;400;500;600;700&display=swap' ) ;
+
+
+*
+{
+  line-height:  2em ;
+  letter-spacing:  0.1em ;
+  -webkit-font-smoothing:  subpixel-antialiased ;
+  -moz-osx-font-smoothing:  auto ;
+  text-rendering:  optimizeLegibility ;
+
+  outline-color:  white ;
+  margin:  0px ;
+  cursor:  default ;
+  hyphen:  auto ;
+  word-break:  break-word ;
+
+  -webkit-tap-highlight-color:  transparent ;
+}
+  *::selection
+{
+  background-color:  lightskyblue ;
+  text-shadow:  0px 0px 1em white ;
+}
+  .hidden
+{
+  display:  none ;
+}
+
+
+html, body
+{
+  padding:  0px ;
+}
+
+
+img
+{
+  display:  block ;
+  margin:  auto  auto ;
+  max-height:  100vh ;
+}
+
+
+a,
+a > *
+{
+  cursor:  pointer ;
+  color:  black ;
+  text-decoration:  none ;
+}
+
+
+h2
+{
+  padding:  2rem  2rem ;
+  font-family:  'Forum' ;
+  text-align:  center ;
+}
+
+p ,
+ol ,
+ul ,
+li
+{
+  margin:  0px  auto ;
+  max-width:  44em ;
+  font-family:  'Quicksand' ;
+}
+  p
+{
+  padding:  4rem ;
+  padding-top:  4rem ;
+  padding-bottom:  0px ;
+  white-space:  pre-wrap ;
+  font-size:  2rem ;
+  font-weight:  800 ;
+}
+
+
+ul>li::marker
+{
+  font-size:  1em ;
+}
+  ul
+{
+  list-style-type:  none ;
+}
+li::marker
+{
+  color:  darkblue ;
+  font-weight:  600 ;
+}
+
+
+
+
+
+
+
