@@ -1,0 +1,64 @@
+
+
+main
+{
+  margin-top: 4rem ;
+}
+
+
+body > main > a
+{
+  padding:  2rem ;
+  width:  100% ;
+  background-color:  cyan ;
+
+  font-size:  2rem ;
+  font-weight:  bold ;
+  text-decoration:  none ;
+  
+  border-radius:  3rem ;
+}
+
+
+pre
+{
+  margin-top:  8rem ;
+}
+
+
+pre > a.map
+{
+  background-color:  green ;
+  
+  color:  white ;
+  text-decoration:  none ;
+  
+  border-radius:  1rem ;
+}
+
+
+pre > a.pdf
+{
+  background-color:  blue ;
+  
+  color:  white ;
+  text-decoration:  none ;
+  
+  border-radius:  1rem ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
